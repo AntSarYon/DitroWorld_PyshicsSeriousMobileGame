@@ -9,6 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/EM_Principal.unity
     guid: e92d666978db9f54a8cd63f26f1b80d8
   m_configObjects:
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 86aedb8289800c94ab867c5bab09b28f,
+      type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000,
       guid: 08145e273d514c947a22af795c3a654d, type: 2}
     com.unity.input.settings: {fileID: 11400000, guid: 721a6055b0494764eb7af982daa35972,
