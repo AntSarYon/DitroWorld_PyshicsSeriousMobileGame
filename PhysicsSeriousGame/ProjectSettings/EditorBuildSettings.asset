@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/TestingPokemonMechanics.unity
+    path: Assets/Scenes/2DTests.unity
     guid: 344134c08a1e3bb4e9921b0c6e93ae6a
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 86aedb8289800c94ab867c5bab09b28f,
