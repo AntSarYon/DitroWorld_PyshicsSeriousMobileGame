@@ -6,35 +6,49 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D mRb;
-    private Collider2D mCollider;
-    private Vector2 mMoveInput;
+    private CapsuleCollider2D mCollider;
+    private Vector3 mMoveInput = Vector3.zero;
+    private Animator mAnimator;
     private float walkSpeed;
 
     void Awake()
     {
         mRb = GetComponent<Rigidbody2D>();
-        mCollider = GetComponent<Collider2D>();
+        mCollider = GetComponent<CapsuleCollider2D>();
+        mAnimator = GetComponent<Animator>();
 
         walkSpeed = 6f;
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
+    {
+        mAnimator.SetFloat("Horizontal", mMoveInput.x);
+        mAnimator.SetFloat("Vertical", mMoveInput.y);
+    }
+
+    private void FixedUpdate()
     {
         /*mRb.velocity = new Vector2(
             mMoveInput.x, 
             mMoveInput.y
             ).normalized * walkSpeed;*/
+
+        mRb.MovePosition(
+            transform.position + (mMoveInput * walkSpeed * Time.fixedDeltaTime)
+        );
+        
     }
 
     private void OnMove(InputValue value)
     {
         //Almacenamos el Vector con la unidad de movimiento en X
-        mMoveInput = value.Get<Vector2>();
-        mRb.velocity = new Vector2(
+        mMoveInput = value.Get<Vector2>().normalized;
+
+        /*mRb.velocity = new Vector2(
             mMoveInput.x,
             mMoveInput.y
-            ).normalized * walkSpeed;
+            ).normalized * walkSpeed;*/
 
     }
 }
