@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private CapsuleCollider2D mCollider;
     private Vector3 mMoveInput = Vector3.zero;
     private Animator mAnimator;
+    [SerializeField]
     private float walkSpeed;
 
     void Awake()
@@ -16,8 +17,6 @@ public class PlayerMovement : MonoBehaviour
         mRb = GetComponent<Rigidbody2D>();
         mCollider = GetComponent<CapsuleCollider2D>();
         mAnimator = GetComponent<Animator>();
-
-        walkSpeed = 6f;
     }
 
     // Update is called once per frame
