@@ -22,8 +22,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        mAnimator.SetFloat("Horizontal", mMoveInput.x);
-        mAnimator.SetFloat("Vertical", mMoveInput.y);
+        Animations();
     }
 
     private void FixedUpdate()
@@ -49,5 +48,16 @@ public class PlayerMovement : MonoBehaviour
             mMoveInput.y
             ).normalized * walkSpeed;*/
 
+    }
+
+    private void Animations()
+    {
+        if(mMoveInput.magnitude != 0)
+        {
+            mAnimator.SetFloat("Horizontal", mMoveInput.x);
+            mAnimator.SetFloat("Vertical", mMoveInput.y);
+            mAnimator.Play("Run");
+        }
+        else mAnimator.Play("Idle");
     }
 }
