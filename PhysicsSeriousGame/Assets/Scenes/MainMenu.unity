@@ -336,7 +336,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 882829223}
-        m_TargetAssemblyTypeName: MainMenuManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: ScenesManager, Assembly-CSharp
         m_MethodName: EmpezarJuego
         m_Mode: 1
         m_Arguments:
@@ -855,7 +855,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74c7a67dc5baa954b972c74a5320348f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitionAnimator: {fileID: 547971220}
   tiempoEspera: 1
 --- !u!1 &942337634
 GameObject:

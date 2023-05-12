@@ -6,10 +6,15 @@ using UnityEngine.SceneManagement;
 public class ScenesManager : MonoBehaviour
 {
     //Referencia al Animator que controla la Transicion
-    public Animator transitionAnimator;
-    public int tiempoEspera;
+    private Animator transitionAnimator;
+    [SerializeField] private int tiempoEspera;
 
     //------------------------------------------------------
+
+    private void Awake()
+    {
+        transitionAnimator = GameObject.Find("FadeTransition").GetComponent<Animator>();
+    }
 
     public void EmpezarJuego()
     {
