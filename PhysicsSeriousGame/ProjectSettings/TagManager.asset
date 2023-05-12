@@ -41,6 +41,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Canvas
+  - name: Terrain
     uniqueID: 749479721
+    locked: 0
+  - name: Buildings
+    uniqueID: 1618691719
+    locked: 0
+  - name: Props
+    uniqueID: 4028830011
+    locked: 0
+  - name: Player
+    uniqueID: 2528735155
+    locked: 0
+  - name: BuildingsNoCollision
+    uniqueID: 2303574983
+    locked: 0
+  - name: PropsNoCollision
+    uniqueID: 1545902111
     locked: 0
