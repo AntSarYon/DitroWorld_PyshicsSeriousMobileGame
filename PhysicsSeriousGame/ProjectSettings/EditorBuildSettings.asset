@@ -6,8 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/2DTests.unity
-    guid: 344134c08a1e3bb4e9921b0c6e93ae6a
+    path: Assets/Scenes/EM_Principal.unity
+    guid: e92d666978db9f54a8cd63f26f1b80d8
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 91821c34fda583444a22f0d0b5846b6e
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 86aedb8289800c94ab867c5bab09b28f,
       type: 2}
