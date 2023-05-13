@@ -23,7 +23,6 @@ public class ScenesManager : MonoBehaviour
 
     //Datos de la siguiente Escena a abrir
     private string nextSceneName;
-    private int nextSceneIndex;
 
     //Tiempo de espera 
     [SerializeField] private int tiempoEspera;
@@ -67,18 +66,19 @@ public class ScenesManager : MonoBehaviour
     public void EmpezarJuego()
     {
         //Cargamos la escena -> El Main Menu siempre tiene animacion
-        GameObject objTransition = GameObject.Find("Transition");
-        transitionAnimator = objTransition.GetComponent<Animator>();
+        //GameObject objTransition = GameObject.Find("Transition");
+        //transitionAnimator = objTransition.GetComponent<Animator>();
 
-        StartCoroutine(CargarEscenaConAnimacion("EM_Principal"));
+        //StartCoroutine(CargarEscenaConAnimacion("EM_Principal"));
+
+        CargarEscena("EM_Principal");
     }
 
     //------------------------------------------------------
 
-    public void SolicitarCambioDeEscena(int nextIndex, string nextName)
+    public void SolicitarCambioDeEscena(string nextName)
     {
         //Actualizamos los valores de siguiente escena
-        nextSceneIndex = nextIndex;
         nextSceneName = nextName;
 
         //Definimos una variable para buscar el Object que contiene la transicion
@@ -100,7 +100,7 @@ public class ScenesManager : MonoBehaviour
     }
 
     //-----------------------------------------------------------
-    private IEnumerator CargarEscenaConAnimacion(string nombreSiguienteEscena)
+    public IEnumerator CargarEscenaConAnimacion(string nombreSiguienteEscena)
     {
         //Disparamos el Trigger para reproducir animacion de FadeIn
         transitionAnimator.SetTrigger("StartTransition");
@@ -113,7 +113,7 @@ public class ScenesManager : MonoBehaviour
     }
 
     //-------------------------------------------------------------
-    private void CargarEscena(string nombreSiguienteEscena)
+    public void CargarEscena(string nombreSiguienteEscena)
     {
         //Cargamos la escena
         SceneManager.LoadScene(nombreSiguienteEscena);

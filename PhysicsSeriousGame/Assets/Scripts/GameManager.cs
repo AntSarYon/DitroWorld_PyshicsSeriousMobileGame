@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
     //Creamos referencia de instancia
     public static GameManager Instance;
 
+    public List<Personajes> personajes;
+
     //--------------------------------------------
 
     private void Awake()
@@ -18,9 +20,9 @@ public class GameManager : MonoBehaviour
     //--------------------------------------------
     private void ControlarUnicaInstancia()
     {
-        if (Instance == null)
+        if (GameManager.Instance == null)
         {
-            Instance = this;
+            GameManager.Instance = this;
             DontDestroyOnLoad(this.gameObject);
         }
         else
