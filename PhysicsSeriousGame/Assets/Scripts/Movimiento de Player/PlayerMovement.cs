@@ -51,12 +51,17 @@ public class PlayerMovement : MonoBehaviour
     //-----------------------------------------------------
     private void Animations()
     {
+        //Si la dirección Input esta recibiendo algo...
         if(mMoveInput.magnitude != 0)
         {
+            //Modificamos los parametros de ambos ejes X e Y
             mAnimator.SetFloat("Horizontal", mMoveInput.x);
             mAnimator.SetFloat("Vertical", mMoveInput.y);
+
+            //Reproducimos el BlendingTree de CORRER
             mAnimator.Play("Run");
         }
+        //En caso no se esté recibiendo Input; se reproducirá el Blending Tree de IDLE
         else mAnimator.Play("Idle");
     }
 }
