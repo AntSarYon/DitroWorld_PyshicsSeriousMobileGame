@@ -28,25 +28,20 @@ public class ScenesManager : MonoBehaviour
     //Tiempo de espera 
     [SerializeField] private int tiempoEspera;
 
-    //------------------------------------------------------
-
-    private void Awake()
-    {
-        //Obtenemos referencia al objeto de UI encargado de la transicion en la Escena
-        transitionAnimator = GameObject.Find("Transition").GetComponent<Animator>();
-    }
+    //----------------------------------------------------
 
     private void Start()
     {
         SceneManager.sceneLoaded += OnSceneLoadedDelegate;
-        SceneManager.sceneUnloaded += OnSceneUnloaded;
+        SceneManager.sceneUnloaded += OnSceneUnloadedDelegate;
     }
 
-    private void OnSceneUnloaded(Scene escenaDescargada)
+    private void OnSceneUnloadedDelegate(Scene escenaDescargada)
     {
         //Actualizamos los datos de la ultima escena
         lastSceneIndex = escenaDescargada.buildIndex;
         lastSceneName = escenaDescargada.name;
+        print("La escena anterior fue " + lastSceneName);
     }
 
     private void OnSceneLoadedDelegate(Scene escenaCargada, LoadSceneMode arg1)
@@ -54,6 +49,18 @@ public class ScenesManager : MonoBehaviour
         //Actualizamos los datos de la Escena actual
         actualSceneIndex = escenaCargada.buildIndex;
         actualSceneName = escenaCargada.name;
+        print("La escena actual es: " + actualSceneName);
+    }
+
+    //------------------------------------------------------
+
+    public void EmpezarJuego()
+    {
+        //Cargamos la escena -> El Main Menu siempre tiene animacion
+        GameObject objTransition = GameObject.Find("Transition");
+        transitionAnimator = objTransition.GetComponent<Animator>();
+
+        StartCoroutine(CargarEscenaConAnimacion("EM_Principal"));
     }
 
     //------------------------------------------------------
@@ -71,7 +78,7 @@ public class ScenesManager : MonoBehaviour
         if (objTransition != null)
         {
             //Obtenemos referencia al objeto de UI encargado de la transicion en la Escena
-            transitionAnimator = GameObject.Find("Transition").GetComponent<Animator>();
+            transitionAnimator = objTransition.GetComponent<Animator>();
 
             //Cargamos la escena mientras respetamos la animación que se esta ejecutando
             StartCoroutine(CargarEscenaConAnimacion(nextSceneName));
@@ -100,8 +107,6 @@ public class ScenesManager : MonoBehaviour
     {
         //Cargamos la escena
         SceneManager.LoadScene(nombreSiguienteEscena);
-
-        
     }
 
 }
