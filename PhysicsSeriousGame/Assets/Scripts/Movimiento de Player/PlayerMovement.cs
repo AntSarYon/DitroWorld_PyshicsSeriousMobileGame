@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private Animator mAnimator;
 
     //Variable para la Dirección de movimiento
-    private Vector3 mMoveInput;
+    private Vector3 mMoveInput = Vector3.zero;
     
     [SerializeField]
     private float walkSpeed;
