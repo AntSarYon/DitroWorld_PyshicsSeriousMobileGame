@@ -28,6 +28,14 @@ public class ScenesManager : MonoBehaviour
     //Tiempo de espera 
     [SerializeField] private int tiempoEspera;
 
+    //-------------------------------------------------------------
+
+    private void Awake()
+    {
+        //Controlamos la unica instancia del ScenesManager
+        ControlarUnicaInstancia();
+    }
+
     //----------------------------------------------------
 
     private void Start()
@@ -35,6 +43,8 @@ public class ScenesManager : MonoBehaviour
         SceneManager.sceneLoaded += OnSceneLoadedDelegate;
         SceneManager.sceneUnloaded += OnSceneUnloadedDelegate;
     }
+
+    //------------------------------------------------------
 
     private void OnSceneUnloadedDelegate(Scene escenaDescargada)
     {
@@ -109,4 +119,17 @@ public class ScenesManager : MonoBehaviour
         SceneManager.LoadScene(nombreSiguienteEscena);
     }
 
+    //-------------------------------------------------------------
+    private void ControlarUnicaInstancia()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(this.gameObject);
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    }
 }

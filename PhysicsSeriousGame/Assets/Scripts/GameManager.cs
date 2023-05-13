@@ -7,4 +7,25 @@ public class GameManager : MonoBehaviour
 {
     //Creamos referencia de instancia
     public static GameManager Instance;
+
+    //--------------------------------------------
+
+    private void Awake()
+    {
+        ControlarUnicaInstancia();
+    }
+
+    //--------------------------------------------
+    private void ControlarUnicaInstancia()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(this.gameObject);
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    }
 }
