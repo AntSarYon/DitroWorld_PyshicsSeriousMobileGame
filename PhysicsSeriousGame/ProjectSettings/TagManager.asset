@@ -44,6 +44,9 @@ TagManager:
   - name: Terrain
     uniqueID: 749479721
     locked: 0
+  - name: TerrainSecondLayer
+    uniqueID: 2376652759
+    locked: 0
   - name: Buildings
     uniqueID: 1618691719
     locked: 0
