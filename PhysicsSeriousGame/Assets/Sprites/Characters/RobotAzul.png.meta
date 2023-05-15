@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 14
+  spritePixelsToUnits: 10
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -837,7 +837,6 @@ TextureImporter:
     nameFileIdTable:
       RobotAzul_27: -2086813746
       RobotAzul_22: -400564918
-      RobotAzul_31: 1123002618
       RobotAzul_13: 901531551
       RobotAzul_1: 1575482107
       RobotAzul_25: -462175454
@@ -864,6 +863,7 @@ TextureImporter:
       RobotAzul_20: -2000064176
       RobotAzul_17: 964625508
       RobotAzul_21: 1178799144
+      RobotAzul_31: 1123002618
       RobotAzul_0: -1106627085
       RobotAzul_23: 1968844042
       RobotAzul_24: 123186127
