@@ -154,9 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lineasDialogo:
   - Soy un NPC.
-  - 'Puedo ser un perosnaje, o un objeto, lo que tu necesites.
-
-'
+  - Puedo ser un personaje, o un objeto, lo que tu necesites.
   dialogPanel: {fileID: 0}
   dialogText: {fileID: 0}
 --- !u!1 &5661512905625151975
