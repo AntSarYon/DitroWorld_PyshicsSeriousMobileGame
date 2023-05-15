@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Terrain
+  - Building
+  - Prop
+  - NPC Character
   layers:
   - Default
   - TransparentFX
@@ -11,13 +15,13 @@ TagManager:
   - Player
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Terrain
+  - Buildings
+  - Props
+  - BuildingsNoCollision
+  - PropsNoCollision
+  - TerrainSecondLayer
+  - NPCCharacter
   - 
   - 
   - 
@@ -53,12 +57,18 @@ TagManager:
   - name: Props
     uniqueID: 4028830011
     locked: 0
+  - name: PropsNoCollisionDetrasP
+    uniqueID: 2900491417
+    locked: 0
+  - name: CharacterNPC
+    uniqueID: 1645542195
+    locked: 0
   - name: Player
     uniqueID: 2528735155
     locked: 0
   - name: BuildingsNoCollision
     uniqueID: 2303574983
     locked: 0
-  - name: PropsNoCollision
+  - name: PropsNoCollisionDelanteP
     uniqueID: 1545902111
     locked: 0
