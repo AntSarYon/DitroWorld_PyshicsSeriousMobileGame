@@ -8,6 +8,7 @@ TagManager:
   - Building
   - Prop
   - NPC Character
+  - Dron
   layers:
   - Default
   - TransparentFX
@@ -22,7 +23,7 @@ TagManager:
   - PropsNoCollision
   - TerrainSecondLayer
   - NPCCharacter
-  - 
+  - Dron
   - 
   - 
   - 
@@ -63,7 +64,7 @@ TagManager:
   - name: CharacterNPC
     uniqueID: 1645542195
     locked: 0
-  - name: Player
+  - name: PlayerDron
     uniqueID: 2528735155
     locked: 0
   - name: BuildingsNoCollision
