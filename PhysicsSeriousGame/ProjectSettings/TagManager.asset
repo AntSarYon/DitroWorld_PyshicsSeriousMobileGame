@@ -61,10 +61,13 @@ TagManager:
   - name: PropsNoCollisionDetrasP
     uniqueID: 2900491417
     locked: 0
+  - name: Dron
+    uniqueID: 2417350845
+    locked: 0
   - name: CharacterNPC
     uniqueID: 1645542195
     locked: 0
-  - name: PlayerDron
+  - name: Player
     uniqueID: 2528735155
     locked: 0
   - name: BuildingsNoCollision
