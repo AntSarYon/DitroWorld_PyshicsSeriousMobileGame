@@ -13,7 +13,7 @@ public class ScenesManager : MonoBehaviour
     //Referencia al Animator que controla la Transicion
     private Animator transitionAnimator;
 
-    //Datos de la útlima Escena 
+    //Datos de la ï¿½tlima Escena 
     private string lastSceneName;
     private int lastSceneIndex;
 
@@ -69,9 +69,9 @@ public class ScenesManager : MonoBehaviour
         //GameObject objTransition = GameObject.Find("Transition");
         //transitionAnimator = objTransition.GetComponent<Animator>();
 
-        //StartCoroutine(CargarEscenaConAnimacion("EM_Principal"));
+        //StartCoroutine(CargarEscenaConAnimacion("Plantilla2D"));
 
-        CargarEscena("EM_Principal");
+        CargarEscena("Plantilla2D");
     }
 
     //------------------------------------------------------
@@ -84,13 +84,13 @@ public class ScenesManager : MonoBehaviour
         //Definimos una variable para buscar el Object que contiene la transicion
         GameObject objTransition = GameObject.Find("Transition");
 
-        //Si  encontramos la Trasición
+        //Si  encontramos la Trasiciï¿½n
         if (objTransition != null)
         {
             //Obtenemos referencia al objeto de UI encargado de la transicion en la Escena
             transitionAnimator = objTransition.GetComponent<Animator>();
 
-            //Cargamos la escena mientras respetamos la animación que se esta ejecutando
+            //Cargamos la escena mientras respetamos la animaciï¿½n que se esta ejecutando
             StartCoroutine(CargarEscenaConAnimacion(nextSceneName));
         }
 
