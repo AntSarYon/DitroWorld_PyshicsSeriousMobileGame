@@ -10,6 +10,7 @@ TagManager:
   - NPC Character
   - Dron
   - PhysicObject
+  - Salida
   layers:
   - Default
   - TransparentFX
