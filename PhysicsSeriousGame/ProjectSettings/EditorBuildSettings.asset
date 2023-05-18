@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Plantilla2D.unity
     guid: c8d130bd5a20ebf45ad42b0a8486977f
+  - enabled: 1
+    path: Assets/Scenes/SCM_Principal.unity
+    guid: 4703a1ffd8fdc944bbfb45e961391725
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 86aedb8289800c94ab867c5bab09b28f,
       type: 2}
