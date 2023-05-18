@@ -91,6 +91,9 @@ public class MenuSeleccionPersonaje : MonoBehaviour
 
     public void IniciarJuego()
     {
+        //Destruimos el objeto que contiene la musica de fondo
+        Destroy(GameObject.Find("MenuBackgroundMusic"));
+
         //Buscamos el objeto de SceneManager para invocar a la función de Empezar Juego
         GameObject.Find("ScenesManager").GetComponent<ScenesManager>().EmpezarJuego();
     }
