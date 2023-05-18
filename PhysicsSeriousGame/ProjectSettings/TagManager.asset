@@ -9,6 +9,7 @@ TagManager:
   - Prop
   - NPC Character
   - Dron
+  - PhysicObject
   layers:
   - Default
   - TransparentFX
@@ -24,7 +25,7 @@ TagManager:
   - TerrainSecondLayer
   - NPCCharacter
   - Dron
-  - 
+  - PhysicObject
   - 
   - 
   - 
