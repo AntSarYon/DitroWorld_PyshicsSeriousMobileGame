@@ -27,33 +27,57 @@ public class PysichsMaster : MonoBehaviour
     }
 
     //------------------------------------------------------------
-
-    // Update is called once per frame
-    void Update()
+    
+    public void Empujar()
     {
-        // RAYCAST DE PUNTERO -------
-
         //Definimos varible que contendra la data del objeto impactado
         RaycastHit hitPointer;
 
-        //Si primo espacio
-        if (Input.GetKeyDown(KeyCode.Space))
+        //Disparo un rayo para obtener un punto de contacto con el objeto en la escena.
+        if (Physics.Raycast(transform.position, transform.forward, out hitPointer, rangoDeteccion))
         {
-            //Disparo un rayo para obtener un punto de contacto con el objeto en la escena.
-            if (Physics.Raycast(transform.position, transform.forward, out hitPointer, rangoDeteccion))
-            {
-                mTouchDeteccion.RigidBodySeleccionado.AddForceAtPosition((transform.forward * fuerzaGolpe), hitPointer.point, ForceMode.Impulse);
+            mTouchDeteccion.RigidBodySeleccionado.AddForceAtPosition((transform.forward * fuerzaGolpe), hitPointer.point, ForceMode.Impulse);
 
-                //Tras Golpearlo; retiramos las referencias de Objeto y Rigidbody
-                DesacoplarseDeObjeto();
+            //Tras Golpearlo; retiramos las referencias de Objeto y Rigidbody
+            DesacoplarseDeObjeto();
 
-                //Movemos el Centro a la posicion donde ocurrio el Golpe
-                centro.transform.position = hitPointer.point;
+            //Movemos el Centro a la posicion donde ocurrio el Golpe
+            centro.transform.position = hitPointer.point;
 
-                //Lo asignamos como nuevo punto de orbita
-                mOrbita.ObjetoSeguido = centro.transform;
+            //Lo asignamos como nuevo punto de orbita
+            mOrbita.ObjetoSeguido = centro.transform;
+        }
+    }
 
-            }
+    //--------------------------------------------------------------
+    public void ModificarGravedad(int direccion)
+    {
+        switch (direccion)
+        {
+            //Caso 0 (Hacia abajo)
+            case 0:
+                Physics.gravity = new Vector3(0, -9.81f, 0);
+                break;
+            //Caso 1 (Hacia arriba)
+            case 1:
+                Physics.gravity = new Vector3(0, 9.81f, 0);
+                break;
+            //Caso 2 (Hacia la Izquierda)
+            case 2:
+                Physics.gravity = new Vector3(-9.81f, 0, 0);
+                break;
+            //Caso 3 (Hacia la Derecha)
+            case 3:
+                Physics.gravity = new Vector3(9.81f, 0, 0);
+                break;
+            //Caso 4 (Hacia Atras)
+            case 4:
+                Physics.gravity = new Vector3(0, 0, -9.81f);
+                break;
+            //Caso 5 (Hacia Adelante)
+            case 5:
+                Physics.gravity = new Vector3(0, 0, 9.81f);
+                break;
         }
     }
 
