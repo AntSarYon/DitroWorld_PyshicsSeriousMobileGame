@@ -10,8 +10,12 @@ public class TouchDeteccion : MonoBehaviour
     //Contenedor del RigidBody del Objeto seleccionado
     private Rigidbody rigidBodySeleccionado;
 
-    //GETTER Y SETTER
+    //Contenedor del RigidBody del Objeto seleccionado
+    private Collider colliderSeleccionado;
+
+    //GETTERS Y SETTERS
     public Rigidbody RigidBodySeleccionado { get => rigidBodySeleccionado; set => rigidBodySeleccionado = value; }
+    public Collider ColliderSeleccionado { get => colliderSeleccionado; set => colliderSeleccionado = value; }
 
     //--------------------------------------------------
 
@@ -48,6 +52,7 @@ public class TouchDeteccion : MonoBehaviour
 
                     //Almacenamos su Rigidbody
                     rigidBodySeleccionado = hitClick.transform.GetComponent<Rigidbody>();
+                    ColliderSeleccionado = hitClick.transform.GetComponent<Collider>();
                 }
             }
         }
