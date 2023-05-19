@@ -37,26 +37,23 @@ public class PlayerMovement : MonoBehaviour
     {
         //Movemos la posición del Player
         mRb.MovePosition(
-            transform.position + (mMoveInput * walkSpeed * Time.fixedDeltaTime)
+            transform.position + (Manager2D.Instance.MoveInput * walkSpeed * Time.fixedDeltaTime)
         );
         
     }
     //-----------------------------------------------------
-    private void OnMove(InputValue value)
-    {
-        //Almacenamos el Vector con la unidad de movimiento en X
-        mMoveInput = value.Get<Vector2>().normalized;
-    }
+
+
 
     //-----------------------------------------------------
     private void Animations()
     {
         //Si la dirección Input esta recibiendo algo...
-        if(mMoveInput.magnitude != 0)
+        if(Manager2D.Instance.MoveInput.magnitude != 0)
         {
             //Modificamos los parametros de ambos ejes X e Y
-            mAnimator.SetFloat("Horizontal", mMoveInput.x);
-            mAnimator.SetFloat("Vertical", mMoveInput.y);
+            mAnimator.SetFloat("Horizontal", Manager2D.Instance.MoveInput.x);
+            mAnimator.SetFloat("Vertical", Manager2D.Instance.MoveInput.y);
 
             //Reproducimos el BlendingTree de CORRER
             mAnimator.Play("Run");

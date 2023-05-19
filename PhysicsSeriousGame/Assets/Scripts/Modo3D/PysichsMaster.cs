@@ -14,9 +14,13 @@ public class PysichsMaster : MonoBehaviour
 
     //Referencia al Objeto del medio de la escena
     [SerializeField] private GameObject centro;
+    [SerializeField] private GameObject centroRelativo;
 
     //Fuerza para GOLPE
     [SerializeField] private float fuerzaGolpe;
+    
+    //Data del objeto impactado por el Rayo
+    private RaycastHit hitPointer;
 
     //------------------------------------------------------------
     private void Awake()
@@ -30,22 +34,20 @@ public class PysichsMaster : MonoBehaviour
     
     public void Empujar()
     {
-        //Definimos varible que contendra la data del objeto impactado
-        RaycastHit hitPointer;
-
-        //Disparo un rayo para obtener un punto de contacto con el objeto en la escena.
-        if (Physics.Raycast(transform.position, transform.forward, out hitPointer, rangoDeteccion))
+        //Compruebo si hay un RigidBody asignado
+        if (mTouchDeteccion.RigidBodySeleccionado != null)
         {
-            mTouchDeteccion.RigidBodySeleccionado.AddForceAtPosition((transform.forward * fuerzaGolpe), hitPointer.point, ForceMode.Impulse);
-
-            //Tras Golpearlo; retiramos las referencias de Objeto y Rigidbody
-            DesacoplarseDeObjeto();
-
-            //Movemos el Centro a la posicion donde ocurrio el Golpe
-            centro.transform.position = hitPointer.point;
-
-            //Lo asignamos como nuevo punto de orbita
-            mOrbita.ObjetoSeguido = centro.transform;
+            //Disparo un rayo para obtener un punto de contacto con el objeto en la escena.
+            if (Physics.Raycast(transform.position, transform.forward, out hitPointer, rangoDeteccion))
+            {
+                //Aplicamos la fuerza a parir del punto de contacto
+                mTouchDeteccion.RigidBodySeleccionado.AddForceAtPosition(
+                    (transform.forward * fuerzaGolpe),
+                    hitPointer.point, 
+                    ForceMode.Impulse
+                    );
+            }
+            
         }
     }
 
@@ -82,10 +84,27 @@ public class PysichsMaster : MonoBehaviour
     }
 
     //--------------------------------------------------------------
-    private void DesacoplarseDeObjeto()
+    public void DesacoplarseDeObjeto()
     {
+        //Actualizamos la posicion del Centro Relativo en base al ultimo objeto seleccionado
+        centroRelativo.transform.position = mOrbita.ObjetoSeguido.transform.position;
+
+        //Cambiamos a Null la referencia de Objeto y RB seguidos
         mOrbita.ObjetoSeguido = null;
         mTouchDeteccion.RigidBodySeleccionado = null;
+
+        //Activamos la orbita desde la posicion donde soltamos el objeto 
+        mOrbita.ObjetoSeguido = centroRelativo.transform;
+    }
+
+    public void RegresarAlMedio()
+    {
+        //Cambiamos a Null la referencia de Objeto y RB seguidos
+        mOrbita.ObjetoSeguido = null;
+        mTouchDeteccion.RigidBodySeleccionado = null;
+
+        //Lo asignamos como nuevo punto de orbita
+        mOrbita.ObjetoSeguido = centro.transform;
     }
 
     //--------------------------------------------------------------

@@ -12,11 +12,20 @@ public class ButtonsManager : MonoBehaviour
     //Lista de botones de gravedad (hijos)
     [SerializeField] private List<GameObject> optsGravedad;
 
+    [SerializeField] private List<GameObject> uiMasa;
+    [SerializeField] private List<GameObject> uiVelocidad;
+    [SerializeField] private List<GameObject> uiFriccion;
+    
+
     [SerializeField] private TextMeshProUGUI textMasa;
     [SerializeField] private TextMeshProUGUI textVelocidad;
+    [SerializeField] private TextMeshProUGUI textFriccion;
 
     //Flags de Status
     private bool gravedadActivada;
+    private bool velocidadActivada;
+    private bool masaActivada;
+    private bool friccionActivada;
 
     //-------------------------------------------------------
 
@@ -25,8 +34,11 @@ public class ButtonsManager : MonoBehaviour
         //Obtenemos referencias
         PlayerTouchDetection = CameraPlayer.GetComponent<TouchDeteccion>();
 
-        //Inicializamos el Flag en Falso
+        //Inicializamos los Flags en Falso
         gravedadActivada = false;
+        velocidadActivada = false;
+        masaActivada = false;
+        friccionActivada = false;
     }
 
     private void Update()
@@ -36,33 +48,96 @@ public class ButtonsManager : MonoBehaviour
         {
             textMasa.text = "Masa: " + PlayerTouchDetection.RigidBodySeleccionado.mass.ToString() + " kg.";
             textVelocidad.text = "Velocidad: " + PlayerTouchDetection.RigidBodySeleccionado.velocity.magnitude.ToString("F2") + " m/s";
+            textFriccion.text = "Friccion: " + PlayerTouchDetection.RigidBodySeleccionado.drag.ToString("F2");
+        }
+        //En caso no haya ningun RB seleccionado
+        else
+        {
+            textMasa.text = "Masa: 0 kg.";
+            textVelocidad.text = "Velocidad: 0 m/s";
+            textFriccion.text = "Friccion: 0";
         }
     }
+
+
+
+    private void ActivarVisualizacion(List<GameObject> ui)
+    {
+            //Por cada boton de gravedad
+            for (int i = 0; i < ui.Count; i++)
+            {
+                //Lo activamos
+                ui[i].SetActive(true);
+            }
+    }
+
+    private void DesactivarVisualizacion(List<GameObject> ui)
+    {
+            //Caso contrario, desactivamos los botones.
+            for (int i = 0; i < ui.Count; i++)
+            {
+                ui[i].SetActive(false);
+            }
+    }
+
+
+    //---------------------------------------------------------------------
 
     public void ControlarBotonesGravedad()
     {
-        //Si la opcion de gravedad no esta activada
         if (!gravedadActivada)
         {
-            //Por cada boton de gravedad
-            for (int i = 0; i < optsGravedad.Count; i++)
-            {
-                //Lo activamos
-                optsGravedad[i].SetActive(true);
-            }
-
-            //Activamos el Flag
-            gravedadActivada = true;
+            ActivarVisualizacion(optsGravedad);
+            gravedadActivada=true;
         }
         else
         {
-            //Caso contrario, desactivamos los botones.
-            for (int i = 0; i < optsGravedad.Count; i++)
-            {
-                optsGravedad[i].SetActive(false);
-            }
-            //Deesactivamos el Flag
+            DesactivarVisualizacion(optsGravedad);
             gravedadActivada = false;
         }
     }
+            
+
+    public void ControlarVisualizacionDeMasa()
+    {
+        if (!masaActivada)
+        {
+            ActivarVisualizacion(uiMasa);
+            masaActivada = true;
+        }
+        else
+        {
+            DesactivarVisualizacion(uiMasa);
+            masaActivada = false;
+        }
+    }
+
+    public void ControlarVisualizacionDeFriccion()
+    {
+        if (!friccionActivada)
+        {
+            ActivarVisualizacion(uiFriccion);
+            friccionActivada = true;
+        }
+        else
+        {
+            DesactivarVisualizacion(uiFriccion);
+            friccionActivada = false;
+        }
+    }
+
+    public void ControlarVisualizacionDeVelocidad()
+    {
+        if (!velocidadActivada)
+        {
+            ActivarVisualizacion(uiVelocidad);
+            velocidadActivada = true;
+        }
+        else
+        {
+            DesactivarVisualizacion(uiVelocidad);
+            velocidadActivada = false;
+        }
+    }
+
 }
