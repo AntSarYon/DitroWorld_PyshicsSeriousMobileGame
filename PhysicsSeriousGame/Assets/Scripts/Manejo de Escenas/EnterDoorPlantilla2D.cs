@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnterDoorPlantilla2D : MonoBehaviour
@@ -8,7 +6,7 @@ public class EnterDoorPlantilla2D : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            GameObject.Find("ScenesManager").GetComponent<ScenesManager>().SolicitarCambioDeEscena("Plantilla2D");
+            ScenesManager.Instance.SolicitarCambioDeEscena("2DLabPrincipal");
         }
     }
 }

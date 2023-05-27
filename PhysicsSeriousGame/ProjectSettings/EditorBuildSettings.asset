@@ -6,20 +6,20 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/Scenes/Menu/MainMenu.unity
     guid: 91821c34fda583444a22f0d0b5846b6e
   - enabled: 1
-    path: Assets/Scenes/CharacterSelection.unity
+    path: Assets/Scenes/Menu/CharacterSelection.unity
     guid: f8d12056b7b946344b8fa628353bad09
   - enabled: 1
-    path: Assets/Scenes/EM_Principal.unity
-    guid: e92d666978db9f54a8cd63f26f1b80d8
-  - enabled: 1
-    path: Assets/Scenes/Plantilla2D.unity
+    path: Assets/Scenes/Laboratorio/2DLabPrincipal.unity
     guid: c8d130bd5a20ebf45ad42b0a8486977f
   - enabled: 1
-    path: Assets/Scenes/SCM_Principal.unity
+    path: Assets/Scenes/Laboratorio/3DTutorial.unity
     guid: 4703a1ffd8fdc944bbfb45e961391725
+  - enabled: 1
+    path: Assets/Scenes/Laboratorio/2DLabOutside.unity
+    guid: e92d666978db9f54a8cd63f26f1b80d8
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 86aedb8289800c94ab867c5bab09b28f,
       type: 2}

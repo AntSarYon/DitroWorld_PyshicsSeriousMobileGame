@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using System;
 
 public class ExitDoorPlantilla2D : MonoBehaviour
 {
@@ -10,7 +7,7 @@ public class ExitDoorPlantilla2D : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             //Activamos el Flag y mostramos el icono de dialogo
-            GameObject.Find("ScenesManager").GetComponent<ScenesManager>().CargarEscena("EM_Principal");
+            ScenesManager.Instance.SolicitarCambioDeEscena("2DLabOutside");
         }
     }
 }

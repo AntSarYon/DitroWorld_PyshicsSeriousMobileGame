@@ -10,10 +10,10 @@ public class MenuSeleccionPersonaje : MonoBehaviour
     private int index;
 
     //Referencia a la imagen para la foto del personaje en la UI
-    [SerializeField] private Image imagen;
+    [SerializeField] private Image uiImagen;
 
     //Referencia al Texto para el nombre del eprosnaje en la UI
-    [SerializeField] private TextMeshProUGUI nombre;
+    [SerializeField] private TextMeshProUGUI uiNombre;
 
     //------------------------------------------------------------
 
@@ -42,8 +42,8 @@ public class MenuSeleccionPersonaje : MonoBehaviour
         PlayerPrefs.SetInt("PersonajeIndex", index);
 
         //Modificamos los elementos de la UI en base al Personaje correspondiente al indice
-        imagen.sprite = GameManager.Instance.personajes[index].imagen;
-        nombre.text = GameManager.Instance.personajes[index].nombre;
+        uiImagen.sprite = GameManager.Instance.personajes[index].imagen;
+        uiNombre.text = GameManager.Instance.personajes[index].nombre;
     }
 
     //------------------------------------------------------------
@@ -94,7 +94,7 @@ public class MenuSeleccionPersonaje : MonoBehaviour
         //Destruimos el objeto que contiene la musica de fondo
         Destroy(GameObject.Find("MenuBackgroundMusic"));
 
-        //Buscamos el objeto de SceneManager para invocar a la función de Empezar Juego
-        GameObject.Find("ScenesManager").GetComponent<ScenesManager>().EmpezarJuego();
+        //Mediante la instancia de SceneManager invocamos la función Empezar Juego
+        ScenesManager.Instance.EmpezarJuego();
     }
 }

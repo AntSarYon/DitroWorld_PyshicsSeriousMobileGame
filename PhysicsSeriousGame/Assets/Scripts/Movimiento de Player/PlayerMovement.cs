@@ -12,9 +12,8 @@ public class PlayerMovement : MonoBehaviour
 
     //Variable para la Dirección de movimiento
     private Vector3 mMoveInput = Vector3.zero;
-    
-    [SerializeField]
-    private float walkSpeed;
+
+    private float walkSpeed = 4;
 
     //-----------------------------------------------------
 

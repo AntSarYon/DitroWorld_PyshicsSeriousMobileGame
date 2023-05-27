@@ -5,6 +5,9 @@ using TMPro;
 
 public class ButtonsManager : MonoBehaviour
 {
+    //Referencia al Objeto de UI de Transicion
+    private Transform objTransicion;
+
     [SerializeField] private GameObject CameraPlayer;
 
     private TouchDeteccion PlayerTouchDetection;
@@ -34,11 +37,19 @@ public class ButtonsManager : MonoBehaviour
         //Obtenemos referencias
         PlayerTouchDetection = CameraPlayer.GetComponent<TouchDeteccion>();
 
+        //Obtenemos referencia a la transicion
+        objTransicion = transform.Find("Transition");
+
         //Inicializamos los Flags en Falso
         gravedadActivada = false;
         velocidadActivada = false;
         masaActivada = false;
         friccionActivada = false;
+    }
+
+    private void PosicionarTransicionDetras3D()
+    {
+        objTransicion.SetAsFirstSibling();
     }
 
     private void Update()
@@ -138,6 +149,12 @@ public class ButtonsManager : MonoBehaviour
             DesactivarVisualizacion(uiVelocidad);
             velocidadActivada = false;
         }
+    }
+
+    public void SalirDeModoCientifico()
+    {
+        //Regresamos a la ultima escena antes del experimento
+        ScenesManager.Instance.SolicitarCambioDeEscena(ScenesManager.Instance.LastSceneName);
     }
 
 }

@@ -1,9 +1,27 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class UI2DController : MonoBehaviour
 {
+    //Referencia al Objeto de UI de Transicion
+    private Transform objTransicion;
+
+    //-----------------------------------------------------
+
+    private void Awake()
+    {
+        //Obtenemos referencia a la transicion
+        objTransicion = transform.Find("Transition");
+    }
+
+    //---------------------------------------------------------
+
+    private void PosicionarTransicionDetras()
+    {
+        objTransicion.SetAsFirstSibling();
+    }
+
+    //---------------------------------------------------------
+
     public void MoverArriba()
     {
         Manager2D.Instance.MoveInput = Vector3.up;

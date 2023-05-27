@@ -1,31 +1,32 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//********************************************
 //Script para controlar los cambios de Escena
+//*********************************************
 
 public class ScenesManager : MonoBehaviour
 {
+    //Variable de Instancia unica
     public static ScenesManager Instance;
 
-    //Referencia al Animator que controla la Transicion
+    //Referencia al Animator que controla la Transicion de una Escena
     private Animator transitionAnimator;
 
-    //Datos de la �tlima Escena 
-    private string lastSceneName;
-    private int lastSceneIndex;
+    //Datos de la utlima Escena 
+    [HideInInspector] public string LastSceneName { get; private set; }
+    [HideInInspector] public int LastSceneIndex { get; private set; }
 
     //Datos de la Escena abierta actualmente
-    private string actualSceneName;
-    private int actualSceneIndex;
+    [HideInInspector] public string actualSceneName { get; private set; }
+    [HideInInspector] public int actualSceneIndex { get; private set; }
 
     //Datos de la siguiente Escena a abrir
-    private string nextSceneName;
+    [HideInInspector] public string NextSceneName { get; private set; }
 
     //Tiempo de espera 
-    [SerializeField] private int tiempoEspera;
+    private float tiempoEspera = 1.75f;
 
     //-------------------------------------------------------------
 
@@ -39,6 +40,7 @@ public class ScenesManager : MonoBehaviour
 
     private void Start()
     {
+        //Asignamos al SceneManager como DELEGADO de los Eventos de Escena cargada y Descargada
         SceneManager.sceneLoaded += OnSceneLoadedDelegate;
         SceneManager.sceneUnloaded += OnSceneUnloadedDelegate;
     }
@@ -47,10 +49,9 @@ public class ScenesManager : MonoBehaviour
 
     private void OnSceneUnloadedDelegate(Scene escenaDescargada)
     {
-        //Actualizamos los datos de la ultima escena
-        lastSceneIndex = escenaDescargada.buildIndex;
-        lastSceneName = escenaDescargada.name;
-        print("La escena anterior fue " + lastSceneName);
+        //Actualizamos los datos de la ultima escena previa al cambio
+        LastSceneIndex = escenaDescargada.buildIndex;
+        LastSceneName = escenaDescargada.name;
     }
 
     private void OnSceneLoadedDelegate(Scene escenaCargada, LoadSceneMode arg1)
@@ -58,20 +59,15 @@ public class ScenesManager : MonoBehaviour
         //Actualizamos los datos de la Escena actual
         actualSceneIndex = escenaCargada.buildIndex;
         actualSceneName = escenaCargada.name;
-        print("La escena actual es: " + actualSceneName);
     }
 
     //------------------------------------------------------
 
     public void EmpezarJuego()
     {
-        //Cargamos la escena -> El Main Menu siempre tiene animacion
-        //GameObject objTransition = GameObject.Find("Transition");
-        //transitionAnimator = objTransition.GetComponent<Animator>();
-
-        //StartCoroutine(CargarEscenaConAnimacion("Plantilla2D"));
-
-        CargarEscena("Plantilla2D");
+        //Cargamos la Escena Inicial del Juego
+        //Por ahora es el Laboratorio
+        SolicitarCambioDeEscena("2DLabPrincipal");
     }
 
     //------------------------------------------------------
@@ -79,23 +75,30 @@ public class ScenesManager : MonoBehaviour
     public void SolicitarCambioDeEscena(string nextName)
     {
         //Actualizamos los valores de siguiente escena
-        nextSceneName = nextName;
+        NextSceneName = nextName;
 
         //Definimos una variable para buscar el Object que contiene la transicion
         GameObject objTransition = GameObject.Find("Transition");
 
-        //Si  encontramos la Trasici�n
+        //Si  encontramos la Trasicion
         if (objTransition != null)
         {
-            //Obtenemos referencia al objeto de UI encargado de la transicion en la Escena
-            transitionAnimator = objTransition.GetComponent<Animator>();
+            //Colocamos el objeto de transicion al frente
+            objTransition.transform.SetAsLastSibling();
+
+            //Obtenemos referencia al Animator del Objeto UI PADRE para la transicion de la Escena
+            transitionAnimator = objTransition.GetComponentInParent<Animator>();
 
             //Cargamos la escena mientras respetamos la animaci�n que se esta ejecutando
-            StartCoroutine(CargarEscenaConAnimacion(nextSceneName));
+            StartCoroutine(CargarEscenaConAnimacion(NextSceneName));            
         }
 
         //Caso contrario, simplemente cargamos la escena
-        else CargarEscena(nextSceneName);
+        else
+        {
+            CargarEscena(NextSceneName);
+        }
+
 
     }
 
@@ -105,11 +108,14 @@ public class ScenesManager : MonoBehaviour
         //Disparamos el Trigger para reproducir animacion de FadeIn
         transitionAnimator.SetTrigger("StartTransition");
 
-        //Esperamos a que se ejecute la animacion
+        //Esperamos a que se ejecute la animacion (1.75 segundos)
         yield return new WaitForSeconds(tiempoEspera);
 
         //Cargamos la escena
         SceneManager.LoadScene(nombreSiguienteEscena);
+
+        //Detenemos la Corutina
+        StopAllCoroutines();
     }
 
     //-------------------------------------------------------------

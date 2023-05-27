@@ -17,7 +17,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1904836677761429839
 Transform:
@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   personajes:
+  - {fileID: 11400000, guid: c74ca6692709c824db7ebb0229de0f0a, type: 2}
   - {fileID: 11400000, guid: 352c7cb9f08516d46b75ec2d40b366f7, type: 2}
   - {fileID: 11400000, guid: 363f7275f0a67354b86f05510bfbec9e, type: 2}
   - {fileID: 11400000, guid: dc87798058544ad4487f30ee1d6f7045, type: 2}

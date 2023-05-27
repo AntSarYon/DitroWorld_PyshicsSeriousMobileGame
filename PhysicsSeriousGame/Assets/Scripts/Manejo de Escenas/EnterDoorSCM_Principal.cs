@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnterDoorSCM_Principal : MonoBehaviour
@@ -9,7 +7,7 @@ public class EnterDoorSCM_Principal : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            GameObject.Find("ScenesManager").GetComponent<ScenesManager>().SolicitarCambioDeEscena("SCM_Principal");
+            ScenesManager.Instance.SolicitarCambioDeEscena("3DTutorial");
         }
     }
 }

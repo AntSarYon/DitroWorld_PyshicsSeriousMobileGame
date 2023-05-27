@@ -54,12 +54,6 @@ public class TouchDeteccion : MonoBehaviour
                     rigidBodySeleccionado = hitClick.transform.GetComponent<Rigidbody>();
                     ColliderSeleccionado = hitClick.transform.GetComponent<Collider>();
                 }
-
-                else if (hitClick.transform.CompareTag("Salida"))
-                {
-                    GameObject.Find("ScenesManager").GetComponent<ScenesManager>().SolicitarCambioDeEscena("Plantilla2D");
-
-                }
             }
         }
     }
