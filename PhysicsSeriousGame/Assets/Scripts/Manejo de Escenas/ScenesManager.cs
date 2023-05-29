@@ -34,6 +34,10 @@ public class ScenesManager : MonoBehaviour
     {
         //Controlamos la unica instancia del ScenesManager
         ControlarUnicaInstancia();
+
+        //Obtenemos Nombre e Indice de la Primera Escena cargada
+        actualSceneName = SceneManager.GetActiveScene().name;
+        actualSceneIndex = SceneManager.GetActiveScene().buildIndex;
     }
 
     //----------------------------------------------------

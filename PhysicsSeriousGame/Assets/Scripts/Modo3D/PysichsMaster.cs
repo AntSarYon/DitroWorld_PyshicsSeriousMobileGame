@@ -6,7 +6,7 @@ using static Cinemachine.CinemachineFreeLook;
 public class PysichsMaster : MonoBehaviour
 {
     //Distancia del rayo
-    [SerializeField] float rangoDeteccion = 25f;
+    private float rangoDeteccion = 200f;
 
     //Referencia al Script de Orbita
     private OrbitaController mOrbita;
@@ -17,10 +17,14 @@ public class PysichsMaster : MonoBehaviour
     [SerializeField] private GameObject centroRelativo;
 
     //Fuerza para GOLPE
-    [SerializeField] private float fuerzaGolpe;
+    private float fuerzaGolpe = 25f;
     
     //Data del objeto impactado por el Rayo
     private RaycastHit hitPointer;
+
+    //GETTERS Y SETTERS
+    public float RangoDeteccion { get => rangoDeteccion; set => rangoDeteccion = value; }
+    public float FuerzaGolpe { get => fuerzaGolpe; set => fuerzaGolpe = value; }
 
     //------------------------------------------------------------
     private void Awake()
@@ -105,6 +109,50 @@ public class PysichsMaster : MonoBehaviour
 
         //Lo asignamos como nuevo punto de orbita
         mOrbita.ObjetoSeguido = centro.transform;
+    }
+
+    //-------------------------------------------------------------------
+
+    public void IncrementarFuerza()
+    {
+        //Solo si la fuerza es superior a 50 000..
+        if (FuerzaGolpe < 50000)
+        {
+            //La aumentamos en 5
+            FuerzaGolpe += 5;
+        }
+    }
+
+    public void ReducirFuerza()
+    {
+        //Solo si la fuerza es superior a 0..
+        if (FuerzaGolpe > 0)
+        {
+            //La reducimos en 5
+            FuerzaGolpe -= 5;
+        }
+
+    }
+
+    public void IncrementarMasa()
+    {
+        mTouchDeteccion.RigidBodySeleccionado.mass += 0.5f;
+    }
+
+    public void ReducirMasa()
+    {
+        mTouchDeteccion.RigidBodySeleccionado.mass -= 0.5f;
+
+    }
+
+    public void IncrementarFriccion()
+    {
+        mTouchDeteccion.RigidBodySeleccionado.drag += 0.5f;
+    }
+
+    public void ReducirFriccion()
+    {
+        mTouchDeteccion.RigidBodySeleccionado.drag -= 0.5f;
     }
 
     //--------------------------------------------------------------

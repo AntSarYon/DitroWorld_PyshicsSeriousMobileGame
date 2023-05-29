@@ -10,9 +10,7 @@ public class PlayerMovement : MonoBehaviour
     private CapsuleCollider2D mCollider;
     private Animator mAnimator;
 
-    //Variable para la Dirección de movimiento
-    private Vector3 mMoveInput = Vector3.zero;
-
+    //Velocidad de movimiento
     private float walkSpeed = 4;
 
     //-----------------------------------------------------
@@ -40,11 +38,9 @@ public class PlayerMovement : MonoBehaviour
         );
         
     }
-    //-----------------------------------------------------
-
-
 
     //-----------------------------------------------------
+
     private void Animations()
     {
         //Si la dirección Input esta recibiendo algo...

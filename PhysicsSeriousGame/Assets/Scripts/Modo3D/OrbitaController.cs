@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class OrbitaController : MonoBehaviour
 {
-    //Angulo horizontal en que se visualiza al objeto
+    //Angulo en que se visualiza al objeto
     private Vector2 anguloVision;
 
     [SerializeField] private Transform objetoSeguido;
@@ -28,14 +28,6 @@ public class OrbitaController : MonoBehaviour
 
         //Inicializamos el angulo para que inicie siempre detrás del Punto inicial
         anguloVision = new Vector2(90 * Mathf.Deg2Rad, 0);
-    }
-
-    //---------------------------------------------------------------------------------
-
-    private void Start()
-    {
-        //Bloqueamos el Mouse para que no se visualice mientras jugamos
-        //Cursor.lockState = CursorLockMode.Locked;
     }
 
     //---------------------------------------------------------------------------------

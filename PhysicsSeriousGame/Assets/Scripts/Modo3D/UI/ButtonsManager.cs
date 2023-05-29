@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class ButtonsManager : MonoBehaviour
 {
@@ -11,15 +12,19 @@ public class ButtonsManager : MonoBehaviour
     [SerializeField] private GameObject CameraPlayer;
 
     private TouchDeteccion PlayerTouchDetection;
+    private PysichsMaster PlayerPhysicsMaster;
 
     //Lista de botones de gravedad (hijos)
     [SerializeField] private List<GameObject> optsGravedad;
 
+    //Lista de interfaces de UI
     [SerializeField] private List<GameObject> uiMasa;
     [SerializeField] private List<GameObject> uiVelocidad;
     [SerializeField] private List<GameObject> uiFriccion;
-    
 
+    [SerializeField] private TextMeshProUGUI textFuerza;
+
+    //Lista de Textos de propiedades físicas
     [SerializeField] private TextMeshProUGUI textMasa;
     [SerializeField] private TextMeshProUGUI textVelocidad;
     [SerializeField] private TextMeshProUGUI textFriccion;
@@ -36,6 +41,7 @@ public class ButtonsManager : MonoBehaviour
     {
         //Obtenemos referencias
         PlayerTouchDetection = CameraPlayer.GetComponent<TouchDeteccion>();
+        PlayerPhysicsMaster = CameraPlayer.GetComponent<PysichsMaster>();
 
         //Obtenemos referencia a la transicion
         objTransicion = transform.Find("Transition");
@@ -54,10 +60,12 @@ public class ButtonsManager : MonoBehaviour
 
     private void Update()
     {
+        textFuerza.text = PlayerPhysicsMaster.FuerzaGolpe.ToString();
+
         //Si hay un RigidBody seleccionado
         if (PlayerTouchDetection.RigidBodySeleccionado != null)
         {
-            textMasa.text = "Masa: " + PlayerTouchDetection.RigidBodySeleccionado.mass.ToString() + " kg.";
+            textMasa.text = "Masa: " + PlayerTouchDetection.RigidBodySeleccionado.mass.ToString("F2") + " kg.";
             textVelocidad.text = "Velocidad: " + PlayerTouchDetection.RigidBodySeleccionado.velocity.magnitude.ToString("F2") + " m/s";
             textFriccion.text = "Friccion: " + PlayerTouchDetection.RigidBodySeleccionado.drag.ToString("F2");
         }
@@ -71,24 +79,30 @@ public class ButtonsManager : MonoBehaviour
     }
 
 
+    //--------------------------------------------------------------------
 
-    private void ActivarVisualizacion(List<GameObject> ui)
+    private void ControlarVisualizacion(List<GameObject> ui, bool flag)
     {
+        if (!flag)
+        {
             //Por cada boton de gravedad
             for (int i = 0; i < ui.Count; i++)
             {
                 //Lo activamos
                 ui[i].SetActive(true);
             }
-    }
-
-    private void DesactivarVisualizacion(List<GameObject> ui)
-    {
+            flag = true;
+        }
+        else
+        {
             //Caso contrario, desactivamos los botones.
             for (int i = 0; i < ui.Count; i++)
             {
                 ui[i].SetActive(false);
             }
+            flag = false;
+        }
+            
     }
 
 
@@ -96,59 +110,23 @@ public class ButtonsManager : MonoBehaviour
 
     public void ControlarBotonesGravedad()
     {
-        if (!gravedadActivada)
-        {
-            ActivarVisualizacion(optsGravedad);
-            gravedadActivada=true;
-        }
-        else
-        {
-            DesactivarVisualizacion(optsGravedad);
-            gravedadActivada = false;
-        }
+        ControlarVisualizacion(optsGravedad, gravedadActivada);
     }
             
 
     public void ControlarVisualizacionDeMasa()
     {
-        if (!masaActivada)
-        {
-            ActivarVisualizacion(uiMasa);
-            masaActivada = true;
-        }
-        else
-        {
-            DesactivarVisualizacion(uiMasa);
-            masaActivada = false;
-        }
+        ControlarVisualizacion(uiMasa, masaActivada);
     }
 
     public void ControlarVisualizacionDeFriccion()
     {
-        if (!friccionActivada)
-        {
-            ActivarVisualizacion(uiFriccion);
-            friccionActivada = true;
-        }
-        else
-        {
-            DesactivarVisualizacion(uiFriccion);
-            friccionActivada = false;
-        }
+        ControlarVisualizacion(uiFriccion, friccionActivada);
     }
 
     public void ControlarVisualizacionDeVelocidad()
     {
-        if (!velocidadActivada)
-        {
-            ActivarVisualizacion(uiVelocidad);
-            velocidadActivada = true;
-        }
-        else
-        {
-            DesactivarVisualizacion(uiVelocidad);
-            velocidadActivada = false;
-        }
+        ControlarVisualizacion(uiVelocidad, velocidadActivada);
     }
 
     public void SalirDeModoCientifico()

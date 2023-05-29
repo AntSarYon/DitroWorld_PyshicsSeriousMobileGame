@@ -15,12 +15,17 @@ public class MenuSeleccionPersonaje : MonoBehaviour
     //Referencia al Texto para el nombre del eprosnaje en la UI
     [SerializeField] private TextMeshProUGUI uiNombre;
 
+    [SerializeField] private List<AudioClip> listaAudios;
+
+    private AudioSource mAudioSource;
+
     //------------------------------------------------------------
 
     private void Awake()
     {
-       //Inicializamos el Index en 0
-       index = 0;
+        //Inicializamos el Index en 0
+        index = 0;
+        mAudioSource = GetComponent<AudioSource>();
     }
 
     //------------------------------------------------------------
@@ -88,6 +93,20 @@ public class MenuSeleccionPersonaje : MonoBehaviour
     }
 
     //------------------------------------------------------------------------
+
+    public void btnPlaySound()
+    {
+        mAudioSource.PlayOneShot(listaAudios[0], 0.55f);
+    }
+
+    //---------------------------------------------------------------------
+
+    public void btnOtherSound()
+    {
+        mAudioSource.PlayOneShot(listaAudios[1], 0.55f);
+    }
+
+    //----------------------------------------------------------------------------
 
     public void IniciarJuego()
     {

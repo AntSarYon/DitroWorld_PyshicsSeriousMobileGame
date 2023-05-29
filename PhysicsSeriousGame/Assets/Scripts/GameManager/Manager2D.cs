@@ -7,7 +7,7 @@ public class Manager2D : MonoBehaviour
     //Creamos referencia de instancia
     public static Manager2D Instance;
 
-    private Vector3 mMoveInput;
+    [SerializeField] private Vector3 mMoveInput;
 
     //--------------------------------------------
     //GETTERS Y SETTERS
@@ -17,21 +17,8 @@ public class Manager2D : MonoBehaviour
 
     private void Awake()
     {
-        ControlarUnicaInstancia();
+        Instance = this;
     }
 
     //--------------------------------------------
-
-    private void ControlarUnicaInstancia()
-    {
-        if (Manager2D.Instance == null)
-        {
-            Manager2D.Instance = this;
-            DontDestroyOnLoad(this.gameObject);
-        }
-        else
-        {
-            Destroy(this.gameObject);
-        }
-    }
 }

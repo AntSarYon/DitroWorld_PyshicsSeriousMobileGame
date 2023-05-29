@@ -46,4 +46,9 @@ public class UI2DController : MonoBehaviour
     {
         Manager2D.Instance.MoveInput = Vector3.zero;
     }
+
+    public void VolverAlMenu()
+    {
+        ScenesManager.Instance.SolicitarCambioDeEscena("MainMenu");
+    }
 }

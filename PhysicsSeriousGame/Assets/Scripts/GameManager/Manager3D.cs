@@ -1,30 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Manager3D : MonoBehaviour
 {
     //Creamos referencia de instancia
     public static Manager3D Instance;
 
+    [SerializeField] private bool teVeo;
     //--------------------------------------------
 
     private void Awake()
     {
-        ControlarUnicaInstancia();
+        Instance = this;
     }
 
     //--------------------------------------------
-    private void ControlarUnicaInstancia()
-    {
-        if (Manager3D.Instance == null)
-        {
-            Manager3D.Instance = this;
-            DontDestroyOnLoad(this.gameObject);
-        }
-        else
-        {
-            Destroy(this.gameObject);
-        }
-    }
 }

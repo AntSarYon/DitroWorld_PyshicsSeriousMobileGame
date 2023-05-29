@@ -42,7 +42,7 @@ public class TouchDeteccion : MonoBehaviour
 
             // Usamos el rayo para hacer un RayCast en la escena - Almacenamos el resultado
             //Si es que impacta
-            if (Physics.Raycast(ray, out hitClick, 100))
+            if (Physics.Raycast(ray, out hitClick, 200))
             {
                 //Si el objeto tiene la Etiqueta de ObjetoFísico
                 if (hitClick.transform.CompareTag("PhysicObject"))
@@ -50,7 +50,7 @@ public class TouchDeteccion : MonoBehaviour
                     //Lo  asignamos como punto de oribta
                     mOrbita.ObjetoSeguido = hitClick.transform;
 
-                    //Almacenamos su Rigidbody
+                    //Almacenamos su Rigidbody y Collider
                     rigidBodySeleccionado = hitClick.transform.GetComponent<Rigidbody>();
                     ColliderSeleccionado = hitClick.transform.GetComponent<Collider>();
                 }

@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class FollowController : MonoBehaviour
 {
-    public GameObject player;
+    //Referencia al jugador
+    private GameObject player;
+
     private bool perseguir;
-    [SerializeField] private float speed;
-    [SerializeField] private float distanciaLimite;
+    private float speed;
+    private float distanciaLimite;
+
     private CircleCollider2D mCollider;
     private Animator mAanimator;
     private SpriteRenderer mRenderer;
@@ -25,13 +28,17 @@ public class FollowController : MonoBehaviour
         perseguir = false;
 
         //Iniciaizamos varibales
-        //speed = 3f;
+        speed = 2.75f;
+        distanciaLimite = 1.75f;
     }
 
     private void Start()
     {
+        //Encontramos al Jugador
         player = GameObject.Find("Player");
-        //transform.SetParent(player.transform);
+
+        //Asignamos que nuestra posicion sea la misma que la de él
+        transform.position = player.transform.position;
     }
 
     //------------------------------------------------------
@@ -44,7 +51,7 @@ public class FollowController : MonoBehaviour
             MirarAlJugador();
             ControlarMovimiento();
         }
-
+        //Caso contrario; perseguimos al Jugador
         else if (Vector2.Distance(transform.position, player.transform.position) > distanciaLimite)
         {
             perseguir = true;

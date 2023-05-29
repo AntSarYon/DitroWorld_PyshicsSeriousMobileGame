@@ -18,7 +18,8 @@ public class GameManager : MonoBehaviour
         ControlarUnicaInstancia();
     }
 
-    //--------------------------------------------
+    //----------------------------------------------
+
     private void ControlarUnicaInstancia()
     {
         if (GameManager.Instance == null)
@@ -31,4 +32,6 @@ public class GameManager : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+
+    //----------------------------------------------
 }

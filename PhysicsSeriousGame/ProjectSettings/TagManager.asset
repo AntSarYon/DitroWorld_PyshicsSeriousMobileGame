@@ -11,6 +11,7 @@ TagManager:
   - Dron
   - PhysicObject
   - Salida
+  - Evento3D
   layers:
   - Default
   - TransparentFX
@@ -27,7 +28,7 @@ TagManager:
   - NPCCharacter
   - Dron
   - PhysicObject
-  - 
+  - Evento3D
   - 
   - 
   - 
