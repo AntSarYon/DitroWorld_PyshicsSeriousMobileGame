@@ -5,8 +5,12 @@ using System;
 
 public class Dialog : MonoBehaviour
 {
-    //Referencia al icono de exclamacion
+    //Referencia al icono de Dialogo
     private GameObject iconoDialogo;
+
+    //Referencia a Componentes
+    private AudioSource mAudioSource;
+    [SerializeField] AudioClip clipDialogo;
 
     //Flags de Estado
     private bool jugadorCerca;
@@ -19,10 +23,6 @@ public class Dialog : MonoBehaviour
     //Array que almacenará las líneas de diálogo del NPC
     [SerializeField, TextArea(4,6)] private string[] lineasDialogo;
 
-    //Referencia a objetos de interfazGrafica para el dialogo
-    [SerializeField] private GameObject dialogPanel;
-    [SerializeField] private TextMeshProUGUI dialogText;
-
     //-----------------------------------------------------------
     
     private void Awake()
@@ -30,42 +30,49 @@ public class Dialog : MonoBehaviour
         //Inicializamos flag de jugador cercano a falso
         jugadorCerca = false;
 
+        //Referencia a componentes
+        mAudioSource = GetComponent<AudioSource>();
+
         //Obtenemos referencia al icono de excalamacion del NPC
-        iconoDialogo = transform.Find("Exclamation").gameObject;
+        iconoDialogo = transform.Find("icoDialogo").gameObject;
     }
 
-    //-----------------------------------------------------------
-    
-    void Update()
+    //--------------------------------------------------------------
+    //Funció para cuando se oprima el Boton de Dialogo
+
+    public void DialogoOprimido()
     {
-        //Si el jugador esta cerca, y oprimimos ESPACIO <-- CONFIGURAR DESPUES
-        if (jugadorCerca && Input.GetKeyDown(KeyCode.Space))
+        //Si el jugador esta cerca, el Flag de Dialogo proximo esta Activo
+        if (jugadorCerca && Manager2D.Instance.FlagDialogo)
         {
-            //Si el dialogo aun no se ha iniciado
+            //Reproducimos el sonido de Dialogo
+            mAudioSource.PlayOneShot(clipDialogo, 0.5f);
+
+            // Si el dialogo aun no ha iniciado
             if (!dialogoIniciado)
             {
                 //Iniciamos dialogo mostrando la primera linea
                 IniciarDialogo();
             }
             //En caso ya haya iniciado, y se haya terminado de escribir la primera linea
-            else if (dialogText.text.Equals(lineasDialogo[indiceLinea]))
+            else if (UI2DController.Instance.InteractionText.text.Equals(lineasDialogo[indiceLinea]))
             {
-                //Pasamos a la sigueinte linea
+                //Cuando hagamos Click, Pasamos a la sigueinte linea
                 SiguienteLinea();
             }
             //En caso ya haya iniciado, pero aun no se termina de escribir la linea completa
             else
             {
-                //Detenemos la corrutina de escritura en proceso
+                //Cuando hagamos Click, Detenemos la corrutina de escritura en proceso
                 StopAllCoroutines();
 
                 //Mostramos la linea de dialogo completa
-                dialogText.text = lineasDialogo[indiceLinea];
+                UI2DController.Instance.InteractionText.text = lineasDialogo[indiceLinea];
             }
         }
     }
 
-    //--------------------------------------------------------------
+    //---------------------------------------------------------------
 
     private void IniciarDialogo()
     {
@@ -73,7 +80,7 @@ public class Dialog : MonoBehaviour
         dialogoIniciado = true;
 
         //Activamos el panel de dialogo
-        dialogPanel.SetActive(true);
+        UI2DController.Instance.InteractionPanel.SetActive(true);
 
         //Desactivamos la visualizacion del icono de dialogo
         iconoDialogo.SetActive(false);
@@ -99,10 +106,12 @@ public class Dialog : MonoBehaviour
         //Verificamos que la linea no exceda el limite de lineas
         if (indiceLinea < lineasDialogo.Length)
         {
+            //Empezamos a mostrar la linea
             StartCoroutine(MostrarLinea());
         }
         else
         {
+            //Terminamos el Dialogo
             TerminarDialogo();
         }
     }
@@ -116,7 +125,7 @@ public class Dialog : MonoBehaviour
         dialogoIniciado = false;
 
         //Activamos el panel de dialogo
-        dialogPanel.SetActive(false);
+        UI2DController.Instance.InteractionPanel.SetActive(false);
 
         //Volvemos a mostrar el icono de dialogo
         iconoDialogo.SetActive(true);
@@ -126,11 +135,17 @@ public class Dialog : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //Si el jugador entra a la zona de Dialogo
         if (collision.gameObject.CompareTag("Player"))
         {
-            //Activamos el Flag y mostramos el icono de dialogo
+            //Activamos el Flag de jugadorCerca
             jugadorCerca = true;
-            iconoDialogo.SetActive(true);            
+            //Mostramos el icono de dialogo
+            iconoDialogo.SetActive(true);
+            //Asignamos referencia a este Objeto como el propietario del Dialogo
+            Manager2D.Instance.ObjetoDialogo = this.gameObject;
+            //Activamos el Flag de Evento de Dialogo proximo
+            Manager2D.Instance.FlagDialogo = true;
         }
 
     }
@@ -139,11 +154,15 @@ public class Dialog : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        //Si el jugador SALE DE la zona de Dialogo
         if (collision.gameObject.CompareTag("Player"))
         {
-            //Activamos tanto el Flag como el icono de dialogo
+            //Desactivamos el Flag de JugadorCerca
             jugadorCerca = false;
+            //Desactivamos el icono de dialogo
             iconoDialogo.SetActive(false);
+            //Desactivamos el Flag de Evento de Dialogo proximo
+            Manager2D.Instance.FlagDialogo = false;
         }
     }
 
@@ -151,13 +170,13 @@ public class Dialog : MonoBehaviour
     private IEnumerator MostrarLinea()
     {
         //Inicialmente el cuadro de texto estará vacio
-        dialogText.text = String.Empty;
+        UI2DController.Instance.InteractionText.text = String.Empty;
 
         //Por cada caracter en la linea de diálogo
         foreach (char ch in lineasDialogo[indiceLinea])
         {
             //Incrementamos el caracter al texto mostrado
-            dialogText.text += ch;
+            UI2DController.Instance.InteractionText.text += ch;
 
             //Esperamos unas milesimas de segundo (real -> ignora la escala de tiempo seteada)
             yield return new WaitForSecondsRealtime(tiempoTipeo);
