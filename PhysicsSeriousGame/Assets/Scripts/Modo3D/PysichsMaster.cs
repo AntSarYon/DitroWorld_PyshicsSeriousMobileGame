@@ -25,6 +25,8 @@ public class PysichsMaster : MonoBehaviour
     //GETTERS Y SETTERS
     public float RangoDeteccion { get => rangoDeteccion; set => rangoDeteccion = value; }
     public float FuerzaGolpe { get => fuerzaGolpe; set => fuerzaGolpe = value; }
+    public GameObject Centro { get => centro; set => centro = value; }
+    public GameObject CentroRelativo { get => centroRelativo; set => centroRelativo = value; }
 
     //------------------------------------------------------------
     private void Awake()
@@ -41,6 +43,9 @@ public class PysichsMaster : MonoBehaviour
         //Compruebo si hay un RigidBody asignado
         if (mTouchDeteccion.RigidBodySeleccionado != null)
         {
+            //Asignamos que desde el golpe, le haremos seguimiento al Objeto en concreto
+            //mOrbita.ObjetoSeguido = mTouchDeteccion.RigidBodySeleccionado.transform;
+
             //Disparo un rayo para obtener un punto de contacto con el objeto en la escena.
             if (Physics.Raycast(transform.position, transform.forward, out hitPointer, rangoDeteccion))
             {
@@ -90,6 +95,9 @@ public class PysichsMaster : MonoBehaviour
     //--------------------------------------------------------------
     public void DesacoplarseDeObjeto()
     {
+        //Hacemos que el Centro relativo ya no sea hijo del Objeto fisico
+        centroRelativo.transform.SetParent(null);
+
         //Actualizamos la posicion del Centro Relativo en base al ultimo objeto seleccionado
         centroRelativo.transform.position = mOrbita.ObjetoSeguido.transform.position;
 

@@ -12,6 +12,7 @@ TagManager:
   - PhysicObject
   - Salida
   - Evento3D
+  - FixedObject
   layers:
   - Default
   - TransparentFX
@@ -29,7 +30,7 @@ TagManager:
   - Dron
   - PhysicObject
   - Evento3D
-  - 
+  - FixedObject
   - 
   - 
   - 

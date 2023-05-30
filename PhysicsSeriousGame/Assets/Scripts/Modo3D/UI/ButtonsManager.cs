@@ -9,11 +9,22 @@ public class ButtonsManager : MonoBehaviour
     //Referencia al Objeto de UI de Transicion
     private Transform objTransicion;
 
+    //Referencia y variables para el sonido
+    private AudioSource mAudioSource;
+
+    [Header("Clips de Audio")]
+    [SerializeField] private AudioClip clipAtributoSeleccionado;
+    [SerializeField] private AudioClip clipCambioGravedad;
+    [SerializeField] private AudioClip clipModificarParametro;
+    [SerializeField] private AudioClip[] clipAplicaFuerza = new AudioClip[2];
+
+    [Header("Referencia a Player (Camara)")]
     [SerializeField] private GameObject CameraPlayer;
 
     private TouchDeteccion PlayerTouchDetection;
     private PysichsMaster PlayerPhysicsMaster;
 
+    [Header("Objetos de UI")]
     //Lista de botones de gravedad (hijos)
     [SerializeField] private List<GameObject> optsGravedad;
 
@@ -42,6 +53,7 @@ public class ButtonsManager : MonoBehaviour
         //Obtenemos referencias
         PlayerTouchDetection = CameraPlayer.GetComponent<TouchDeteccion>();
         PlayerPhysicsMaster = CameraPlayer.GetComponent<PysichsMaster>();
+        mAudioSource = GetComponent<AudioSource>();
 
         //Obtenemos referencia a la transicion
         objTransicion = transform.Find("Transition");
@@ -83,7 +95,7 @@ public class ButtonsManager : MonoBehaviour
 
     private void ControlarVisualizacion(List<GameObject> ui, bool flag)
     {
-        if (!flag)
+        if (flag == false)
         {
             //Por cada boton de gravedad
             for (int i = 0; i < ui.Count; i++)
@@ -93,7 +105,7 @@ public class ButtonsManager : MonoBehaviour
             }
             flag = true;
         }
-        else
+        else if (flag )
         {
             //Caso contrario, desactivamos los botones.
             for (int i = 0; i < ui.Count; i++)
@@ -111,22 +123,48 @@ public class ButtonsManager : MonoBehaviour
     public void ControlarBotonesGravedad()
     {
         ControlarVisualizacion(optsGravedad, gravedadActivada);
+        gravedadActivada = !gravedadActivada;
     }
             
 
     public void ControlarVisualizacionDeMasa()
     {
         ControlarVisualizacion(uiMasa, masaActivada);
+        masaActivada = !masaActivada;
     }
 
     public void ControlarVisualizacionDeFriccion()
     {
         ControlarVisualizacion(uiFriccion, friccionActivada);
+        friccionActivada = !friccionActivada;
     }
 
     public void ControlarVisualizacionDeVelocidad()
     {
         ControlarVisualizacion(uiVelocidad, velocidadActivada);
+        velocidadActivada = !velocidadActivada;
+    }
+
+    //------------------------------------------------------------------------------
+
+    public void ReproducirCambioDeGravedad()
+    {
+        mAudioSource.PlayOneShot(clipCambioGravedad, 0.5f);
+    }
+
+    public void ReproducirUsoDeFuerza()
+    {
+        mAudioSource.PlayOneShot(clipAplicaFuerza[Random.Range(0,2)], 0.5f);
+    }
+
+    public void ReproducirModificacionDeParametro()
+    {
+        mAudioSource.PlayOneShot(clipModificarParametro, 0.5f);
+    }
+
+    public void ReproducirSeleccionDeAtributo()
+    {
+        mAudioSource.PlayOneShot(clipAtributoSeleccionado, 0.5f);
     }
 
     public void SalirDeModoCientifico()

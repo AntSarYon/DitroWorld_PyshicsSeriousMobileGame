@@ -6,12 +6,16 @@ public class TouchDeteccion : MonoBehaviour
 {
     //Referencia al Script de Orbita
     private OrbitaController mOrbita;
+    private PysichsMaster mPysichsMaster;
 
     //Contenedor del RigidBody del Objeto seleccionado
     private Rigidbody rigidBodySeleccionado;
 
     //Contenedor del RigidBody del Objeto seleccionado
     private Collider colliderSeleccionado;
+
+    private AudioSource mAudioSource;
+    [SerializeField] private AudioClip clipSeleccionDeObjeto;
 
     //GETTERS Y SETTERS
     public Rigidbody RigidBodySeleccionado { get => rigidBodySeleccionado; set => rigidBodySeleccionado = value; }
@@ -23,6 +27,8 @@ public class TouchDeteccion : MonoBehaviour
     {
         //Obtenemos referencia al Orbita Controller
         mOrbita = GetComponent<OrbitaController>();
+        mPysichsMaster = GetComponent<PysichsMaster>();
+        mAudioSource = GetComponent<AudioSource>();
     }
 
     //--------------------------------------------------
@@ -47,12 +53,24 @@ public class TouchDeteccion : MonoBehaviour
                 //Si el objeto tiene la Etiqueta de ObjetoFísico
                 if (hitClick.transform.CompareTag("PhysicObject"))
                 {
-                    //Lo  asignamos como punto de oribta
-                    mOrbita.ObjetoSeguido = hitClick.transform;
+                    //Reproducimos sonido de Seleccion de Objeto
+                    mAudioSource.PlayOneShot(clipSeleccionDeObjeto, 0.5f);
 
-                    //Almacenamos su Rigidbody y Collider
+                    //Hacemos que el Centro Relativo se coloque en el punto de impacto
+                    mPysichsMaster.CentroRelativo.transform.position = hitClick.point; //<-- Esto no estaba
+
+                    //Asignamos el Centro relativo como como punto de oribta
+                    mOrbita.ObjetoSeguido = mPysichsMaster.CentroRelativo.transform;
+
+                    //Hacemos que el CentroRelativo sea HIjo del Objeto Físico <-- Así lo seguirá
+                    mPysichsMaster.CentroRelativo.transform.SetParent(hitClick.transform);
+
+                    //Almacenamos el Rigidbody y Collider del Objeto Real cn el cual estamos interactuando
                     rigidBodySeleccionado = hitClick.transform.GetComponent<Rigidbody>();
                     ColliderSeleccionado = hitClick.transform.GetComponent<Collider>();
+
+                    //De esta forma, rotaremos en base al punto que tocamos, pero el objeto físico afectado si
+                    //será el que corresponda
                 }
             }
         }
