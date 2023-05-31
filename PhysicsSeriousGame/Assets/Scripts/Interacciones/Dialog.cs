@@ -9,8 +9,8 @@ public class Dialog : MonoBehaviour
     private GameObject iconoDialogo;
 
     //Referencia a Componentes
-    private AudioSource mAudioSource;
-    [SerializeField] AudioClip clipDialogo;
+    //private AudioSource mAudioSource;
+    //[SerializeField] AudioClip clipDialogo;
 
     //Flags de Estado
     private bool jugadorCerca;
@@ -31,7 +31,7 @@ public class Dialog : MonoBehaviour
         jugadorCerca = false;
 
         //Referencia a componentes
-        mAudioSource = GetComponent<AudioSource>();
+        //mAudioSource = GetComponent<AudioSource>();
 
         //Obtenemos referencia al icono de excalamacion del NPC
         iconoDialogo = transform.Find("icoDialogo").gameObject;
@@ -46,7 +46,7 @@ public class Dialog : MonoBehaviour
         if (jugadorCerca && Manager2D.Instance.FlagDialogo)
         {
             //Reproducimos el sonido de Dialogo
-            mAudioSource.PlayOneShot(clipDialogo, 0.5f);
+            //mAudioSource.PlayOneShot(clipDialogo, 0.5f);
 
             // Si el dialogo aun no ha iniciado
             if (!dialogoIniciado)
@@ -161,6 +161,8 @@ public class Dialog : MonoBehaviour
             jugadorCerca = false;
             //Desactivamos el icono de dialogo
             iconoDialogo.SetActive(false);
+            //Asignamos a null la referencia a este Objeto 
+            Manager2D.Instance.ObjetoDialogo = null;
             //Desactivamos el Flag de Evento de Dialogo proximo
             Manager2D.Instance.FlagDialogo = false;
         }

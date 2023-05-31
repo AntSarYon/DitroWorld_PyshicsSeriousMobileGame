@@ -8,9 +8,13 @@ public class UI2DController : MonoBehaviour
     //Variable de Instancia
     public static UI2DController Instance;
 
-    //Referencia a Componentes
+    //Referencia a Componentes de Audio
     private AudioSource mAudioSource;
-
+    [SerializeField] AudioClip clipClicks;
+    [SerializeField] AudioClip clipManipulacion;
+    [SerializeField] AudioClip clipEvento3D;
+    [SerializeField] AudioClip[] clipsDron = new AudioClip[5];
+    
     //Referencia al Objeto de UI de Transicion
     private Transform objTransicion;
 
@@ -81,8 +85,45 @@ public class UI2DController : MonoBehaviour
 
     public void BtnDialogClick()
     {
-        //Llamamos a la funcion de DialogoOprimido desde el Objeto dueño del dialogo
-        Manager2D.Instance.ObjetoDialogo.GetComponent<Dialog>().DialogoOprimido();
+        if (Manager2D.Instance.ObjetoDialogo != null)
+        {
+            //Llamamos a la funcion de DialogoOprimido desde el Objeto dueño del dialogo
+            Manager2D.Instance.ObjetoDialogo.GetComponent<Dialog>().DialogoOprimido();
+            //Reproducimos Sonido de Pokemon
+            mAudioSource.PlayOneShot(clipClicks, 0.5f);
+        }
+            }
+
+    public void BtnObservationClick()
+    {
+        if (Manager2D.Instance.ObjetoObservacion != null)
+        {
+            //Llamamos a la funcion de DialogoOprimido desde el Objeto dueño del dialogo
+            Manager2D.Instance.ObjetoObservacion.GetComponent<Observation>().ObservacionOprimida();
+            ////Reproducimos Sonido de Pokemon
+            mAudioSource.PlayOneShot(clipClicks, 0.5f);
+        }
+    }
+
+    public void BtnManipulationClick()
+    {
+        //if (Manager2D.Instance.ObjetoManipulacion != null)
+        //{
+            //Llamamos a la funcion de DialogoOprimido desde el Objeto dueño del dialogo
+            //Manager2D.Instance.ObjetoManipulacion.GetComponent<Manipulation>().ManipulacionOprimida();
+            //Reproducimos Sonido de Manipulacion
+            mAudioSource.PlayOneShot(clipManipulacion, 0.5f);
+        //}
+    }
+
+    public void BtnComentarioDronClick()
+    {
+        mAudioSource.PlayOneShot(clipsDron[Random.Range(0,5)], 0.5f);
+    }
+
+    public void BtnEvento3DClick()
+    {
+        mAudioSource.PlayOneShot(clipEvento3D, 0.5f);
     }
 
     //---------------------------------------------------------------
