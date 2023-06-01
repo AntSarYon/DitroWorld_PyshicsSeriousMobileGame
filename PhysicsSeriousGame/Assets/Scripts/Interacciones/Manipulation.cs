@@ -76,6 +76,7 @@ public class Manipulation : MonoBehaviour
         {
             //Mostramos el icono de Manipulacion
             iconoManipulacion.SetActive(true);
+            Manager2D.Instance.FlagManipulacionVisible = true;
         }
     }
 
@@ -86,6 +87,7 @@ public class Manipulation : MonoBehaviour
         {
             //Dsactivamos el icono de Manipulacion
             iconoManipulacion.SetActive(false);
+            Manager2D.Instance.FlagManipulacionVisible = false;
         }
     }
 

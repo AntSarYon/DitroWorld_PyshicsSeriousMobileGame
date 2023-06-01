@@ -54,7 +54,7 @@ public class DronCommentsController : MonoBehaviour
                 AsignarYActivarDialogo(dialogoEvento3D);
             }
             //Si hay un Objeto manipulable activo...
-            else if (Manager2D.Instance.FlagManipulacion)
+            else if (Manager2D.Instance.FlagManipulacionVisible)
             {
                 AsignarYActivarDialogo(dialogoManipulacion);
             }

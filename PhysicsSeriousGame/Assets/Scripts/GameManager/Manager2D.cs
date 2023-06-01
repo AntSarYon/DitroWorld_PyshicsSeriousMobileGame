@@ -14,13 +14,17 @@ public class Manager2D : MonoBehaviour
     //Flags para controlar si hay Eventos Activos
     private bool flagDialogo;
     private bool flagObservacion;
+
+    private bool flagManipulacionVisible;
     private bool flagManipulacion;
+
     private bool flagComentarioRobot;
     private bool flagEvento3DProximo;
 
     private GameObject objetoDialogo;
     private GameObject objetoObservacion;
     private GameObject objetoManipulacion;
+    private GameObject objetoEvento3D;
     private GameObject dron;
 
 
@@ -38,6 +42,8 @@ public class Manager2D : MonoBehaviour
     public GameObject ObjetoObservacion { get => objetoObservacion; set => objetoObservacion = value; }
     public GameObject ObjetoManipulacion { get => objetoManipulacion; set => objetoManipulacion = value; }
     public GameObject Dron { get => dron; set => dron = value; }
+    public GameObject ObjetoEvento3D { get => objetoEvento3D; set => objetoEvento3D = value; }
+    public bool FlagManipulacionVisible { get => flagManipulacionVisible; set => flagManipulacionVisible = value; }
 
 
     //--------------------------------------------
@@ -49,7 +55,10 @@ public class Manager2D : MonoBehaviour
 
         //Inicializamos Flags en Falso
         flagComentarioRobot = false;
+
+        flagManipulacionVisible = false;
         flagManipulacion = false;
+
         flagEvento3DProximo = false;
         flagDialogo = false;
         flagObservacion = false;

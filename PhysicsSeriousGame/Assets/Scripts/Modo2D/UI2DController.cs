@@ -157,13 +157,17 @@ public class UI2DController : MonoBehaviour
     }
 
 
-    
 
-        //----------------------------------------------------------------------------------------------------------
 
-        public void BtnEvento3DClick()
+    //----------------------------------------------------------------------------------------------------------
+
+    public void BtnEvento3DClick()
     {
-        mAudioSource.PlayOneShot(clipEvento3D, 0.5f);
+        if (Manager2D.Instance.ObjetoEvento3D != null)
+        {
+            mAudioSource.PlayOneShot(clipEvento3D, 0.5f);
+            Manager2D.Instance.ObjetoEvento3D.GetComponent<Event3D>().BtnEvento3DOprimido();
+        }
     }
 
     //---------------------------------------------------------------

@@ -38,9 +38,6 @@ public class Dialog : MonoBehaviour
         //Si el jugador esta cerca, el Flag de Dialogo proximo esta Activo
         if (jugadorCerca && Manager2D.Instance.FlagDialogo)
         {
-            //Reproducimos el sonido de Dialogo
-            //mAudioSource.PlayOneShot(clipDialogo, 0.5f);
-
             // Si el dialogo aun no ha iniciado
             if (!dialogoIniciado)
             {
