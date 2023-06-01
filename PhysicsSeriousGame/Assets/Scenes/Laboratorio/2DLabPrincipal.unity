@@ -3271,13 +3271,29 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1452843778}
-          m_TargetAssemblyTypeName: 
-          m_MethodName: 
+        - m_Target: {fileID: 3277083081330596376}
+          m_TargetAssemblyTypeName: UI2DController, Assembly-CSharp
+          m_MethodName: BtnManipulationDown
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: 
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3277083081330596376}
+          m_TargetAssemblyTypeName: UI2DController, Assembly-CSharp
+          m_MethodName: BtnManipulationUp
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -3691,7 +3707,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1197603594}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -3940,12 +3956,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NombreEscenaOrigen: 2DLabOutside
---- !u!1 &1452843778 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3277083082389984956, guid: 527b95a8c81bff14fa3aa6461d49d0b6,
-    type: 3}
-  m_PrefabInstance: {fileID: 3277083081330596375}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1485856052
 GameObject:
   m_ObjectHideFlags: 0
@@ -11747,7 +11757,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1953236098
 Transform:
   m_ObjectHideFlags: 0
@@ -12132,7 +12142,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 3277083081330596375}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1452843778}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aafd54810778d0345bebe76d5cdb8c0c, type: 3}
