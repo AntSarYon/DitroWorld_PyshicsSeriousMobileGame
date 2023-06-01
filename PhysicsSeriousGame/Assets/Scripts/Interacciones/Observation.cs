@@ -8,10 +8,6 @@ public class Observation : MonoBehaviour
     //Referencia al icono de Dialogo
     private GameObject iconoObservacion;
 
-    //Referencia a Componentes
-    //private AudioSource mAudioSource;
-    //[SerializeField] AudioClip clipObservacion;
-
     //Flags de Estado
     private bool jugadorCerca;
     private bool observacionIniciada;

@@ -92,7 +92,7 @@ public class UI2DController : MonoBehaviour
             //Reproducimos Sonido de Pokemon
             mAudioSource.PlayOneShot(clipClicks, 0.5f);
         }
-            }
+    }
 
     public void BtnObservationClick()
     {
@@ -105,16 +105,36 @@ public class UI2DController : MonoBehaviour
         }
     }
 
+    //-------------------------------------------------------------------------------------------------------
     public void BtnManipulationClick()
     {
-        //if (Manager2D.Instance.ObjetoManipulacion != null)
-        //{
-            //Llamamos a la funcion de DialogoOprimido desde el Objeto dueño del dialogo
-            //Manager2D.Instance.ObjetoManipulacion.GetComponent<Manipulation>().ManipulacionOprimida();
+        if (Manager2D.Instance.ObjetoManipulacion != null)
+        {
             //Reproducimos Sonido de Manipulacion
             mAudioSource.PlayOneShot(clipManipulacion, 0.5f);
-        //}
+        }
     }
+
+    public void BtnManipulationDown()
+    {
+        if (Manager2D.Instance.ObjetoManipulacion != null)
+        {
+            //Llamamos a la funcion de ManipulacionOprimida desde el Objeto dueño del dialogo
+            Manager2D.Instance.ObjetoManipulacion.GetComponent<Manipulation>().ManipulacionOprimida();
+        }
+    }
+
+    public void BtnManipulationUp()
+    {
+        if (Manager2D.Instance.ObjetoManipulacion != null)
+        {
+            //Llamamos a la funcion de Convertir a Kinematico
+            Manager2D.Instance.ObjetoManipulacion.GetComponent<Manipulation>().ConvertirAKinematico();
+        }
+    }
+
+    //--------------------------------------------------------------------------------------------------------
+
 
     public void BtnComentarioDronClick()
     {
