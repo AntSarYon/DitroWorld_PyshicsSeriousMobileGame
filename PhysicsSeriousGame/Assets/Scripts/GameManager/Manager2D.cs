@@ -21,6 +21,7 @@ public class Manager2D : MonoBehaviour
     private GameObject objetoDialogo;
     private GameObject objetoObservacion;
     private GameObject objetoManipulacion;
+    private GameObject dron;
 
 
     //--------------------------------------------
@@ -36,6 +37,7 @@ public class Manager2D : MonoBehaviour
     public GameObject ObjetoDialogo { get => objetoDialogo; set => objetoDialogo = value; }
     public GameObject ObjetoObservacion { get => objetoObservacion; set => objetoObservacion = value; }
     public GameObject ObjetoManipulacion { get => objetoManipulacion; set => objetoManipulacion = value; }
+    public GameObject Dron { get => dron; set => dron = value; }
 
 
     //--------------------------------------------
@@ -51,7 +53,13 @@ public class Manager2D : MonoBehaviour
         flagEvento3DProximo = false;
         flagDialogo = false;
         flagObservacion = false;
-}
+    }
 
     //--------------------------------------------
+
+    private void Start()
+    {
+        //Obtenemos referencia al Dron
+        dron = GameObject.Find("Dron");
+    }
 }

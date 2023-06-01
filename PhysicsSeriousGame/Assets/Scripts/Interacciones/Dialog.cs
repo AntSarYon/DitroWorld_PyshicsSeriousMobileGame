@@ -8,10 +8,6 @@ public class Dialog : MonoBehaviour
     //Referencia al icono de Dialogo
     private GameObject iconoDialogo;
 
-    //Referencia a Componentes
-    //private AudioSource mAudioSource;
-    //[SerializeField] AudioClip clipDialogo;
-
     //Flags de Estado
     private bool jugadorCerca;
     private bool dialogoIniciado;
@@ -21,7 +17,7 @@ public class Dialog : MonoBehaviour
     private float tiempoTipeo = 0.025f;
 
     //Array que almacenará las líneas de diálogo del NPC
-    [SerializeField, TextArea(4,6)] private string[] lineasDialogo;
+    [SerializeField, TextArea(3,5)] private string[] lineasDialogo;
 
     //-----------------------------------------------------------
     
@@ -29,9 +25,6 @@ public class Dialog : MonoBehaviour
     {
         //Inicializamos flag de jugador cercano a falso
         jugadorCerca = false;
-
-        //Referencia a componentes
-        //mAudioSource = GetComponent<AudioSource>();
 
         //Obtenemos referencia al icono de excalamacion del NPC
         iconoDialogo = transform.Find("icoDialogo").gameObject;
@@ -124,7 +117,7 @@ public class Dialog : MonoBehaviour
         //Desactivamos el flag de Dialogo iniciado
         dialogoIniciado = false;
 
-        //Activamos el panel de dialogo
+        //Desactivamos el panel de dialogo
         UI2DController.Instance.InteractionPanel.SetActive(false);
 
         //Volvemos a mostrar el icono de dialogo

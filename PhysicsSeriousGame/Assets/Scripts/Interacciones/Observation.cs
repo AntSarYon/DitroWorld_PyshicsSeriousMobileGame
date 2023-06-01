@@ -17,7 +17,7 @@ public class Observation : MonoBehaviour
     private float tiempoTipeo = 0.025f;
 
     //Array que almacenará las líneas de diálogo del NPC
-    [SerializeField, TextArea(4, 6)] private string[] lineasObservacion;
+    [SerializeField, TextArea(3, 5)] private string[] lineasObservacion;
 
     //-----------------------------------------------------------
 

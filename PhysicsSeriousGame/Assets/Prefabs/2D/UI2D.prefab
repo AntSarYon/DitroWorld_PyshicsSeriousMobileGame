@@ -264,7 +264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8962264, g: 0.43427426, b: 0.16487186, a: 0.392}
+  m_Color: {r: 0.11013707, g: 0.11013707, b: 0.4245283, a: 0.49019608}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1136,7 +1136,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3277083081852722582}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3277083082389984935}
+        m_TargetAssemblyTypeName: UI2DController, Assembly-CSharp
+        m_MethodName: BtnComentarioDronClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3277083082199280339
 GameObject:
   m_ObjectHideFlags: 0
@@ -1149,6 +1161,7 @@ GameObject:
   - component: {fileID: 3277083082199280351}
   - component: {fileID: 3277083082199280336}
   - component: {fileID: 3277083082199280337}
+  - component: {fileID: 656838740}
   m_Layer: 5
   m_Name: BtnManipulacion
   m_TagString: Untagged
@@ -1257,7 +1270,64 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3277083082199280336}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3277083082389984935}
+        m_TargetAssemblyTypeName: UI2DController, Assembly-CSharp
+        m_MethodName: BtnManipulationClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &656838740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3277083082199280339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3277083082389984935}
+          m_TargetAssemblyTypeName: UI2DController, Assembly-CSharp
+          m_MethodName: BtnManipulationDown
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3277083082389984935}
+          m_TargetAssemblyTypeName: UI2DController, Assembly-CSharp
+          m_MethodName: BtnManipulationUp
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &3277083082389984956
 GameObject:
   m_ObjectHideFlags: 0
@@ -1380,6 +1450,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clipClicks: {fileID: 8300000, guid: 42105cb2dd0ff584581a352990bc7197, type: 3}
+  clipManipulacion: {fileID: 8300000, guid: c894bd2696280df4d858a88dd401dcc3, type: 3}
+  clipEvento3D: {fileID: 8300000, guid: f195a36550ff1b342bb769907630f1c3, type: 3}
   clipsDron:
   - {fileID: 8300000, guid: eb79ba6abe258ec4ba88b2dc4159d131, type: 3}
   - {fileID: 8300000, guid: c19b5f9579e102a45be38376ad0bfe30, type: 3}
@@ -1420,7 +1492,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2034,7 +2106,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8331947574469667346}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3277083082389984935}
+        m_TargetAssemblyTypeName: UI2DController, Assembly-CSharp
+        m_MethodName: BtnEvento3DClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6153595352067340145
 GameObject:
   m_ObjectHideFlags: 0

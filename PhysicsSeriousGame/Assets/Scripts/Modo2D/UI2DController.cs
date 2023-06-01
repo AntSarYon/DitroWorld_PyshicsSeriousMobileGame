@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using System.Drawing;
 using TMPro;
 using UnityEngine;
@@ -21,6 +23,7 @@ public class UI2DController : MonoBehaviour
     //Referencia a Objetos de UI para la ineraccion
     [SerializeField] private GameObject interactionPanel;
     [SerializeField] private TextMeshProUGUI interactionText;
+    
 
     public GameObject InteractionPanel { get => interactionPanel; set => interactionPanel = value; }
     public TextMeshProUGUI InteractionText { get => interactionText; set => interactionText = value; }
@@ -138,10 +141,27 @@ public class UI2DController : MonoBehaviour
 
     public void BtnComentarioDronClick()
     {
-        mAudioSource.PlayOneShot(clipsDron[Random.Range(0,5)], 0.5f);
+        //Si el Dron aun no ha mepezado a hablar
+        if (!Manager2D.Instance.Dron.GetComponent<DronCommentsController>().DronEmpezoAHablar)
+        {
+            //Reproducimos sonido del Dron e invocamos a la funcion
+            mAudioSource.PlayOneShot(clipsDron[UnityEngine.Random.Range(0, 5)], 0.5f);
+            Manager2D.Instance.Dron.GetComponent<DronCommentsController>().BtnComentarioDronOprimido();
+        }
+        else
+        {
+            //Reproducimos sonido de Click(Pokemon) e invocamos a la funcion
+            mAudioSource.PlayOneShot(clipClicks, 0.5f);
+            Manager2D.Instance.Dron.GetComponent<DronCommentsController>().BtnComentarioDronOprimido();
+        }
     }
 
-    public void BtnEvento3DClick()
+
+    
+
+        //----------------------------------------------------------------------------------------------------------
+
+        public void BtnEvento3DClick()
     {
         mAudioSource.PlayOneShot(clipEvento3D, 0.5f);
     }
