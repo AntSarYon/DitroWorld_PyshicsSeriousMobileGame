@@ -31,6 +31,11 @@ public class UIMenuController : MonoBehaviour
         ScenesManager.Instance.SolicitarCambioDeEscena("CharacterSelection");
     }
 
+    public void IrASettings()
+    {
+        ScenesManager.Instance.SolicitarCambioDeEscena("Settings");
+    }
+
     //---------------------------------------------------------------------------
     public void Salir()
     {
