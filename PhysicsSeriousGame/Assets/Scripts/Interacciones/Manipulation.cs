@@ -16,6 +16,8 @@ public class Manipulation : MonoBehaviour
 
     private Collision2D colisionConPlayer;
 
+    [TextArea(3, 4)] public string ComentarioDron;
+
     #endregion
     //-----------------------------------------------------------
     //-----------------------------------------------------------
@@ -77,6 +79,9 @@ public class Manipulation : MonoBehaviour
             //Mostramos el icono de Manipulacion
             iconoManipulacion.SetActive(true);
             Manager2D.Instance.FlagManipulacionVisible = true;
+
+            //Asignamos referencia a este Objeto como el propietario del Dialogo
+            Manager2D.Instance.ObjetoManipulacion = this.gameObject;
         }
     }
 
@@ -88,6 +93,9 @@ public class Manipulation : MonoBehaviour
             //Dsactivamos el icono de Manipulacion
             iconoManipulacion.SetActive(false);
             Manager2D.Instance.FlagManipulacionVisible = false;
+
+            //Cambiamos referencia a Objeto null
+            Manager2D.Instance.ObjetoManipulacion = null;
         }
     }
 

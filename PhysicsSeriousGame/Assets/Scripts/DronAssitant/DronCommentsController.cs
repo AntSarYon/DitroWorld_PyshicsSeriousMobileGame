@@ -51,25 +51,30 @@ public class DronCommentsController : MonoBehaviour
             //Si hay un Objeto manipulable activo...
             if (Manager2D.Instance.FlagEvento3DProximo)
             {
-                AsignarYActivarDialogo(dialogoEvento3D);
+                //Tomamos el dialogo DE Dron que tienen asignados...
+                AsignarYActivarDialogo(Manager2D.Instance.ObjetoEvento3D.GetComponent<Event3D>().ComentarioDron);
             }
             //Si hay un Objeto manipulable activo...
             else if (Manager2D.Instance.FlagManipulacionVisible)
             {
-                AsignarYActivarDialogo(dialogoManipulacion);
+                //Tomamos el dialogo DE Dron que tienen asignados...
+                AsignarYActivarDialogo(Manager2D.Instance.ObjetoManipulacion.GetComponent<Manipulation>().ComentarioDron);
             }
             //Si hay un Objeto manipulable activo...
             else if (Manager2D.Instance.FlagObservacion)
             {
-                AsignarYActivarDialogo(dialogoObservacion);
+                //Tomamos el dialogo DE Dron que tienen asignados...
+                AsignarYActivarDialogo(Manager2D.Instance.ObjetoObservacion.GetComponent<Observation>().ComentarioDron);
             }
             //Si hay un Objeto manipulable activo...
             else if (Manager2D.Instance.FlagDialogo)
             {
-                AsignarYActivarDialogo(dialogoDialogo);
+                //Tomamos el dialogo DE Dron que tienen asignados...
+                AsignarYActivarDialogo(Manager2D.Instance.ObjetoDialogo.GetComponent<Dialog>().ComentarioDron);
             }
             else
             {
+                //Sino, tomamos uno de los dialogos que tenemos por default
                 AsignarYActivarDialogo(
                     lineasDialogo[
                         UnityEngine.Random.Range(

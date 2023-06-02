@@ -1275,6 +1275,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df7b509988cdcdb45bdd5e90ee24c016, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComentarioDron: "La ultima vez que estuve cerca de ese grifo me ca\xED e hice corto
+    circuto. Mejor no te acerques..."
   lineasObservacion:
   - '"Un lavadero que gotea ligeramente"'
   - "\".. aunque tienes ganas de cerrar el grifo, sabes que el agua podria da\xF1ar
@@ -3335,6 +3337,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df7b509988cdcdb45bdd5e90ee24c016, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComentarioDron: A veces el cientifico Oscar utiliza la computadora para jugar en
+    lugar de trabajar.
   lineasObservacion:
   - '"Una Supercomputadora de 3 monitores"'
   - '".. te preguntas que son todas esas letras y numeros en la pantalla ..."'
@@ -3657,6 +3661,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 356725b862761ce4081ae5a657f24d52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComentarioDron: "Parece que puedes empujar esa extra\xF1a silueta verde."
 --- !u!1001 &1232686246
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7347,6 +7352,7 @@ MonoBehaviour:
   lineasDialogo:
   - 'Chico: Soy un NPC.'
   - 'Chico: Puedo ser un personaje, o un objeto, lo que tu necesites.'
+  ComentarioDron: Parece que ese chico de gorra negra quiere decirte algo.
 --- !u!1 &1752188953
 GameObject:
   m_ObjectHideFlags: 0

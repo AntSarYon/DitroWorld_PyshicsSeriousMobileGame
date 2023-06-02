@@ -19,6 +19,8 @@ public class Dialog : MonoBehaviour
     //Array que almacenará las líneas de diálogo del NPC
     [SerializeField, TextArea(3,5)] private string[] lineasDialogo;
 
+    [TextArea(3, 4)] public string ComentarioDron;
+
     //-----------------------------------------------------------
     
     private void Awake()

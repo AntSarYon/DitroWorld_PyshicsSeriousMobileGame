@@ -12,6 +12,8 @@ public class Event3D : MonoBehaviour
 
     [SerializeField] private string nombreEscena3D;
 
+    [TextArea(3, 4)] public string ComentarioDron;
+
     public string NombreEscena3D { get => nombreEscena3D; set => nombreEscena3D = value; }
 
     //-------------------------------------------------------------

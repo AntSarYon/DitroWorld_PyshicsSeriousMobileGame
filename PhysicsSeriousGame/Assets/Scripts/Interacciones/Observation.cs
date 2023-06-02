@@ -13,6 +13,8 @@ public class Observation : MonoBehaviour
     private bool observacionIniciada;
     private int indiceLinea;
 
+    [TextArea(3, 4)] public string ComentarioDron;
+
     //Tiempo que tomará typear cada caracter
     private float tiempoTipeo = 0.025f;
 

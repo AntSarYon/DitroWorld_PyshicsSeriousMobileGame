@@ -11,6 +11,8 @@ public class Manager2D : MonoBehaviour
     //Vector de Movimiento para personaje
     private Vector3 mMoveInput;
 
+    private bool textoEnProceso = false;
+
     //Flags para controlar si hay Eventos Activos
     private bool flagDialogo;
     private bool flagObservacion;
@@ -44,6 +46,7 @@ public class Manager2D : MonoBehaviour
     public GameObject Dron { get => dron; set => dron = value; }
     public GameObject ObjetoEvento3D { get => objetoEvento3D; set => objetoEvento3D = value; }
     public bool FlagManipulacionVisible { get => flagManipulacionVisible; set => flagManipulacionVisible = value; }
+    public bool TextoEnProceso { get => textoEnProceso; set => textoEnProceso = value; }
 
 
     //--------------------------------------------
