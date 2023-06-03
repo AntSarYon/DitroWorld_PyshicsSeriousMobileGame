@@ -814,7 +814,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Musica
+  m_text: Musica de Fondo
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d28e17355bb1afc458cd8febb6949cb3, type: 2}
   m_sharedMaterial: {fileID: -1734632800649394153, guid: d28e17355bb1afc458cd8febb6949cb3,
@@ -1103,6 +1103,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d0e58a16f0cce14e9911543c7f7520d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioMixerMusicaDeFondo: {fileID: 24100000, guid: dec5f239336ef2347879f69494d8b480,
+    type: 2}
+  audioMixerEfectosDeSonido: {fileID: 24100000, guid: 670cde45335cca54987867a655c23dfc,
+    type: 2}
 --- !u!1 &827314106
 GameObject:
   m_ObjectHideFlags: 0
@@ -1741,7 +1745,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Alta
+  m_text: Media
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d28e17355bb1afc458cd8febb6949cb3, type: 2}
   m_sharedMaterial: {fileID: -1734632800649394153, guid: d28e17355bb1afc458cd8febb6949cb3,
@@ -2401,11 +2405,25 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: Media
       m_Image: {fileID: 0}
+    - m_Text: Media
+      m_Image: {fileID: 0}
     - m_Text: Alta
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 755220285}
+        m_TargetAssemblyTypeName: SettingsController, Assembly-CSharp
+        m_MethodName: CambiarCalidad
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &1641161065
 MonoBehaviour:
@@ -2641,13 +2659,25 @@ MonoBehaviour:
   m_FillRect: {fileID: 1827026074}
   m_HandleRect: {fileID: 0}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: -80
+  m_MaxValue: 0
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 755220285}
+        m_TargetAssemblyTypeName: SettingsController, Assembly-CSharp
+        m_MethodName: AjustarMusicaDeFondo
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1827026073
 GameObject:
   m_ObjectHideFlags: 0
@@ -3330,13 +3360,25 @@ MonoBehaviour:
   m_FillRect: {fileID: 1754666502}
   m_HandleRect: {fileID: 0}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: -80
+  m_MaxValue: 0
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 755220285}
+        m_TargetAssemblyTypeName: SettingsController, Assembly-CSharp
+        m_MethodName: AjustarEfectosDeSonido
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1904836677431783333
 PrefabInstance:
   m_ObjectHideFlags: 0
