@@ -28,7 +28,7 @@ public class FollowController : MonoBehaviour
         perseguir = false;
 
         //Iniciaizamos varibales
-        speed = 2.75f;
+        speed = 3.25f;
         distanciaLimite = 1.75f;
     }
 

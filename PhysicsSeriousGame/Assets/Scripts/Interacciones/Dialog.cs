@@ -45,7 +45,14 @@ public class Dialog : MonoBehaviour
             {
                 //Iniciamos dialogo mostrando la primera linea
                 IniciarDialogo();
+
+                //Hacemos que solo se visualice el boton de Dialogo
+                UI2DController.Instance.MostrarSoloBotonEnCurso("BtnDialogo");
+
+                //Activamos el Flag de TextoEnProceso para que el Player no se mueva
+                Manager2D.Instance.TextoEnProceso = true;
             }
+
             //En caso ya haya iniciado, y se haya terminado de escribir la primera linea
             else if (UI2DController.Instance.InteractionText.text.Equals(lineasDialogo[indiceLinea]))
             {
@@ -82,7 +89,7 @@ public class Dialog : MonoBehaviour
         indiceLinea = 0;
 
         //Seteamos la escala de tiempo a 0 para que todo se detenga
-        Time.timeScale = 0;
+        //Time.timeScale = 0;
 
         //Iniciamos la corrutina para tippear la linea de dialogo
         StartCoroutine(MostrarLinea());
@@ -111,7 +118,7 @@ public class Dialog : MonoBehaviour
     private void TerminarDialogo()
     {
         //Devolvemos la escala de tiempo a la normlaidad
-        Time.timeScale = 1;
+        //Time.timeScale = 1;
 
         //Desactivamos el flag de Dialogo iniciado
         dialogoIniciado = false;
@@ -121,6 +128,12 @@ public class Dialog : MonoBehaviour
 
         //Volvemos a mostrar el icono de dialogo
         iconoDialogo.SetActive(true);
+
+        //Volvemos a mostrar todos los botones de la Interfaz
+        UI2DController.Instance.MostraTodosLosBotones();
+
+        //Desactivamos Flag de Texto en Proceso para habilitar el movimiento del Player
+        Manager2D.Instance.TextoEnProceso = false;
     }
 
     //-----------------------------------------------------------

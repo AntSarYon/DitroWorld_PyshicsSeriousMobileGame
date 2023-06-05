@@ -51,6 +51,12 @@ public class Observation : MonoBehaviour
             {
                 //Iniciamos dialogo mostrando la primera linea
                 IniciarDialogo();
+
+                //Mostramos solo el boton de Observacion y ocultamos los demas
+                UI2DController.Instance.MostrarSoloBotonEnCurso("BtnObservacion");
+
+                //Activamos el Flag de TextoEnProceso para que el Player no se mueva
+                Manager2D.Instance.TextoEnProceso = true;
             }
             //En caso ya haya iniciado, y se haya terminado de escribir la primera linea
             else if (UI2DController.Instance.InteractionText.text.Equals(lineasObservacion[indiceLinea]))
@@ -88,7 +94,7 @@ public class Observation : MonoBehaviour
         indiceLinea = 0;
 
         //Seteamos la escala de tiempo a 0 para que todo se detenga
-        Time.timeScale = 0;
+        //Time.timeScale = 0;
 
         //Iniciamos la corrutina para tippear la linea de dialogo
         StartCoroutine(MostrarLinea());
@@ -117,7 +123,7 @@ public class Observation : MonoBehaviour
     private void TerminarDialogo()
     {
         //Devolvemos la escala de tiempo a la normlaidad
-        Time.timeScale = 1;
+        //Time.timeScale = 1;
 
         //Desactivamos el flag de Dialogo iniciado
         observacionIniciada = false;
@@ -127,6 +133,12 @@ public class Observation : MonoBehaviour
 
         //Volvemos a mostrar el icono de dialogo
         iconoObservacion.SetActive(true);
+
+        //Volvemos a mostrar todos los botones
+        UI2DController.Instance.MostraTodosLosBotones();
+
+        //Desactivamos el Flag de Texto -> Ahora el jugador si podra moverse
+        Manager2D.Instance.TextoEnProceso = false;
     }
 
     //-----------------------------------------------------------

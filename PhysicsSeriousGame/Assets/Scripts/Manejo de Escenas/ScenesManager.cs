@@ -71,7 +71,7 @@ public class ScenesManager : MonoBehaviour
     {
         //Cargamos la Escena Inicial del Juego
         //Por ahora es el Laboratorio
-        SolicitarCambioDeEscena("2DLabPrincipal");
+        SolicitarCambioDeEscena("Prologo");
     }
 
     //------------------------------------------------------

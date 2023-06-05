@@ -32,10 +32,15 @@ public class PlayerMovement : MonoBehaviour
     //-----------------------------------------------------
     private void FixedUpdate()
     {
-        //Movemos la posición del Player
-        mRb.MovePosition(
-            transform.position + (Manager2D.Instance.MoveInput * walkSpeed * Time.fixedDeltaTime)
-        );
+        //Mientras no se esté mostrando ningún Texto en pantalla
+        if (!Manager2D.Instance.TextoEnProceso)
+        {
+            //Movemos la posición del Player
+            mRb.MovePosition(
+                transform.position + (Manager2D.Instance.MoveInput * walkSpeed * Time.fixedDeltaTime)
+            );
+        }
+        
         
     }
 

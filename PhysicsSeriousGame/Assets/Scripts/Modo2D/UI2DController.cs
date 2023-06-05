@@ -16,7 +16,10 @@ public class UI2DController : MonoBehaviour
     [SerializeField] AudioClip clipManipulacion;
     [SerializeField] AudioClip clipEvento3D;
     [SerializeField] AudioClip[] clipsDron = new AudioClip[5];
-    
+
+    //Referencia a Botones de Accion
+    [SerializeField] private GameObject[] botonesInteraccion = new GameObject[5];
+
     //Referencia al Objeto de UI de Transicion
     private Transform objTransicion;
 
@@ -40,6 +43,34 @@ public class UI2DController : MonoBehaviour
 
         //Obtenemos referencia a la transicion
         objTransicion = transform.Find("Transition");
+    }
+
+    //---------------------------------------------------------
+
+    public void MostrarSoloBotonEnCurso(string nombreObjetoBoton)
+    {
+        //Por cada boton en Botones Interaccion
+        foreach (GameObject btn in botonesInteraccion)
+        {
+            //Si el nombre del Boton no es el mismo que el de entrada
+            if (btn.gameObject.name != nombreObjetoBoton)
+            {
+                //Desactivamos el Boton
+                btn.SetActive(false);
+            }
+        }
+
+    }
+
+    public void MostraTodosLosBotones()
+    {
+        //Por cada boton en Botones Interaccion
+        foreach (GameObject btn in botonesInteraccion)
+        {
+                //Activamos el Boton
+                btn.SetActive(true);
+        }
+
     }
 
     //---------------------------------------------------------

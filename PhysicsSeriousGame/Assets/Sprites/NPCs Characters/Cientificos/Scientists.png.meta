@@ -69,7 +69,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -2957,10 +2957,10 @@ TextureImporter:
       Scientists_7: -810592231
       Scientists_0: -823964396
       Scientists_75: -800328694
+      Scientists_115: 1598489857
       Scientists_37: -1618440689
       Scientists_10: -1286177569
-      Scientists_72: -1151773316
-      Scientists_115: 1598489857
+      Scientists_127: 1025072698
       Scientists_80: 13265838
       Scientists_110: 869868406
       Scientists_52: -383003982
@@ -2975,7 +2975,7 @@ TextureImporter:
       Scientists_19: 1794756056
       Scientists_31: -967131114
       Scientists_121: 732848463
-      Scientists_127: 1025072698
+      Scientists_72: -1151773316
       Scientists_104: 759705759
       Scientists_55: -589284591
       Scientists_67: -1402542152

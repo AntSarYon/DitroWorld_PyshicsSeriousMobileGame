@@ -65,6 +65,8 @@ public class Manager2D : MonoBehaviour
         flagEvento3DProximo = false;
         flagDialogo = false;
         flagObservacion = false;
+
+        textoEnProceso = false;
     }
 
     //--------------------------------------------

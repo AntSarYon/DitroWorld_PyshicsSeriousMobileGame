@@ -48,6 +48,12 @@ public class DronCommentsController : MonoBehaviour
             //Activamos el icono de DronHablando
             iconoHablando.SetActive(true);
 
+            //Mostramos solo el Boton del Dron
+            UI2DController.Instance.MostrarSoloBotonEnCurso("BtnComentarioRobot");
+
+            //Activamos Flag de Texto en Proceso para impedir que el Player se mueva
+            Manager2D.Instance.TextoEnProceso = true;
+
             //Si hay un Objeto manipulable activo...
             if (Manager2D.Instance.FlagEvento3DProximo)
             {
@@ -116,7 +122,7 @@ public class DronCommentsController : MonoBehaviour
         UI2DController.Instance.InteractionPanel.SetActive(true);
 
         //Seteamos la escala de tiempo a 0 para que todo se detenga
-        Time.timeScale = 0;
+        //Time.timeScale = 0;
 
         //Iniciamos la corrutina para tippear la linea de dialogo
         StartCoroutine(MostrarLinea());
@@ -125,7 +131,7 @@ public class DronCommentsController : MonoBehaviour
     private void TerminarDialogo()
     {
         //Devolvemos la escala de tiempo a la normlaidad
-        Time.timeScale = 1;
+        //Time.timeScale = 1;
 
         //Desactivamos el flag de Dialogo iniciado
         dronEmpezoAHablar = false;
@@ -135,6 +141,12 @@ public class DronCommentsController : MonoBehaviour
 
         //Desactivamos el icono de DronHablando
         iconoHablando.SetActive(false);
+
+        //Activamos todos los botones de interaccion de vuelta
+        UI2DController.Instance.MostraTodosLosBotones();
+
+        //Desactivamos Flag de Texto en Proceso para habilitar el movimiento del Player
+        Manager2D.Instance.TextoEnProceso = false;
 
     }
 

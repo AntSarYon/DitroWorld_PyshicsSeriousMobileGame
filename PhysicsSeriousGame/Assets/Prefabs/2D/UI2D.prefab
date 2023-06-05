@@ -1458,6 +1458,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 847ff18d7302b114fb249ba8809cdf4d, type: 3}
   - {fileID: 8300000, guid: 9eda13de917fb7140bf6176f44ab8a66, type: 3}
   - {fileID: 8300000, guid: e32bf5652393f4241b0108e7ae2c84bf, type: 3}
+  botonesInteraccion:
+  - {fileID: 3277083081816575609}
+  - {fileID: 3277083081200036562}
+  - {fileID: 3277083081852722537}
+  - {fileID: 3277083082199280339}
+  - {fileID: 5756231607274170678}
   interactionPanel: {fileID: 1174019103}
   interactionText: {fileID: 926653303}
 --- !u!95 &3277083082389984934
