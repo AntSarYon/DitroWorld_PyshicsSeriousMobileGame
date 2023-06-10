@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 1334371297295548898}
   - component: {fileID: 1334371297295548897}
   - component: {fileID: 1334371297295548899}
-  - component: {fileID: 1334371297295548908}
   - component: {fileID: 617411901}
   m_Layer: 0
   m_Name: CameraPlayer
@@ -117,6 +116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   centro: {fileID: 0}
   centroRelativo: {fileID: 0}
+  fuerzaGolpe: 5
 --- !u!114 &1334371297295548899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,20 +132,6 @@ MonoBehaviour:
   objetoSeguido: {fileID: 0}
   distancia: 20
   sensibilidadCamara: {x: 1.75, y: 1.75}
---- !u!114 &1334371297295548908
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1334371297295548900}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77267b3d7a775284dbbea55e792de498, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objetoSeguido: {fileID: 0}
-  distancia: 0
 --- !u!82 &617411901
 AudioSource:
   m_ObjectHideFlags: 0

@@ -14,6 +14,7 @@ TagManager:
   - Evento3D
   - FixedObject
   - MANObject
+  - ZonaInteraccion
   layers:
   - Default
   - TransparentFX
@@ -33,8 +34,8 @@ TagManager:
   - Evento3D
   - FixedObject
   - MANObject
-  - 
-  - 
+  - Limites3D
+  - ZonaInteraccion
   - 
   - 
   - 

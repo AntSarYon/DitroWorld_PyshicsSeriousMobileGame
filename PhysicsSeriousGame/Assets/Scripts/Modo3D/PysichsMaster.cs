@@ -17,10 +17,10 @@ public class PysichsMaster : MonoBehaviour
     [SerializeField] private GameObject centroRelativo;
 
     //Fuerza para GOLPE
-    private float fuerzaGolpe = 1f;
+    [SerializeField] private float fuerzaGolpe;
 
-    //Aceleracion Consecuente
-    private float aceleracionConsecuente = 0;
+    private bool incrementandoFuerza = false;
+    private bool reduciendoFuerza = false;
 
     //Flag de Fuerza siendo aplicada
     private bool empujando = false;
@@ -33,7 +33,6 @@ public class PysichsMaster : MonoBehaviour
     public float FuerzaGolpe { get => fuerzaGolpe; set => fuerzaGolpe = value; }
     public GameObject Centro { get => centro; set => centro = value; }
     public GameObject CentroRelativo { get => centroRelativo; set => centroRelativo = value; }
-    public float AceleracionConsecuente { get => aceleracionConsecuente; set => aceleracionConsecuente = value; }
 
     //------------------------------------------------------------
     void Awake()
@@ -44,6 +43,18 @@ public class PysichsMaster : MonoBehaviour
     }
 
     //------------------------------------------------------------
+
+    private void Update()
+    {
+        if (incrementandoFuerza)
+        {
+            IncrementarFuerza();
+        }
+        if (reduciendoFuerza)
+        {
+            ReducirFuerza();
+        }
+    }
 
     void FixedUpdate()
     {
@@ -59,16 +70,13 @@ public class PysichsMaster : MonoBehaviour
                     //Aplicamos una fuerza de Empuje constante sobre ese objeto en el Punto de choque
                     //Dividimos entre la masa para que el efecto se vea afectado por la masa.
 
-
                     mTouchDeteccion.RigidBodySeleccionado.AddForceAtPosition(
-                        (transform.forward * fuerzaGolpe * 50) / mTouchDeteccion.RigidBodySeleccionado.mass,
+                        transform.forward * fuerzaGolpe,
                         hitPointer.point,
                         ForceMode.Force
                     );
-
-                    AceleracionConsecuente = ((transform.forward * fuerzaGolpe * 50) / mTouchDeteccion.RigidBodySeleccionado.mass).magnitude;
                 }
-                    
+
             }
         }
     }
@@ -85,7 +93,6 @@ public class PysichsMaster : MonoBehaviour
     {
         //Retornamos Flag de empujando de vuelta a falso
         empujando = false;
-        aceleracionConsecuente = 0;
     }
 
     //--------------------------------------------------------------
@@ -149,26 +156,50 @@ public class PysichsMaster : MonoBehaviour
 
     //-------------------------------------------------------------------
 
-    public void IncrementarFuerza()
+    private void IncrementarFuerza()
     {
         //Solo si la fuerza es superior a 50 000..
         if (FuerzaGolpe < 5000)
         {
-            //La aumentamos en 5
-            FuerzaGolpe += 1;
+            //La aumentamos en 2.5
+            FuerzaGolpe += 5 * Time.deltaTime;
         }
     }
 
-    public void ReducirFuerza()
+    public void ActivarAumentoDeFuerza()
+    {
+        incrementandoFuerza = true;
+    }
+
+    public void DesactivarAumentoDeFuerza()
+    {
+        incrementandoFuerza = false;
+    }
+
+    //-------------------------------------------------------------------------
+
+    private void ReducirFuerza()
     {
         //Solo si la fuerza es superior a 0..
         if (FuerzaGolpe > 0)
         {
             //La reducimos en 5
-            FuerzaGolpe -= 1;
+            FuerzaGolpe -= 5 * Time.deltaTime;
         }
 
     }
+
+    public void ActivarReduccionDeFuerza()
+    {
+        reduciendoFuerza = true;
+    }
+
+    public void DesactivarReduccionDeFuerza()
+    {
+        reduciendoFuerza = false;
+    }
+
+    //---------------------------------------------------------------------------
 
     public void IncrementarMasa()
     {
@@ -184,21 +215,6 @@ public class PysichsMaster : MonoBehaviour
         }
         
 
-    }
-
-    public void IncrementarFriccion()
-    {
-        mTouchDeteccion.RigidBodySeleccionado.drag += 0.5f;
-    }
-
-    public void ReducirFriccion()
-    {
-        //Limitamos que la Friccion no puede reducirse a negativos
-        if (mTouchDeteccion.RigidBodySeleccionado.drag > 0)
-        {
-            mTouchDeteccion.RigidBodySeleccionado.drag -= 0.5f;
-        }
-        
     }
 
     //--------------------------------------------------------------

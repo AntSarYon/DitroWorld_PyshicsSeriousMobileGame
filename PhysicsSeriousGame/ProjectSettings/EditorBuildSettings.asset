@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Laboratorio/2DLabPrincipal.unity
     guid: c8d130bd5a20ebf45ad42b0a8486977f
   - enabled: 1
-    path: Assets/Scenes/Laboratorio/2DLabOutside.unity
+    path: Assets/Scenes/Exterior/2DLabOutside.unity
     guid: e92d666978db9f54a8cd63f26f1b80d8
   - enabled: 1
     path: Assets/Scenes/Laboratorio/2DLabTutorial.unity

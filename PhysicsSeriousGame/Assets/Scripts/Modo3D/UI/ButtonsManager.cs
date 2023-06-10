@@ -32,7 +32,6 @@ public class ButtonsManager : MonoBehaviour
     [SerializeField] private List<GameObject> uiMasa;
     [SerializeField] private List<GameObject> uiVelocidad;
     [SerializeField] private List<GameObject> uiFriccion;
-    [SerializeField] private List<GameObject> uiAceleracion;
 
     [SerializeField] private TextMeshProUGUI textFuerza;
 
@@ -40,14 +39,12 @@ public class ButtonsManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI textMasa;
     [SerializeField] private TextMeshProUGUI textVelocidad;
     [SerializeField] private TextMeshProUGUI textFriccion;
-    [SerializeField] private TextMeshProUGUI textAceleracion;
 
     //Flags de Status
     private bool gravedadActivada;
     private bool velocidadActivada;
     private bool masaActivada;
     private bool friccionActivada;
-    private bool aceleracionActivada;
 
     //-------------------------------------------------------
 
@@ -66,25 +63,29 @@ public class ButtonsManager : MonoBehaviour
         velocidadActivada = false;
         masaActivada = false;
         friccionActivada = false;
-        aceleracionActivada = false;
     }
+
+    //--------------------------------------------
 
     private void PosicionarTransicionDetras3D()
     {
         objTransicion.SetAsFirstSibling();
     }
+    private void PosicionarTransicionDelante3D()
+    {
+        objTransicion.SetAsLastSibling();
+    }
 
     private void Update()
     {
-        textFuerza.text = PlayerPhysicsMaster.FuerzaGolpe.ToString();
+        textFuerza.text = PlayerPhysicsMaster.FuerzaGolpe.ToString("F2");
 
         //Si hay un RigidBody seleccionado
         if (PlayerTouchDetection.RigidBodySeleccionado != null)
         {
             textMasa.text = "Masa: " + PlayerTouchDetection.RigidBodySeleccionado.mass.ToString("F2") + " kg.";
             textVelocidad.text = "Velocidad: " + PlayerTouchDetection.RigidBodySeleccionado.velocity.magnitude.ToString("F2") + " m/s";
-            textFriccion.text = "Friccion: " + PlayerTouchDetection.RigidBodySeleccionado.drag.ToString("F2");
-            textAceleracion.text = "Aceleración: " + PlayerPhysicsMaster.AceleracionConsecuente.ToString("F2") + "m/s2";
+            textFriccion.text = "Friccion de base: " + PlayerTouchDetection.RigidBodySeleccionado.drag.ToString("F2");
         }
         //En caso no haya ningun RB seleccionado
         else
@@ -148,12 +149,6 @@ public class ButtonsManager : MonoBehaviour
     {
         ControlarVisualizacion(uiVelocidad, velocidadActivada);
         velocidadActivada = !velocidadActivada;
-    }
-
-    public void ControlarVisualizacionDeAceleracion()
-    {
-        ControlarVisualizacion(uiAceleracion, aceleracionActivada);
-        aceleracionActivada = !aceleracionActivada;
     }
 
     //------------------------------------------------------------------------------
