@@ -90,6 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nombreEscena3D: 3DTutorial
+  ComentarioDron: 
 --- !u!1 &7442606244469346726
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,7 +163,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1545902111
   m_SortingLayer: 11
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 8fe6488fc5d3ba54c9b240d982ba0456, type: 3}
   m_Color: {r: 0, g: 1, b: 0.06653786, a: 0.49019608}
   m_FlipX: 0

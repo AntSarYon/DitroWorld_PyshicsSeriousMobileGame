@@ -1208,20 +1208,29 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 354352139}
     m_ColliderPaths:
-    - - X: 50000000
-        Y: 60000000
-      - X: 30000000
-        Y: 60000000
-      - X: 30000000
-        Y: 50000000
-      - X: 50000000
-        Y: 50000000
+    - - X: -10000000
+        Y: 11875000
+      - X: -10000000
+        Y: 18750000
+      - X: -17500000
+        Y: 18750000
+      - X: -20000000
+        Y: 16875000
+      - X: -20000000
+        Y: 12500000
+      - X: -18750000
+        Y: 11250000
+      - X: -12500000
+        Y: 11250000
   m_CompositePaths:
     m_Paths:
-    - - {x: 4.999971, y: 5}
-      - {x: 4.999971, y: 6}
-      - {x: 3, y: 5.999971}
-      - {x: 3.0000293, y: 5}
+    - - {x: -1.2500029, y: 1.125}
+      - {x: -1, y: 1.1875219}
+      - {x: -1.0000293, y: 1.875}
+      - {x: -1.7500068, y: 1.8749949}
+      - {x: -2, y: 1.6874868}
+      - {x: -1.9999924, y: 1.2499924}
+      - {x: -1.8749893, y: 1.125}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!50 &354352141
@@ -1278,9 +1287,8 @@ MonoBehaviour:
   ComentarioDron: "La ultima vez que estuve cerca de ese grifo me ca\xED e hice corto
     circuto. Mejor no te acerques..."
   lineasObservacion:
-  - '"Un lavadero que gotea ligeramente"'
-  - "\".. aunque tienes ganas de cerrar el grifo, sabes que el agua podria da\xF1ar
-    tus circuitos ...\""
+  - "Hay una taza con residuos de Caf\xE9 y Azucar."
+  - "*Aunque tienes ganas de limpiarla, sabes que el agua podria da\xF1ar tus circuitos*"
 --- !u!58 &461687443
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3469,8 +3477,8 @@ MonoBehaviour:
   ComentarioDron: A veces el cientifico Oscar utiliza la computadora para jugar en
     lugar de trabajar.
   lineasObservacion:
-  - '"Una Supercomputadora de 3 monitores"'
-  - '".. te preguntas que son todas esas letras y numeros en la pantalla ..."'
+  - Una Supercomputadora de 3 monitores.
+  - '*Te preguntas que son todas esas letras y numeros en la pantalla*'
 --- !u!58 &678554415
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4079,6 +4087,26 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: -2, y: 1, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 59
+      m_TileSpriteIndex: 59
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -1, y: 1, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 58
+      m_TileSpriteIndex: 58
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: -10, y: 4, z: 0}
     second:
       serializedVersion: 2
@@ -4237,10 +4265,10 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 75f0583c1c44ec3438e7f19709264fab, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 3b763108b864e2c4e84308d0b4f918e0, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 8388b792f6a640d4d944c4199dc0cd49, type: 2}
   - m_RefCount: 1
@@ -4382,10 +4410,10 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -466685426, guid: b811bd11aef3108408ed66eecdcf26b7, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -674187349, guid: b811bd11aef3108408ed66eecdcf26b7, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 472406829, guid: b811bd11aef3108408ed66eecdcf26b7, type: 3}
   - m_RefCount: 1
@@ -4411,7 +4439,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 1821205644, guid: b811bd11aef3108408ed66eecdcf26b7, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 12
+  - m_RefCount: 14
     m_Data:
       e00: 1
       e01: 0
@@ -4430,7 +4458,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 12
+  - m_RefCount: 14
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -4837,6 +4865,16 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: -10, y: 4, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 46
+      m_TileSpriteIndex: 46
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
   - m_RefCount: 0
@@ -4931,8 +4969,8 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 75f0583c1c44ec3438e7f19709264fab, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 34e948fb1fd362f4db04fbcfaf18f12d, type: 2}
   - m_RefCount: 1
@@ -5084,8 +5122,8 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -466685426, guid: b811bd11aef3108408ed66eecdcf26b7, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -1682330066, guid: b811bd11aef3108408ed66eecdcf26b7, type: 3}
   - m_RefCount: 1
@@ -5145,7 +5183,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 226353238, guid: b811bd11aef3108408ed66eecdcf26b7, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 29
+  - m_RefCount: 30
     m_Data:
       e00: 1
       e01: 0
@@ -5164,7 +5202,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 29
+  - m_RefCount: 30
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -5226,9 +5264,9 @@ MonoBehaviour:
   lineasDialogo:
   - "Cientifica Ellie: \xA1Me alegra poder conocerte al fin; hemos esperado tanto
     este d\xEDa!"
-  - "Cientifica Ellie: Nuestros compa\xF1eros Bao y Foreman te est\xE1n esperando
-    en la habitaci\xF3n de enfrente"
-  - 'Cientifica Ellie: Adelante, ve a verlos!'
+  - "Cientifica Ellie: Nuestros compa\xF1eros Bou y Foreman te est\xE1n esperando
+    en la habitaci\xF3n de enfrente."
+  - 'Cientifica Ellie: !Adelante, ve a verlos!'
   ComentarioDron: 'CRAB: Ellie es mi mejor amiga dentro del laboratorio; no solo
     es brillante, sino tambien muy creativa.'
 --- !u!61 &1537529833
@@ -12075,3 +12113,153 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 183d8cc28f27a1d4287bbeb9ddff6021, type: 3}
+--- !u!114 &7340299282307774608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7340299282307774611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df7b509988cdcdb45bdd5e90ee24c016, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ComentarioDron: 'CRAB: El profesor KAO suele olvidar lavar los trastes; pero lo
+    compensa con entusiasmo por la ciencia. '
+  lineasObservacion:
+  - Parece que alguien estuvo almorzando en esta mesa...
+--- !u!58 &7340299282307774609
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7340299282307774611}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 3
+--- !u!1 &7340299282307774611
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7340299282307774614}
+  - component: {fileID: 7340299282307774609}
+  - component: {fileID: 7340299282307774608}
+  m_Layer: 0
+  m_Name: OBS_MesaSucia
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7340299282307774614
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7340299282307774611}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.19, y: 1.52, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7340299283332525879}
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &7340299283332525876
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7340299283332525878}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 1545902111
+  m_SortingLayer: 11
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 21300000, guid: 9eaa570c159df8e4faddd814945ad36f, type: 3}
+  m_Color: {r: 1, g: 0, b: 0, a: 0.627451}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 5.12, y: 5.12}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!1 &7340299283332525878
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7340299283332525879}
+  - component: {fileID: 7340299283332525876}
+  m_Layer: 0
+  m_Name: icoObservacion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &7340299283332525879
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7340299283332525878}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.35, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7340299282307774614}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
