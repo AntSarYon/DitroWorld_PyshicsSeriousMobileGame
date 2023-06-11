@@ -5224,12 +5224,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lineasDialogo:
-  - "Cientifica Ellie: Me alegra poder conocerte al fin; hemos esperado tanto este
-    d\xEDa; casi necesito pelliscarme para asegurarme de estar despierta."
-  - 'Cientifica Ellie: Estoy ansiosa por ver las grandes cosas de las cuales eres
-    capaz.'
-  - "Cientifica Ellie: Con CRAB a tu lado estoy segura de que no tendr\xE1s problemas
-    o dudas durante tu traves\xEDa."
+  - "Cientifica Ellie: \xA1Me alegra poder conocerte al fin; hemos esperado tanto
+    este d\xEDa!"
+  - "Cientifica Ellie: Nuestros compa\xF1eros Bao y Foreman te est\xE1n esperando
+    en la habitaci\xF3n de enfrente"
+  - 'Cientifica Ellie: Adelante, ve a verlos!'
   ComentarioDron: 'CRAB: Ellie es mi mejor amiga dentro del laboratorio; no solo
     es brillante, sino tambien muy creativa.'
 --- !u!61 &1537529833
@@ -7581,11 +7580,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lineasDialogo:
-  - 'Profesor Kao: Bueno, ahora que despertaste eres totalmente libre de explorar
-    el mundo y aprender cosas nuevas.'
-  - "Profesor Kao: Si nos necesitas estaremos justo aqui; aunque puedo garantizarte
-    que CRAB est\xE1 tan capacitado como nosotros."
-  - "Profesor Kao: \xBFNo es cierto CRAB?"
+  - "Profesor Kao: Ahora que despertaste eres totalmente libre de ir a explorar el
+    mundo y aprender cosas nuevas por t\xED mismo."
+  - "Profesor Kao: Si necesitas ayuda con algo, no dudes en hablar con CRAB, \xE9l
+    est\xE1 tan capacitado como nosotros."
   ComentarioDron: "CRAB: El profesor KAO es el ser humano m\xE1s brillante que he
     conocido. Aunque no conozco a muchos..."
 --- !u!95 &1691708024

@@ -63,7 +63,10 @@ public class OrbitaController : MonoBehaviour
             );
 
         //Actualizamos la distancia constantmente en base al incremento del Zoom;
-        distancia = distancia + incrementoZoom * Time.deltaTime;
+        distancia = Mathf.Clamp(
+            distancia + incrementoZoom * Time.deltaTime,
+            0.5f,
+            45f);
 
         //Actualizamos la posicion de la camara en base a la posiciond el Objeto seguido.
         transform.position = objetoSeguido.position + orbita * distancia;

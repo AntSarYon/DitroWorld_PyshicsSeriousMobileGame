@@ -181,21 +181,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Ah ver...
-
-
-    Fecha: 14/06/2060
-
-
-    El sujeto muestra buena capacidad
-    auditiva...
-
-
-    Esta girando la cabeza...
-
-
-    sus receptores visuales parecen
-    estar funcionando...'
+  m_text: "A ver...\n\nFecha: 14/06/2060\n\nEl sujeto muestra buena capacidad auditiva...\n\nEst\xE1
+    girando la cabeza...\n\nsus receptores visuales parecen estar funcionando..."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c9208511857f2614384259a8d01a6142, type: 2}
   m_sharedMaterial: {fileID: -4072353854928752152, guid: c9208511857f2614384259a8d01a6142,
@@ -331,10 +318,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\xA1Oh, disculpa, me deje llevar!\n\n\xA1Bienvenido, querido Ditro, a
-    este fascinante mundo! \n\nMe complace verte activado y listo para comenzar tu
-    misi\xF3n de aprendizaje. \n\nSoy el Dr. Kao, tu gu\xEDa y mentor en este viaje
-    hacia el conocimiento cient\xEDfico."
+  m_text: "\xA1Oh, disculpa, me dej\xE9 llevar!\n\n\xA1Bienvenido, querido Ditro,
+    a este fascinante mundo! \n\nSoy el Dr. Kao.\n\nMe complace verte activado y
+    listo para comenzar tu misi\xF3n de aprendizaje. \n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c9208511857f2614384259a8d01a6142, type: 2}
   m_sharedMaterial: {fileID: -4072353854928752152, guid: c9208511857f2614384259a8d01a6142,
@@ -470,10 +456,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "A medida que interact\xFAes con objetos y realices experimentos, obtendr\xE1s
-    informaci\xF3n valiosa sobre diferentes conceptos f\xEDsicos, como la gravedad,
-    el movimiento, la energ\xEDa y muchas otras \xE1reas. \nAdem\xE1s, encontrar\xE1s
-    libros y recursos educativos que ampliar\xE1n tu comprensi\xF3n."
+  m_text: "Cuando interact\xFAes con objetos, obtendr\xE1s informaci\xF3n crucial
+    sobre sus atributos f\xEDsicos, esto te permitir\xE1 entender mejor su comportamiento.\n\nCon
+    esto en cuenta, conceptos como la fuerza y la gravedad, el movimiento y la velocidad,
+    ser\xE1 cruciales para alcanzar objetivos; pero no nos adelantemos..."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c9208511857f2614384259a8d01a6142, type: 2}
   m_sharedMaterial: {fileID: -4072353854928752152, guid: c9208511857f2614384259a8d01a6142,
@@ -609,8 +595,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "A medida que avances, adquirir\xE1s nuevas habilidades y herramientas
-    para superar obst\xE1culos y enfrentar desaf\xEDos cada vez m\xE1s complejos."
+  m_text: "A medida que avances, los desaf\xEDos que enfrentes podr\xE1n parecerte
+    m\xE1s complejos, o m\xE1s secillos, dependiendo de tu desempe\xF1o a lo largo
+    de tu aventura."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c9208511857f2614384259a8d01a6142, type: 2}
   m_sharedMaterial: {fileID: -4072353854928752152, guid: c9208511857f2614384259a8d01a6142,
@@ -1004,8 +991,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\xA1Oh vaya! \nEst\xE1 despertando\n\nDe acuerdo, \n\xA1todos calmados!\n\nHemos
-    esperado mucho \npor este momento."
+  m_text: "\xA1Oh vaya! \nEst\xE1 despertando\n\n\xA1Todos calmados!\n\nHemos esperado
+    mucho \npor este momento."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c9208511857f2614384259a8d01a6142, type: 2}
   m_sharedMaterial: {fileID: -4072353854928752152, guid: c9208511857f2614384259a8d01a6142,
@@ -1141,9 +1128,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Tu misi\xF3n,\nes aprender sobre las leyes naturales que rigen este mundo,\n\ninteract\xFAa
-    con los diferentes entornos y habla con las personas que encuentres, \n\nResuelve
-    problemas aplicando lo aprendido. "
+  m_text: "Tu misi\xF3n,\nes aprender sobre las leyes naturales que rigen este mundo.\n\nPara
+    ello deber\xE1s Interactuar con los diferentes entornos,\ny hablar con las personas
+    que encuentres,\n\nPero sobretodo, deber\xE1s\naplicar lo aprendido."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c9208511857f2614384259a8d01a6142, type: 2}
   m_sharedMaterial: {fileID: -4072353854928752152, guid: c9208511857f2614384259a8d01a6142,
@@ -1925,7 +1912,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Como Super Inteligencia Artificial Sint\xE9tica, tienes un gran potencial
     para comprender y aplicar los principios f\xEDsicos que rigen nuestro universo.
-    \n\nPero hay mucho trabajo por hacer..."
+    \n\nPero a\xFAn hay mucho trabajo por hacer..."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c9208511857f2614384259a8d01a6142, type: 2}
   m_sharedMaterial: {fileID: -4072353854928752152, guid: c9208511857f2614384259a8d01a6142,
@@ -2061,10 +2048,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Oh, s\xED, casi lo olvido.\n\nNuestro querido CRAB, se ha ofrecido a acompa\xF1arte
-    durante tu aventura.\n\nEs un dron muy servicial, cuando tengas dudas sobre qu\xE9
-    hacer, o quieras saber m\xE1s sobre algo, puedes cnofiar en que \xE9l sabr\xE1
-    c\xF3mo ayudarte."
+  m_text: "Oh, s\xED, casi lo olvido.\n\nNuestro querido dron: CRAB, se ha ofrecido
+    a acompa\xF1arte durante tu aventura.\n\nEs un dron muy servicial, cuando tengas
+    alguna duda sobre algo, puedes confiar en que \xE9l sabr\xE1 c\xF3mo ayudarte."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c9208511857f2614384259a8d01a6142, type: 2}
   m_sharedMaterial: {fileID: -4072353854928752152, guid: c9208511857f2614384259a8d01a6142,
@@ -2200,8 +2186,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Por cierto, antes de salir, te recomiendo ir a la habitaci\xF3n que tenemos
-    detr\xE1s; mis compa\xF1eros han preparado algo muy especial para t\xED. \n\n\xA1Adelante
+  m_text: "Por cierto, antes de salir, te recomiendo ir a la SALA ESTE del laboratorio;
+    mis compa\xF1eros han preparado algo muy especial para t\xED. \n\n\xA1Adelante
     DITRO, \nens\xE9\xF1ale al mundo de lo que eres capaz!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c9208511857f2614384259a8d01a6142, type: 2}
