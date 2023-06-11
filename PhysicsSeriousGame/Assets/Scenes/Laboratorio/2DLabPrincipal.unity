@@ -1287,7 +1287,7 @@ MonoBehaviour:
   ComentarioDron: "La ultima vez que estuve cerca de ese grifo me ca\xED e hice corto
     circuto. Mejor no te acerques..."
   lineasObservacion:
-  - "Hay una taza con residuos de Caf\xE9 y Azucar."
+  - "*Observas una taza con residuos de Caf\xE9 y Azucar en el lavadero*"
   - "*Aunque tienes ganas de limpiarla, sabes que el agua podria da\xF1ar tus circuitos*"
 --- !u!58 &461687443
 CircleCollider2D:
@@ -3477,7 +3477,7 @@ MonoBehaviour:
   ComentarioDron: A veces el cientifico Oscar utiliza la computadora para jugar en
     lugar de trabajar.
   lineasObservacion:
-  - Una Supercomputadora de 3 monitores.
+  - '*Observas una Supercomputadora de 3 monitores*'
   - '*Te preguntas que son todas esas letras y numeros en la pantalla*'
 --- !u!58 &678554415
 CircleCollider2D:
@@ -3557,7 +3557,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.117815256, y: 1.2014189}
+  m_Offset: {x: 0.117815256, y: 1.1847429}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3568,7 +3568,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.2828784, y: 2.617403}
+  m_Size: {x: 2.2828784, y: 2.5840511}
   m_EdgeRadius: 0
 --- !u!114 &723874072
 MonoBehaviour:
@@ -11925,6 +11925,142 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   siguienteEscena: 2DLabTutorial
+--- !u!1001 &2027543564
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2522234034842157576, guid: aad97d391aa428f448fdcc6bc7ff7a4a,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.9311123
+      objectReference: {fileID: 0}
+    - target: {fileID: 2522234034842157576, guid: aad97d391aa428f448fdcc6bc7ff7a4a,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.110487
+      objectReference: {fileID: 0}
+    - target: {fileID: 2522234034842157576, guid: aad97d391aa428f448fdcc6bc7ff7a4a,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.019930363
+      objectReference: {fileID: 0}
+    - target: {fileID: 2522234034842157576, guid: aad97d391aa428f448fdcc6bc7ff7a4a,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.029895782
+      objectReference: {fileID: 0}
+    - target: {fileID: 2522234034842157576, guid: aad97d391aa428f448fdcc6bc7ff7a4a,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2522234034842157576, guid: aad97d391aa428f448fdcc6bc7ff7a4a,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2522234034842157576, guid: aad97d391aa428f448fdcc6bc7ff7a4a,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2522234034842157576, guid: aad97d391aa428f448fdcc6bc7ff7a4a,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2522234034842157577, guid: aad97d391aa428f448fdcc6bc7ff7a4a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 2522234034842157577, guid: aad97d391aa428f448fdcc6bc7ff7a4a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 2522234034842157577, guid: aad97d391aa428f448fdcc6bc7ff7a4a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -9.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 2522234034842157577, guid: aad97d391aa428f448fdcc6bc7ff7a4a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2522234034842157577, guid: aad97d391aa428f448fdcc6bc7ff7a4a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2522234034842157577, guid: aad97d391aa428f448fdcc6bc7ff7a4a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2522234034842157577, guid: aad97d391aa428f448fdcc6bc7ff7a4a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2522234034842157577, guid: aad97d391aa428f448fdcc6bc7ff7a4a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2522234034842157577, guid: aad97d391aa428f448fdcc6bc7ff7a4a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2522234034842157577, guid: aad97d391aa428f448fdcc6bc7ff7a4a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2522234034842157577, guid: aad97d391aa428f448fdcc6bc7ff7a4a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2522234034842157579, guid: aad97d391aa428f448fdcc6bc7ff7a4a,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2522234034842157579, guid: aad97d391aa428f448fdcc6bc7ff7a4a,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2522234034842157579, guid: aad97d391aa428f448fdcc6bc7ff7a4a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1918733706, guid: d0cf0e3ee3853f74a8cd1b07e49898e8,
+        type: 3}
+    - target: {fileID: 2522234034842157579, guid: aad97d391aa428f448fdcc6bc7ff7a4a,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2522234034842157582, guid: aad97d391aa428f448fdcc6bc7ff7a4a,
+        type: 3}
+      propertyPath: m_Name
+      value: MAN_Balde
+      objectReference: {fileID: 0}
+    - target: {fileID: 2522234034842157588, guid: aad97d391aa428f448fdcc6bc7ff7a4a,
+        type: 3}
+      propertyPath: ComentarioDron
+      value: "CRAB: Es el balde que pusieron para recolectar el agua que ca\xEDa
+        por la grieta del techo. Empujala para que podamos salir."
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: aad97d391aa428f448fdcc6bc7ff7a4a, type: 3}
 --- !u!1001 &3277083081330596375
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12128,7 +12264,8 @@ MonoBehaviour:
   ComentarioDron: 'CRAB: El profesor KAO suele olvidar lavar los trastes; pero lo
     compensa con entusiasmo por la ciencia. '
   lineasObservacion:
-  - Parece que alguien estuvo almorzando en esta mesa...
+  - "*Parece que alguien estuvo almorzando en esta mesa...\n...Y no recogi\xF3 sus
+    trastes.*"
 --- !u!58 &7340299282307774609
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -2647,7 +2647,7 @@ MonoBehaviour:
     Limonada en un Matraz y le hizo creer que estaba bebiendo sustancias t\xF3xicas,
     Jajajaja."
   lineasObservacion:
-  - "Es una Mesa con matraces para la realizaci\xF3n de experimentos."
+  - "*Observas una mesa con matraces que se usan para la realizaci\xF3n de experimentos*"
   - '*Notas que han pegado las patas de la mesa al suelo; como si quisieran impedir
     que se despegara de este*'
 --- !u!58 &1617121227667515821
@@ -2799,7 +2799,7 @@ MonoBehaviour:
   ComentarioDron: 'CRAB: Han retirado los libros del estante; supongo que es parte
     del experimento qu vamos a realizar.'
   lineasObservacion:
-  - Un estante para libros.
+  - '*Observas un estante para libros hecho de madera*'
   - '*Notas que han utilizado clavos para mantenerla pegada al muro*'
 --- !u!58 &1956232108357951421
 CircleCollider2D:
@@ -10856,11 +10856,8 @@ MonoBehaviour:
   ComentarioDron: "CRAB: Al parecer los humanos han creado una sustancia capaz de
     inducir al sentimiento de alegr\xEDa. Qu\xE9 curioso, \xBFNo crees?"
   lineasObservacion:
-  - "Una m\xE1quina dispensadora de Gaseosas.\n"
-  - 'Alcanzas a leer una frase en la parte inferior; dice...
-
-
-    "Destapa la Felicidad"'
+  - "*Es una m\xE1quina dispensadora de Gaseosas*\n"
+  - "*Alcanzas a leer una frase en la parte inferior* \nDice... \"Destapa la Felicidad\""
   - "*Metes la mano por la ranura par ver si hay algo all\xED; pero no hay nada*"
 --- !u!1 &8915655196309329954
 GameObject:
