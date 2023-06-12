@@ -30,7 +30,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Introduction/Prologo.unity
     guid: 72988eccbda69784084d1cf2f966ab82
   - enabled: 1
-    path: Assets/Scenes/Laboratorio/3DBasssss.unity
+    path: Assets/Scenes/Exterior/3DBasssss.unity
     guid: ff8084e93d051804491800a47c6355af
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 86aedb8289800c94ab867c5bab09b28f,
