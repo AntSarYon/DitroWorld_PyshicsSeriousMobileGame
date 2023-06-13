@@ -7618,10 +7618,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lineasDialogo:
-  - "Profesor Kao: Ahora que despertaste eres totalmente libre de ir a explorar el
-    mundo y aprender cosas nuevas por t\xED mismo."
-  - "Profesor Kao: Si necesitas ayuda con algo, no dudes en hablar con CRAB, \xE9l
-    est\xE1 tan capacitado como nosotros."
+  - "Cient\xEDfico Kao: Ahora que despertaste eres totalmente libre de ir a explorar
+    el mundo y aprender cosas nuevas por t\xED mismo."
+  - "Cient\xEDfico Kao: Si necesitas ayuda con algo, no dudes en hablar con CRAB,
+    \xE9l est\xE1 tan capacitado como nosotros."
   ComentarioDron: "CRAB: El profesor KAO es el ser humano m\xE1s brillante que he
     conocido. Aunque no conozco a muchos..."
 --- !u!95 &1691708024
