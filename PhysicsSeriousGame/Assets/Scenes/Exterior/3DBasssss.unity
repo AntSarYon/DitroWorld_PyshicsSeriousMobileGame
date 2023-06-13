@@ -131,10 +131,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -501,6 +516,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree_03 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 8258636257821695437, guid: a79e88c85c3bfe84a8a82d89cf830ac7,
+        type: 3}
+      propertyPath: m_LightProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8258636257821695437, guid: a79e88c85c3bfe84a8a82d89cf830ac7,
+        type: 3}
+      propertyPath: m_ReflectionProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a79e88c85c3bfe84a8a82d89cf830ac7, type: 3}
 --- !u!4 &183358076 stripped
@@ -591,10 +616,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -761,10 +801,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (44)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -1092,10 +1147,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (51)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -1167,10 +1237,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -1242,10 +1327,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -1317,10 +1417,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -1452,6 +1567,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grass_02 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 3356751432538110193, guid: f5016e1e311931548bd95d2166812ce4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236091592663432304, guid: f5016e1e311931548bd95d2166812ce4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119635006381219650, guid: f5016e1e311931548bd95d2166812ce4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5016e1e311931548bd95d2166812ce4, type: 3}
 --- !u!4 &416838847 stripped
@@ -1562,10 +1692,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -1682,10 +1827,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -1757,10 +1917,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (46)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -1987,6 +2162,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grass_02 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 3356751432538110193, guid: f5016e1e311931548bd95d2166812ce4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236091592663432304, guid: f5016e1e311931548bd95d2166812ce4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119635006381219650, guid: f5016e1e311931548bd95d2166812ce4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5016e1e311931548bd95d2166812ce4, type: 3}
 --- !u!4 &564340729 stripped
@@ -2002,10 +2192,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -2077,10 +2282,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (54)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -2349,6 +2569,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grass_02 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 3356751432538110193, guid: f5016e1e311931548bd95d2166812ce4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236091592663432304, guid: f5016e1e311931548bd95d2166812ce4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119635006381219650, guid: f5016e1e311931548bd95d2166812ce4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5016e1e311931548bd95d2166812ce4, type: 3}
 --- !u!4 &620100760 stripped
@@ -2364,10 +2599,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -2475,10 +2725,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -2610,6 +2875,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grass_02 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 3356751432538110193, guid: f5016e1e311931548bd95d2166812ce4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236091592663432304, guid: f5016e1e311931548bd95d2166812ce4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119635006381219650, guid: f5016e1e311931548bd95d2166812ce4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5016e1e311931548bd95d2166812ce4, type: 3}
 --- !u!4 &744148565 stripped
@@ -2625,10 +2905,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (39)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -2700,10 +2995,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -2850,10 +3160,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -2925,10 +3250,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -3060,6 +3400,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grass_02 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 3356751432538110193, guid: f5016e1e311931548bd95d2166812ce4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236091592663432304, guid: f5016e1e311931548bd95d2166812ce4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119635006381219650, guid: f5016e1e311931548bd95d2166812ce4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5016e1e311931548bd95d2166812ce4, type: 3}
 --- !u!4 &865270828 stripped
@@ -3170,10 +3525,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -3305,6 +3675,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grass_02 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 3356751432538110193, guid: f5016e1e311931548bd95d2166812ce4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236091592663432304, guid: f5016e1e311931548bd95d2166812ce4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119635006381219650, guid: f5016e1e311931548bd95d2166812ce4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5016e1e311931548bd95d2166812ce4, type: 3}
 --- !u!4 &916681724 stripped
@@ -3320,6 +3705,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 644074017}
     m_Modifications:
+    - target: {fileID: 7549564184259322936, guid: 71f317190a16a5d4eb5f765186e82272,
+        type: 3}
+      propertyPath: m_LightProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7549564184259322936, guid: 71f317190a16a5d4eb5f765186e82272,
+        type: 3}
+      propertyPath: m_ReflectionProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8031339192871210686, guid: 71f317190a16a5d4eb5f765186e82272,
         type: 3}
       propertyPath: m_RootOrder
@@ -3394,6 +3789,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Suelo
+      objectReference: {fileID: 0}
+    - target: {fileID: 8957304962413023527, guid: 71f317190a16a5d4eb5f765186e82272,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 127
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71f317190a16a5d4eb5f765186e82272, type: 3}
@@ -3500,14 +3900,14 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.8396226, g: 0.76104116, b: 0.29703632, a: 1}
+  m_Intensity: 0.7
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -3540,7 +3940,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -3573,10 +3973,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -3684,10 +4099,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (45)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -3759,10 +4189,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -3834,10 +4279,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -3909,10 +4369,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (49)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -3984,10 +4459,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -4172,10 +4662,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -4247,10 +4752,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (52)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -4587,10 +5107,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -4662,10 +5197,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (48)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -4797,6 +5347,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grass_02 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 3356751432538110193, guid: f5016e1e311931548bd95d2166812ce4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236091592663432304, guid: f5016e1e311931548bd95d2166812ce4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119635006381219650, guid: f5016e1e311931548bd95d2166812ce4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5016e1e311931548bd95d2166812ce4, type: 3}
 --- !u!4 &1298978981 stripped
@@ -4812,10 +5377,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -4887,10 +5467,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -5022,6 +5617,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grass_02 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3356751432538110193, guid: f5016e1e311931548bd95d2166812ce4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236091592663432304, guid: f5016e1e311931548bd95d2166812ce4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119635006381219650, guid: f5016e1e311931548bd95d2166812ce4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5016e1e311931548bd95d2166812ce4, type: 3}
 --- !u!4 &1326313495 stripped
@@ -5041,21 +5651,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 880970725214738984, guid: a79e88c85c3bfe84a8a82d89cf830ac7,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 880970725214738984, guid: a79e88c85c3bfe84a8a82d89cf830ac7,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 880970725214738984, guid: a79e88c85c3bfe84a8a82d89cf830ac7,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 880970725214738984, guid: a79e88c85c3bfe84a8a82d89cf830ac7,
         type: 3}
@@ -5106,11 +5701,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 880970725214738984, guid: a79e88c85c3bfe84a8a82d89cf830ac7,
-        type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6941765000743290380, guid: a79e88c85c3bfe84a8a82d89cf830ac7,
         type: 3}
@@ -5177,10 +5767,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -5312,6 +5917,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grass_02 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 3356751432538110193, guid: f5016e1e311931548bd95d2166812ce4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236091592663432304, guid: f5016e1e311931548bd95d2166812ce4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119635006381219650, guid: f5016e1e311931548bd95d2166812ce4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5016e1e311931548bd95d2166812ce4, type: 3}
 --- !u!4 &1445205951 stripped
@@ -5327,10 +5947,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (40)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -5497,10 +6132,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (47)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -5572,10 +6222,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -5897,6 +6562,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grass_02 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3356751432538110193, guid: f5016e1e311931548bd95d2166812ce4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236091592663432304, guid: f5016e1e311931548bd95d2166812ce4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119635006381219650, guid: f5016e1e311931548bd95d2166812ce4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5016e1e311931548bd95d2166812ce4, type: 3}
 --- !u!4 &1547421128 stripped
@@ -5912,10 +6592,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -5987,10 +6682,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (41)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -6069,21 +6779,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 108507113624698413, guid: ca521033c75cc2540b7aadd09cd502d2,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 108507113624698413, guid: ca521033c75cc2540b7aadd09cd502d2,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 108507113624698413, guid: ca521033c75cc2540b7aadd09cd502d2,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 108507113624698413, guid: ca521033c75cc2540b7aadd09cd502d2,
-        type: 3}
       propertyPath: m_LocalPosition.x
       value: 38.404194
       objectReference: {fileID: 0}
@@ -6132,30 +6827,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 108507113624698413, guid: ca521033c75cc2540b7aadd09cd502d2,
-        type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 108507113624723981, guid: ca521033c75cc2540b7aadd09cd502d2,
         type: 3}
       propertyPath: m_Name
       value: Talado1
-      objectReference: {fileID: 0}
-    - target: {fileID: 108507113624723981, guid: ca521033c75cc2540b7aadd09cd502d2,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 6690580599928000713, guid: ca521033c75cc2540b7aadd09cd502d2,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 7067936637415105213, guid: ca521033c75cc2540b7aadd09cd502d2,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca521033c75cc2540b7aadd09cd502d2, type: 3}
@@ -6172,10 +6847,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -6454,21 +7144,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1279437348525638701, guid: e2e682b966e3f644392ffbfab511e0e2,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1279437348525638701, guid: e2e682b966e3f644392ffbfab511e0e2,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1279437348525638701, guid: e2e682b966e3f644392ffbfab511e0e2,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1279437348525638701, guid: e2e682b966e3f644392ffbfab511e0e2,
-        type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.984195
       objectReference: {fileID: 0}
@@ -6516,11 +7191,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1279437348525638701, guid: e2e682b966e3f644392ffbfab511e0e2,
-        type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2e682b966e3f644392ffbfab511e0e2, type: 3}
@@ -6596,6 +7266,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Grass_02 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3356751432538110193, guid: f5016e1e311931548bd95d2166812ce4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236091592663432304, guid: f5016e1e311931548bd95d2166812ce4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119635006381219650, guid: f5016e1e311931548bd95d2166812ce4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5016e1e311931548bd95d2166812ce4, type: 3}
@@ -6714,10 +7399,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -6884,10 +7584,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -6959,10 +7674,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -7034,10 +7764,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -7154,10 +7899,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -7327,6 +8087,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grass_02 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3356751432538110193, guid: f5016e1e311931548bd95d2166812ce4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236091592663432304, guid: f5016e1e311931548bd95d2166812ce4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119635006381219650, guid: f5016e1e311931548bd95d2166812ce4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5016e1e311931548bd95d2166812ce4, type: 3}
 --- !u!4 &1857156575 stripped
@@ -7342,10 +8117,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (42)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -7417,10 +8207,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -7552,6 +8357,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grass_02 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 3356751432538110193, guid: f5016e1e311931548bd95d2166812ce4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236091592663432304, guid: f5016e1e311931548bd95d2166812ce4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119635006381219650, guid: f5016e1e311931548bd95d2166812ce4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5016e1e311931548bd95d2166812ce4, type: 3}
 --- !u!4 &1868236013 stripped
@@ -7662,10 +8482,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -7812,10 +8647,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (43)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -7887,10 +8737,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -8168,6 +9033,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grass_02 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 3356751432538110193, guid: f5016e1e311931548bd95d2166812ce4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236091592663432304, guid: f5016e1e311931548bd95d2166812ce4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119635006381219650, guid: f5016e1e311931548bd95d2166812ce4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5016e1e311931548bd95d2166812ce4, type: 3}
 --- !u!4 &1978223052 stripped
@@ -8183,10 +9063,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -8318,6 +9213,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grass_02 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 3356751432538110193, guid: f5016e1e311931548bd95d2166812ce4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236091592663432304, guid: f5016e1e311931548bd95d2166812ce4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119635006381219650, guid: f5016e1e311931548bd95d2166812ce4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5016e1e311931548bd95d2166812ce4, type: 3}
 --- !u!4 &2003697730 stripped
@@ -8333,10 +9243,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (50)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -8408,10 +9333,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -8483,10 +9423,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -8558,10 +9513,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (53)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
@@ -8633,10 +9603,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1700674092}
     m_Modifications:
+    - target: {fileID: 1267198441840142800, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312969165794846113, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
       propertyPath: m_Name
       value: Grass_01 (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903058273634794869, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903058273634951509, guid: 03cd6f1c5f86ac5469d32b8cf8e56ff5,
         type: 3}
