@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &297889505705136700
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 297889505705136706}
+  - component: {fileID: 297889505705136707}
+  m_Layer: 0
+  m_Name: Event3DData
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &297889505705136706
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297889505705136700}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 774.1401, y: 359.16956, z: 4.326101}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &297889505705136707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297889505705136700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be991625862380d46bc46720525b6271, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textoObjetivo: 'OBJETIVO:
+
+    Aprende a interactuar dentro de la ZonaCero.'
+  comentariosDron:
+  - "Si te encuentras atascado, considera esto: \n\xBFHay alguna fuerza actuando
+    sobre el objeto en cuesti\xF3n, y que afecte su movimiento?"
+  - "En Cinem\xE1tica la velocidad es el cambio en la posici\xF3n de un objeto con
+    respecto al tiempo. Si necesitas llegar a un lugar r\xE1pidamente, \xA1aumenta
+    tu velocidad!"
+  - "En la din\xE1mica, las fuerzas pueden acelerar o desacelerar un objeto. Si necesitas
+    detener un objeto,  \xA1aplica una fuerza en direcci\xF3n opuesta a su movimiento!"
+  - "Si alguna vez  enfrentas un problema complicado, \xA1No dudes en apoyarte de
+    las ecuaciones relevantes!"
+  - "Si alguna vez  enfrentas un problema complicado, \xA1No dudes en apoyarte de
+    las ecuaciones relevantes!"
+  - "Toca un Objeto para seleccionarlo y tener acceso a sus atributos f\xEDsicos.
+    Podr\xE1s modificar su Masa, y controlar la Fuerza con la cual lo afectar\xE1s."
+  - "A diferencia de la Fuerza de tus manos, la Gravedad es una fuerza universal;
+    quiere decir que afecta a todos los objetos en el espacio. \xA1Consid\xE9ralo!"
+  - Prueba a cambiar el Modo en que utilizas la Fuerza. No es lo mismo EMPUJAR un
+    objeto, que IMPULSARLO de un solo y potente Golpe.
+  - "Si no consigues mover un objeto, recuerda la 2da Ley de Newton: \"La aceleraci\xF3n
+    de un objeto es proporcional a la suma de todas las fuerzas que act\xFAan sobre
+    \xE9l e inversamente propocional a su masa\""

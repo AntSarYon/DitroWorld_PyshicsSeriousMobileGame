@@ -22,6 +22,9 @@ public class PysichsMaster : MonoBehaviour
     private bool incrementandoFuerza = false;
     private bool reduciendoFuerza = false;
 
+    private bool incrementandoMasa = false;
+    private bool reduciendoMasa = false;
+
     //Flag de Fuerza siendo aplicada
     private bool empujando = false;
 
@@ -46,15 +49,30 @@ public class PysichsMaster : MonoBehaviour
 
     private void Update()
     {
-        if (incrementandoFuerza)
-        {
+        //Controlamos constantemente el nivel de Fuerza
+        if (incrementandoFuerza){
             IncrementarFuerza();
         }
-        if (reduciendoFuerza)
-        {
+
+        if (reduciendoFuerza){
             ReducirFuerza();
         }
+
+        //Controlamos contantemente el nivel de Masa del RigidBody (Si es que lo hubiera)
+        if (mTouchDeteccion.RigidBodySeleccionado != null)
+        {
+            if (incrementandoMasa)
+            {
+                IncrementarMasa();
+            }
+            if (reduciendoMasa)
+            {
+                ReducirMasa();
+            }
+        }
     }
+
+    //------------------------------------------------------------------------------------------------------
 
     void FixedUpdate()
     {
@@ -82,6 +100,24 @@ public class PysichsMaster : MonoBehaviour
     }
 
     //-------------------------------------------------------------
+
+    public void ImpulsarObjeto()
+    {
+        //Compruebo si hay un RigidBody asignado
+        if (mTouchDeteccion.RigidBodySeleccionado != null)
+        {
+            //Identificamos elpunto de contacto a partir del centro de la camara hasta el Objeto
+            if (Physics.Raycast(transform.position, transform.forward, out hitPointer, rangoDeteccion))
+            {
+                //Aplicamos una fuerza de IMPULSO ese objeto en el Punto de choque
+                mTouchDeteccion.RigidBodySeleccionado.AddForceAtPosition(
+                    transform.forward * fuerzaGolpe,
+                    hitPointer.point,
+                    ForceMode.Impulse
+                );
+            }
+        }
+    }
 
     public void Empujar()
     {
@@ -154,7 +190,7 @@ public class PysichsMaster : MonoBehaviour
         mOrbita.ObjetoSeguido = centro.transform;
     }
 
-    //-------------------------------------------------------------------
+    //----------------------------------------------------------------------------------------
 
     private void IncrementarFuerza()
     {
@@ -176,7 +212,7 @@ public class PysichsMaster : MonoBehaviour
         incrementandoFuerza = false;
     }
 
-    //-------------------------------------------------------------------------
+    //----------------------------------------------
 
     private void ReducirFuerza()
     {
@@ -199,22 +235,40 @@ public class PysichsMaster : MonoBehaviour
         reduciendoFuerza = false;
     }
 
-    //---------------------------------------------------------------------------
+    //------------------------------------------------------------------------------------------
 
     public void IncrementarMasa()
     {
-        mTouchDeteccion.RigidBodySeleccionado.mass += 0.5f;
+        mTouchDeteccion.RigidBodySeleccionado.mass += 1.25f * Time.deltaTime;
     }
 
+    public void ActivarAumentoDeMasa()
+    {
+        incrementandoMasa = true;
+    }
+
+    public void DesactivarAumentoDeMasa()
+    {
+        incrementandoMasa = false;
+    }
+    //------------------------------------------------------------
     public void ReducirMasa()
     {
         //Limitamos que el objeto nunca pueda pesar 0 Kg
-        if (mTouchDeteccion.RigidBodySeleccionado.mass > 1f)
+        if (mTouchDeteccion.RigidBodySeleccionado.mass >= 0.25f)
         {
-            mTouchDeteccion.RigidBodySeleccionado.mass -= 0.5f;
+            mTouchDeteccion.RigidBodySeleccionado.mass -= 1.25f * Time.deltaTime;
         }
-        
+    }
 
+    public void ActivarReduccionDeMasa()
+    {
+        reduciendoMasa = true;
+    }
+
+    public void DesactivarReduccionDeMasa()
+    {
+        reduciendoMasa = false;
     }
 
     //--------------------------------------------------------------
