@@ -42,7 +42,7 @@ public class ButtonsManager : MonoBehaviour
     [SerializeField] private List<GameObject> uiFriccion;
 
     [Header("Textos Actualizables")]
-    //Lista de Textos de propiedades físicas
+    //Lista de Textos de propiedades fï¿½sicas
     [SerializeField] private TextMeshProUGUI textFuerza;
     [SerializeField] private TextMeshProUGUI textMasa;
     [SerializeField] private TextMeshProUGUI textVelocidad;
@@ -64,10 +64,10 @@ public class ButtonsManager : MonoBehaviour
     //Tiempo de tipeo para paneles de texto
     private float tiempoTipeo = 0.025f;
 
-    [SerializeField] private GameObject optionCRABText; //<-- Texto que deberá ocultarse
+    [SerializeField] private GameObject optionCRABText; //<-- Texto que deberï¿½ ocultarse
 
-    // 3D Contabilizará acciones y medirá...
-    // EventData tendrá el Objetivo y los comentariosDeCrab
+    // 3D Contabilizarï¿½ acciones y medirï¿½...
+    // EventData tendrï¿½ el Objetivo y los comentariosDeCrab
 
     private Event3DData dataEvento3D;
 
@@ -178,7 +178,7 @@ public class ButtonsManager : MonoBehaviour
         //Activamos el panel de Ayuda
         helpPanel.SetActive(true);
 
-        //Asignamos un Índice para las ayudas del DRON.
+        //Asignamos un ï¿½ndice para las ayudas del DRON.
         indiceAyuda = UnityEngine.Random.Range(0, dataEvento3D.ComentariosDron.Count);
 
         //Iniciamos la corrutina para tippear la linea de dialogo
@@ -204,10 +204,10 @@ public class ButtonsManager : MonoBehaviour
     //Subrutina para mostrar las lineas de dialogo con efecto de Typeo
     private IEnumerator MostrarLineaAyuda()
     {
-        //Inicialmente el cuadro de texto de Ayuda estará vacio
+        //Inicialmente el cuadro de texto de Ayuda estarï¿½ vacio
         helpText.text = String.Empty;
 
-        //Por cada caracter en la linea de diálogo
+        //Por cada caracter en la linea de diï¿½logo
         foreach (char ch in dataEvento3D.ComentariosDron[indiceAyuda])
         {
             //Incrementamos el caracter al texto mostrado
@@ -234,14 +234,14 @@ public class ButtonsManager : MonoBehaviour
 
     private void Update()
     {
-        //Si el boton de impulso está activo && el de Empuje está desactivado
+        //Si el boton de impulso estï¿½ activo && el de Empuje estï¿½ desactivado
         if (btnImpulsar.activeSelf && !btnEmpujar.activeSelf)
         {
             //Asignamos el Texto de FUERZA DE IMPULSO a la UI
             txtDescripcionFuerza.text = "Fuerza Impulso";
         }
 
-        //Si el boton de Empuje está activo && el de Impulso está desactivado
+        //Si el boton de Empuje estï¿½ activo && el de Impulso estï¿½ desactivado
         else if (btnEmpujar.activeSelf && !btnImpulsar.activeSelf)
         {
             //Asignamos el Texto de FUERZA DE EMPUJE a la UI
@@ -273,7 +273,7 @@ public class ButtonsManager : MonoBehaviour
 
     public void CambiarModoDeFuerza()
     {
-        //Si el boton de impulso está activo && el de Empuje está desactivado
+        //Si el boton de impulso estï¿½ activo && el de Empuje estï¿½ desactivado
         if (btnImpulsar.activeSelf && !btnEmpujar.activeSelf)
         {
             //Desactivamos el boton de Impulso
@@ -282,7 +282,7 @@ public class ButtonsManager : MonoBehaviour
             btnEmpujar.SetActive(true);
         }
 
-        //Si el boton de Empuje está activo && el de Impulso está desactivado
+        //Si el boton de Empuje estï¿½ activo && el de Impulso estï¿½ desactivado
         else if (btnEmpujar.activeSelf && !btnImpulsar.activeSelf)
         {
             //Activamos el Boton de Empuje simple
