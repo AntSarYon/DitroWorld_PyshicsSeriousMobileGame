@@ -1450,7 +1450,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clipClicks: {fileID: 8300000, guid: 42105cb2dd0ff584581a352990bc7197, type: 3}
-  clipManipulacion: {fileID: 8300000, guid: c894bd2696280df4d858a88dd401dcc3, type: 3}
+  clipManipulacion: {fileID: 8300000, guid: 88c08bcdbdb32354eb89cc28ec6b8a41, type: 3}
   clipEvento3D: {fileID: 8300000, guid: f195a36550ff1b342bb769907630f1c3, type: 3}
   clipsDron:
   - {fileID: 8300000, guid: eb79ba6abe258ec4ba88b2dc4159d131, type: 3}
