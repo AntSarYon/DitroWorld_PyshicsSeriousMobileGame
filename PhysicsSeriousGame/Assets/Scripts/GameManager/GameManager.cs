@@ -11,6 +11,12 @@ public class GameManager : MonoBehaviour
     //Lista de Personajes Jugables
     public List<Personajes> personajes;
 
+    //Definimos e inicializamos una Lista de Resultados  
+    public List<ResultadosEvento> listaResultados = new List<ResultadosEvento>();
+
+    //EVENTO PARA CONTROLAR EL CUMPLIMIENTO DE UN OBJETIVO
+    public event UnityAction OnEventAcomplished;
+
     //--------------------------------------------
 
     private void Awake()
@@ -18,7 +24,13 @@ public class GameManager : MonoBehaviour
         ControlarUnicaInstancia();
     }
 
-    //----------------------------------------------
+    //----------------------------------------------------------
+    //Invocador de Evento
+    public void EventAcomplished()
+    {
+        OnEventAcomplished?.Invoke();
+    }
+    //------------------------------------------------------------
 
     private void ControlarUnicaInstancia()
     {

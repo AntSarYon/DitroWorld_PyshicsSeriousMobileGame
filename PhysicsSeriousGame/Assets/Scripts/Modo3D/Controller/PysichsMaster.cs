@@ -13,8 +13,8 @@ public class PysichsMaster : MonoBehaviour
     private TouchDeteccion mTouchDeteccion;
 
     //Referencia al Objeto del medio de la escena
-    [SerializeField] private GameObject centro;
-    [SerializeField] private GameObject centroRelativo;
+    private GameObject centro;
+    private GameObject centroRelativo;
 
     //Fuerza para GOLPE
     [SerializeField] private float fuerzaGolpe;
@@ -31,6 +31,9 @@ public class PysichsMaster : MonoBehaviour
     //Data del objeto impactado por el Rayo
     private RaycastHit hitPointer;
 
+    //Variable para almacenar la maxima velocidad que obtengamos de los objetos
+    private float maxVelocidadEscaneada;
+
     //GETTERS Y SETTERS
     public float RangoDeteccion { get => rangoDeteccion; set => rangoDeteccion = value; }
     public float FuerzaGolpe { get => fuerzaGolpe; set => fuerzaGolpe = value; }
@@ -43,6 +46,16 @@ public class PysichsMaster : MonoBehaviour
         //Obtenemos referencia a componentes
         mOrbita = GetComponent<OrbitaController>();
         mTouchDeteccion = GetComponent<TouchDeteccion>();
+
+        //Inicializamos la Vlocidad escaneada en 0
+        maxVelocidadEscaneada = 0;
+    }
+
+    private void Start()
+    {
+        //Obtenemos referencia a los Centros
+        centro = GameObject.Find("CentroExperimento");
+        centroRelativo = GameObject.Find("CentroRelativo");
     }
 
     //------------------------------------------------------------
@@ -68,6 +81,13 @@ public class PysichsMaster : MonoBehaviour
             if (reduciendoMasa)
             {
                 ReducirMasa();
+            }
+
+            //Si la velocidad observada por el objeto supera a la maxima ya escaneada
+            if (mTouchDeteccion.RigidBodySeleccionado.velocity.magnitude > maxVelocidadEscaneada)
+            {
+                //Actualizamos
+                maxVelocidadEscaneada = mTouchDeteccion.RigidBodySeleccionado.velocity.magnitude;
             }
         }
     }
@@ -97,6 +117,9 @@ public class PysichsMaster : MonoBehaviour
 
             }
         }
+
+        //Actualizamos constantemente la variable de maxima velocidad alcanzada que recibirá la interfaz;
+        ButtonsManager.Instance.MaxVelAlcanzada = maxVelocidadEscaneada;
     }
 
     //-------------------------------------------------------------
@@ -138,26 +161,77 @@ public class PysichsMaster : MonoBehaviour
         {
             //Caso 0 (Hacia abajo)
             case 0:
+                //Si el boton no habia sido oprimido hasta ese momento
+                if (!ButtonsManager.Instance.AccionGravedad0Oprimida)
+                {
+                    //Pasamos el Flag de oprimido a TRUE
+                    ButtonsManager.Instance.AccionGravedad0Oprimida = true;
+                    //Incrementamos el contador de acciones totales
+                    ButtonsManager.Instance.ContAccionesTotal++;
+                }
                 Physics.gravity = new Vector3(0, -9.81f, 0);
                 break;
+
             //Caso 1 (Hacia arriba)
             case 1:
+                //Si el boton no habia sido oprimido hasta ese momento
+                if (!ButtonsManager.Instance.AccionGravedad1Oprimida)
+                {
+                    //Pasamos el Flag de oprimido a TRUE
+                    ButtonsManager.Instance.AccionGravedad1Oprimida = true;
+                    //Incrementamos el contador de acciones totales
+                    ButtonsManager.Instance.ContAccionesTotal++;
+                }
                 Physics.gravity = new Vector3(0, 9.81f, 0);
                 break;
+
             //Caso 2 (Hacia la Izquierda)
             case 2:
+                //Si el boton no habia sido oprimido hasta ese momento
+                if (!ButtonsManager.Instance.AccionGravedad2Oprimida)
+                {
+                    //Pasamos el Flag de oprimido a TRUE
+                    ButtonsManager.Instance.AccionGravedad2Oprimida = true;
+                    //Incrementamos el contador de acciones totales
+                    ButtonsManager.Instance.ContAccionesTotal++;
+                }
                 Physics.gravity = new Vector3(-9.81f, 0, 0);
                 break;
+
             //Caso 3 (Hacia la Derecha)
             case 3:
+                //Si el boton no habia sido oprimido hasta ese momento
+                if (!ButtonsManager.Instance.AccionGravedad3Oprimida)
+                {
+                    //Pasamos el Flag de oprimido a TRUE
+                    ButtonsManager.Instance.AccionGravedad3Oprimida = true;
+                    //Incrementamos el contador de acciones totales
+                    ButtonsManager.Instance.ContAccionesTotal++;
+                }
                 Physics.gravity = new Vector3(9.81f, 0, 0);
                 break;
             //Caso 4 (Hacia Atras)
             case 4:
+                //Si el boton no habia sido oprimido hasta ese momento
+                if (!ButtonsManager.Instance.AccionGravedad4Oprimida)
+                {
+                    //Pasamos el Flag de oprimido a TRUE
+                    ButtonsManager.Instance.AccionGravedad4Oprimida = true;
+                    //Incrementamos el contador de acciones totales
+                    ButtonsManager.Instance.ContAccionesTotal++;
+                }
                 Physics.gravity = new Vector3(0, 0, -9.81f);
                 break;
             //Caso 5 (Hacia Adelante)
             case 5:
+                //Si el boton no habia sido oprimido hasta ese momento
+                if (!ButtonsManager.Instance.AccionGravedad5Oprimida)
+                {
+                    //Pasamos el Flag de oprimido a TRUE
+                    ButtonsManager.Instance.AccionGravedad5Oprimida = true;
+                    //Incrementamos el contador de acciones totales
+                    ButtonsManager.Instance.ContAccionesTotal++;
+                }
                 Physics.gravity = new Vector3(0, 0, 9.81f);
                 break;
         }

@@ -38,19 +38,6 @@ public class TouchDeteccion : MonoBehaviour
         mAudioSource = GetComponent<AudioSource>();
     }
 
-    //--------------------------------------------------
-    /*
-    private void Update()
-    {
-        //RAYCAST DE CLICK DE MOUSE <-- Cambiar por TOUCH más adelante
-
-        //Si hacemos click izquierdo
-        if (Input.GetMouseButtonDown(0))
-        {
-            
-        }
-    }*/
-
     public void DetectarClickEnZonaDeInteraccion()
     {
         //Creamos un Ray desde el punto en que se hizo click
@@ -63,8 +50,8 @@ public class TouchDeteccion : MonoBehaviour
         //Si es que impacta
         if (Physics.Raycast(ray, out hitClick, 200))
         {
-            //Si el objeto tiene la Etiqueta de ObjetoFísico
-            if (hitClick.transform.CompareTag("PhysicObject"))
+            //Si el objeto que esta en la capa de ObjetoFísico (capa 124)
+            if (hitClick.transform.gameObject.layer.Equals(14))
             {
                 //Reproducimos sonido de Seleccion de Objeto
                 mAudioSource.PlayOneShot(clipSeleccionDeObjeto, 0.5f);
@@ -81,9 +68,6 @@ public class TouchDeteccion : MonoBehaviour
                 //Almacenamos el Rigidbody y Collider del Objeto Real cn el cual estamos interactuando
                 rigidBodySeleccionado = hitClick.transform.GetComponent<Rigidbody>();
                 ColliderSeleccionado = hitClick.transform.GetComponent<Collider>();
-
-                //De esta forma, rotaremos en base al punto que tocamos, pero el objeto físico afectado si
-                //será el que corresponda
             }
         }
     }

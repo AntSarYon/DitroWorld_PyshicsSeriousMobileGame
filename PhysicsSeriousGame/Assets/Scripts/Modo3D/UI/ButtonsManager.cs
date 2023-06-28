@@ -8,6 +8,8 @@ using System;
 
 public class ButtonsManager : MonoBehaviour
 {
+    public static ButtonsManager Instance;
+
     //Referencia al Objeto de UI de Transicion
     private Transform objTransicion;
 
@@ -23,7 +25,7 @@ public class ButtonsManager : MonoBehaviour
     [SerializeField] private AudioClip clipPokemon;
 
     [Header("Referencia a Player (Camara)")]
-    [SerializeField] private GameObject CameraPlayer;
+    private GameObject CameraPlayer;
 
     private TouchDeteccion PlayerTouchDetection;
     private PysichsMaster PlayerPhysicsMaster;
@@ -57,6 +59,7 @@ public class ButtonsManager : MonoBehaviour
     //Referencia a Objetos de UI para la ayuda de CRAB
     [SerializeField] private GameObject helpPanel;
     [SerializeField] private TextMeshProUGUI helpText;
+    [SerializeField] private GameObject optionCRABText; //<-- Texto que deber� ocultarse
 
     private bool dialogoAyudaIniciado;
     private int indiceAyuda;
@@ -64,7 +67,40 @@ public class ButtonsManager : MonoBehaviour
     //Tiempo de tipeo para paneles de texto
     private float tiempoTipeo = 0.025f;
 
-    [SerializeField] private GameObject optionCRABText; //<-- Texto que deber� ocultarse
+    [Header("Objetos de UI para la AYUDA de CRAB")]
+    //Referencia a Objetos de UI para los Resultados
+    [SerializeField] private GameObject victoryPanel;
+    [SerializeField] private TextMeshProUGUI timeText;
+    [SerializeField] private TextMeshProUGUI actionsText;
+    [SerializeField] private TextMeshProUGUI prefActionText;
+    [SerializeField] private TextMeshProUGUI prefFuerzaText;
+    [SerializeField] private TextMeshProUGUI maxVelText;
+    [SerializeField] private TextMeshProUGUI solApoyoText;
+
+    private float timer;
+
+    private int contAccionesTotal;
+
+    private bool accionGravedad0Oprimida;
+    private bool accionGravedad1Oprimida;
+    private bool accionGravedad2Oprimida;
+    private bool accionGravedad3Oprimida;
+    private bool accionGravedad4Oprimida;
+    private bool accionGravedad5Oprimida;
+
+    private bool accionEmpujeOprimida;
+    private bool accionImpulsoOprimida;
+    private bool accionAumentoDeMasaOprimida;
+    private bool accionReduccionDeMasaOprimida;
+
+    private int contGravedad;
+    private int contModificacionDeMasa;
+    private int contEmpuje;
+    private int contImpulso;
+
+    private float maxVelAlcanzada;
+    private int contApoyo;
+
 
     // 3D Contabilizar� acciones y medir�...
     // EventData tendr� el Objetivo y los comentariosDeCrab
@@ -77,13 +113,24 @@ public class ButtonsManager : MonoBehaviour
     private bool masaActivada;
     private bool friccionActivada;
 
+    public float MaxVelAlcanzada { get => maxVelAlcanzada; set => maxVelAlcanzada = value; }
+    public float Timer { get => timer; set => timer = value; }
+    public bool AccionGravedad0Oprimida { get => accionGravedad0Oprimida; set => accionGravedad0Oprimida = value; }
+    public bool AccionGravedad1Oprimida { get => accionGravedad1Oprimida; set => accionGravedad1Oprimida = value; }
+    public bool AccionGravedad2Oprimida { get => accionGravedad2Oprimida; set => accionGravedad2Oprimida = value; }
+    public bool AccionGravedad3Oprimida { get => accionGravedad3Oprimida; set => accionGravedad3Oprimida = value; }
+    public bool AccionGravedad4Oprimida { get => accionGravedad4Oprimida; set => accionGravedad4Oprimida = value; }
+    public bool AccionGravedad5Oprimida { get => accionGravedad5Oprimida; set => accionGravedad5Oprimida = value; }
+    public int ContAccionesTotal { get => contAccionesTotal; set => contAccionesTotal = value; }
+
     //-------------------------------------------------------
 
     private void Awake()
     {
-        //Obtenemos referencias
-        PlayerTouchDetection = CameraPlayer.GetComponent<TouchDeteccion>();
-        PlayerPhysicsMaster = CameraPlayer.GetComponent<PysichsMaster>();
+        //Asignamos esta interfaz como la Instancia
+        Instance = this;
+
+        //Obtenemos referencia a la Fuente de Audio
         mAudioSource = GetComponent<AudioSource>();
 
         //Obtenemos referencia a la transicion
@@ -110,6 +157,44 @@ public class ButtonsManager : MonoBehaviour
 
     private void Start()
     {
+        #region Variables de Medicion 
+        //Inicializamos contadores en 0
+        timer = 0.00f;
+
+        ContAccionesTotal = 0;
+        contEmpuje = 0;
+        contGravedad = 0;
+        contImpulso = 0;
+        contModificacionDeMasa = 0;
+
+        maxVelAlcanzada = 0;
+        contApoyo = 0;
+
+        //Inicializamos Flags de Acciones oprimidas en Falso
+        accionEmpujeOprimida = false;
+
+        AccionGravedad0Oprimida = false;
+        AccionGravedad1Oprimida = false;
+        AccionGravedad2Oprimida = false;
+        AccionGravedad3Oprimida = false;
+        AccionGravedad4Oprimida = false;
+        AccionGravedad5Oprimida = false;
+
+        accionImpulsoOprimida = false;
+        accionAumentoDeMasaOprimida = false;
+        accionReduccionDeMasaOprimida = false;
+
+        #endregion
+
+        // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+        //Encontramos el CameraPlayer en la Escena y lo asignamos
+        CameraPlayer = GameObject.Find("CameraPlayer");
+
+        //Obtenemos referencias
+        PlayerTouchDetection = CameraPlayer.GetComponent<TouchDeteccion>();
+        PlayerPhysicsMaster = CameraPlayer.GetComponent<PysichsMaster>();
+
         //Activamos el Panel de Objetivo
         objectivePanel.SetActive(true);
 
@@ -120,7 +205,182 @@ public class ButtonsManager : MonoBehaviour
         helpPanel.SetActive(false);
     }
 
-    //------------------------------------------------------------------
+    //-----------------------------------------------------------------------------------------------
+    #region Resultados y Adaptabilidad 
+    //-----------------------------------------------------------------------------------------------
+
+    public void MostrarPanelDeVictoria()
+    {
+        //Asignamos los resultados a los textos
+        timeText.text = "Tiempo empleado: " + Manager3D.Instance.TiempoTranscurrido.ToString("F2") + "s";
+        actionsText.text = $"Se utilizaron {ContAccionesTotal} de 10 Herramientas";
+        prefActionText.text = $"Accion preferida: {ObtenerTextoDeAccionPreferida()}";
+        prefFuerzaText.text = $"Tipo de Fuerza preferida: : {ObtenerTextoDeFuerzaPreferida()}";
+        maxVelText.text = "Max velocidad escaneada: " + maxVelAlcanzada.ToString("F2") + "m/s";
+        solApoyoText.text = $"Solicitudes de Apoyo a CRAB: {contApoyo}";
+
+        //Mostramos el Panel de Victoria
+        victoryPanel.SetActive(true);
+    }
+
+    //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+    private string ObtenerTextoDeAccionPreferida()
+    {
+        int indiceMax = 0;
+        int valMaximo = 0;
+
+        string[] arrAcciones = new string[4];
+        arrAcciones[0] = "EMPUJE DE OBJETOS";
+        arrAcciones[1] = "IMPULSAR OBJETOS";
+        arrAcciones[2] = "MODIFICAR GRAVEDAD";
+        arrAcciones[3] = "MODIFICACION DE MASA";
+
+
+        int[] arrContadores= new int[4];
+        arrContadores[0] = contEmpuje;
+        arrContadores[1] = contImpulso;
+        arrContadores[2] = contGravedad;
+        arrContadores[3] = contModificacionDeMasa;
+
+        for (int i = 0; i< arrContadores.Length;i++)
+        {
+            if (arrContadores[i] > valMaximo)
+            {
+                valMaximo = arrContadores[i];
+                indiceMax = i;
+            }
+        }
+
+        //Regresamos un enunciado indicando la Accion y su puntaje.
+        return $"{arrAcciones[indiceMax]} ({valMaximo})";
+    }
+
+    //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+    private TipoDeAccion RegistrarAccionPreferida()
+    {
+        int indiceMax = 0;
+        int valMaximo = 0;
+
+        TipoDeAccion[] arrTiposAccion = new TipoDeAccion[4];
+        arrTiposAccion[0] = TipoDeAccion.AccionEmpuje;
+        arrTiposAccion[1] = TipoDeAccion.AccionImpulso;
+        arrTiposAccion[2] = TipoDeAccion.AccionGravedad;
+        arrTiposAccion[3] = TipoDeAccion.AccionMasa;
+
+        int[] arrContadores = new int[4];
+        arrContadores[0] = contEmpuje;
+        arrContadores[1] = contImpulso;
+        arrContadores[2] = contGravedad;
+        arrContadores[3] = contModificacionDeMasa;
+
+        for (int i = 0; i < arrContadores.Length; i++)
+        {
+            if (arrContadores[i] > valMaximo)
+            {
+                valMaximo = arrContadores[i];
+                indiceMax = i;
+            }
+        }
+
+        //Retornamos el Tipo de Accion mas utilizado
+        return arrTiposAccion[indiceMax];
+    }
+
+    //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    private string ObtenerTextoDeFuerzaPreferida()
+    {
+        if (contEmpuje > contGravedad && contEmpuje > contImpulso)
+        {
+            return "EMPUJE";
+        }
+        else if (contGravedad > contEmpuje && contGravedad > contImpulso)
+        {
+            return "GRAVEDAD";
+        }
+        else if (contImpulso > contGravedad && contImpulso > contEmpuje)
+        {
+            return "IMPULSO";
+        }
+        else
+        {
+            return "SIN PREFERENCIAS";
+        }
+    }
+
+    //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    private TipoDeFuerza ObtenerFuerzaPreferida()
+    {
+        if (contEmpuje > contGravedad && contEmpuje > contImpulso)
+        {
+            return TipoDeFuerza.Empuje;
+        }
+        else if (contGravedad > contEmpuje && contGravedad > contImpulso)
+        {
+            return TipoDeFuerza.Gravedad;
+        }
+        else if (contImpulso > contGravedad && contImpulso > contEmpuje)
+        {
+            return TipoDeFuerza.Impulso;
+        }
+        else
+        {
+            return TipoDeFuerza.SinPreferencias;
+        }
+    }
+
+    //***********************************************************************
+
+    public void EnviarResultadosAAdaptationController()
+    {
+        ResultadosEvento resultados = new ResultadosEvento();
+
+        //Obtenemos la Accion y fuerza preferida
+        resultados.accionFavorita = RegistrarAccionPreferida();
+        resultados.fuerzaFavorita = ObtenerFuerzaPreferida();
+
+        //Obtenemos el tiempo que hemos tardado
+        resultados.tiempoFinal = CalcularTiempoDeResolucion();
+
+        //Obtenemos la Velocidad maxima registrada en la escena
+        resultados.velocidadObtenida = maxVelAlcanzada;
+
+        //Con los datos anteriormente obtenidos, Calculamos la Dificultad de Evento percibida
+        resultados.dificultadPercibida = resultados.CalcularDificultadDeEventoPercibida();
+
+        //Agregamos el resultado a la Lista de Resultados de Evento
+        GameManager.Instance.listaResultados.Add(resultados);
+    }
+
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+    private TiempoDeResolucion CalcularTiempoDeResolucion()
+    {
+        if (Manager3D.Instance.TiempoTranscurrido > 0.00f && Manager3D.Instance.TiempoTranscurrido < 60.00f)
+        {
+            return TiempoDeResolucion.Veloz;
+        }
+
+        else if (Manager3D.Instance.TiempoTranscurrido > 60.00f && Manager3D.Instance.TiempoTranscurrido < 150.00f)
+        {
+            return TiempoDeResolucion.Normal;
+        }
+
+        else
+        {
+            return TiempoDeResolucion.Lento;
+        }
+    }
+
+
+    //************************************************************************
+
+    //-----------------------------------------------------------------------------------------------
+    #endregion //------------------------------------------------------------------------------------
+    //-----------------------------------------------------------------------------------------------
 
     public void ControlarVisualizacionDeObjetivo()
     {
@@ -167,6 +427,10 @@ public class ButtonsManager : MonoBehaviour
 
     private void IniciarAyuda()
     {
+        //Incrementamos el Contador de Apoyo
+        contApoyo++;
+        //...................................
+
         //Activamos el flag de Ayuda iniciada
         dialogoAyudaIniciado = true;
 
@@ -332,6 +596,10 @@ public class ButtonsManager : MonoBehaviour
 
     public void ModificarGravedad(int direccion)
     {
+        //Incrementamos el Contador de Gravedad modificada
+        contGravedad++;
+        //...................................
+
         CameraPlayer.GetComponent<PysichsMaster>().ModificarGravedad(direccion);
     }
 
@@ -411,6 +679,20 @@ public class ButtonsManager : MonoBehaviour
 
     public void DesactivarAumentoDeMasa()
     {
+        //Si el aumento de Masa aun no se ha oprimido
+        if (!accionAumentoDeMasaOprimida)
+        {
+            //Pasamos el Flag a True
+            accionAumentoDeMasaOprimida = true;
+
+            //Incrementamos el contador de acciones totales
+            ContAccionesTotal++;
+        }
+
+        //Incrementamos el Contador de MasaModificada
+        contModificacionDeMasa++;
+        //...................................
+
         CameraPlayer.GetComponent<PysichsMaster>().DesactivarAumentoDeMasa();
     }
 
@@ -421,6 +703,20 @@ public class ButtonsManager : MonoBehaviour
 
     public void DesactivarReduccionDeMasa()
     {
+        //Si la reduccion de Masa aun no se ha oprimido
+        if (!accionReduccionDeMasaOprimida)
+        {
+            //Pasamos el Flag a True
+            accionReduccionDeMasaOprimida = true;
+
+            //Incrementamos el contador de acciones totales
+            ContAccionesTotal++;
+        }
+
+        //Incrementamos el Contador de MasaModificada
+        contModificacionDeMasa++;
+        //...................................
+
         CameraPlayer.GetComponent<PysichsMaster>().DesactivarReduccionDeMasa();
     }
 
@@ -428,6 +724,20 @@ public class ButtonsManager : MonoBehaviour
 
     public void ImpulsarObjeto()
     {
+        //Si la reduccion de Masa aun no se ha oprimido
+        if (!accionImpulsoOprimida)
+        {
+            //Pasamos el Flag a True
+            accionImpulsoOprimida = true;
+
+            //Incrementamos el contador de acciones totales
+            ContAccionesTotal++;
+        }
+
+        //Incrementamos el Contador de IMPULSOS
+        contImpulso++;
+        //...................................
+        
         CameraPlayer.GetComponent<PysichsMaster>().ImpulsarObjeto();
     }
 
@@ -438,6 +748,20 @@ public class ButtonsManager : MonoBehaviour
 
     public void DejarDeEmpujar()
     {
+        //Si la reduccion de Masa aun no se ha oprimido
+        if (!accionEmpujeOprimida)
+        {
+            //Pasamos el Flag a True
+            accionEmpujeOprimida = true;
+
+            //Incrementamos el contador de acciones totales
+            ContAccionesTotal++;
+        }
+
+        //Incrementamos el Contador de Empuje
+        contEmpuje++;
+        //...................................
+
         CameraPlayer.GetComponent<PysichsMaster>().DejarDeEmpujar();
     }
 

@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace eventoManzano
 {
     public class EControllerManzano : EventsEDConditions
     {
+
+        // TENEMOS UNA Lista heredada de los Objetos Fisicos dentro del nivel
+        //protected List<GameObject> listaObjetosFisicos = new List<GameObject>();
 
         //-------------------------------------------------
 
@@ -16,26 +20,33 @@ namespace eventoManzano
 
         public override void EjecutarCondicionesDeInicio()
         {
+            //Seteamos la Gravedad a 0
             Physics.gravity = Vector3.zero;
         }
 
         public override bool MonitorearVictoria()
         {
-            return victoria;
+            if (Input.GetKeyDown(KeyCode.V))
+            {
+                return true;
+            }else
+            {
+                return false;
+            }
+            
         }
 
-        // Start is called before the first frame update
-        void Start()
+        //-------------------------------------------------
+       protected override void Start()
         {
-            EjecutarCondicionesDeInicio();
-
-            print("¿Victoria? " + victoria);
-
-            ObtenerObjetosFisicos();
-
-            print(listaObjetosFisicos[0].name);
-            print(listaObjetosFisicos[1].name);
-            print("¡¡Funciona!!");
+            //Llamamos al Start heredado del padre
+            base.Start();
+        }
+        //----------------------------------------------------
+        protected override void Update()
+        {
+            //Llamamos al Update heredado del padre
+            base.Update();
         }
     }
 }

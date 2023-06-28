@@ -7,7 +7,7 @@ public class OrbitaController : MonoBehaviour
     //Angulo en que se visualiza al objeto
     private Vector2 anguloVision;
 
-    [SerializeField] private Transform objetoSeguido;
+    private Transform objetoSeguido;
     [SerializeField] private float distancia;
     [SerializeField] private Vector2 sensibilidadCamara;
 
@@ -23,11 +23,14 @@ public class OrbitaController : MonoBehaviour
 
     private void Awake()
     {
-        //Inicialimente el Objeto seguido por la camara siempre será el ObjetoCentral
-        objetoSeguido = GameObject.Find("CentroExperimento").transform;
-
         //Inicializamos el angulo para que inicie siempre detrás del Punto inicial
         anguloVision = new Vector2(90 * Mathf.Deg2Rad, 0);
+    }
+
+    private void Start()
+    {
+        //Inicialimente el Objeto seguido por la camara siempre será el ObjetoCentral
+        objetoSeguido = GameObject.Find("CentroExperimento").transform;
     }
 
     //---------------------------------------------------------------------------------
