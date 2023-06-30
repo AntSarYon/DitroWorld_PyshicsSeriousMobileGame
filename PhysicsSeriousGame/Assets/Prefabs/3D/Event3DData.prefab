@@ -15,7 +15,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &297889505705136706
 Transform:
@@ -44,9 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be991625862380d46bc46720525b6271, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textoObjetivo: 'OBJETIVO:
-
-    Aprende a interactuar dentro de la ZonaCero.'
+  IDEvento: 0
+  textoObjetivo: "OBJETIVO: \nRecrea el accidente de Ornella"
   comentariosDron:
   - "Si te encuentras atascado, considera esto: \n\xBFHay alguna fuerza actuando
     sobre el objeto en cuesti\xF3n, y que afecte su movimiento?"

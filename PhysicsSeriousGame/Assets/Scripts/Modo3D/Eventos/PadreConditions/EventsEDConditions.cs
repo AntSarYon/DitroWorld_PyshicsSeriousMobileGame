@@ -49,11 +49,13 @@ public abstract class EventsEDConditions : MonoBehaviour
     //START que sera ejecutado por todos sus hijos 
     protected virtual void Start()
     {
+        //Obtenemos Lista con los Objetos fisicos del Escenario
+        ObtenerObjetosFisicos();
+
         //Ejecutamos las condiciones de inicio del Evento3D
         EjecutarCondicionesDeInicio();
 
-        //Obtenemos Lista con los Objetos fisicos del Escenario
-        ObtenerObjetosFisicos();
+        
     }
 
     //---------------------------------------------

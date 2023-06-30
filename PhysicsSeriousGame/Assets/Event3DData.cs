@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Event3DData : MonoBehaviour 
 {
+    public int IDEvento;
     [SerializeField, TextArea(3, 5)] private string textoObjetivo;
     [SerializeField, TextArea(3, 5)] private List<string> comentariosDron;
 

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Event3D : MonoBehaviour
 {
+    public int IDEvento;
+
     //Referencia al icono de Dialogo
     private GameObject iconoEvento;
 

@@ -4939,22 +4939,22 @@ PrefabInstance:
     - target: {fileID: 314607070663445035, guid: d1918ef5054cfba4b97c46972329fcdb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1534450622313102179, guid: d1918ef5054cfba4b97c46972329fcdb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4575629907033354169, guid: d1918ef5054cfba4b97c46972329fcdb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5200772544492575966, guid: d1918ef5054cfba4b97c46972329fcdb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5868637373441961659, guid: d1918ef5054cfba4b97c46972329fcdb,
         type: 3}
@@ -4964,7 +4964,7 @@ PrefabInstance:
     - target: {fileID: 7395854622950138433, guid: d1918ef5054cfba4b97c46972329fcdb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7583456960165463936, guid: d1918ef5054cfba4b97c46972329fcdb,
         type: 3}
@@ -5079,7 +5079,7 @@ PrefabInstance:
     - target: {fileID: 7875619208343306009, guid: d1918ef5054cfba4b97c46972329fcdb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1918ef5054cfba4b97c46972329fcdb, type: 3}
@@ -6218,11 +6218,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Event3DData
       objectReference: {fileID: 0}
-    - target: {fileID: 297889505705136700, guid: f31a4fe05284d614ab6b8d48b4b83932,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 297889505705136706, guid: f31a4fe05284d614ab6b8d48b4b83932,
         type: 3}
       propertyPath: m_RootOrder
@@ -6280,8 +6275,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 297889505705136707, guid: f31a4fe05284d614ab6b8d48b4b83932,
         type: 3}
-      propertyPath: textoObjetivo
-      value: "OBJETIVO: \nRecrea el accidente de Ornella"
+      propertyPath: IDEvento
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f31a4fe05284d614ab6b8d48b4b83932, type: 3}
@@ -8962,24 +8957,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85cb125a2da983145a3d60180b8cc9cc, type: 3}
---- !u!1 &1603126237 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1904836677761429837, guid: 85cb125a2da983145a3d60180b8cc9cc,
-    type: 3}
-  m_PrefabInstance: {fileID: 1603126236}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1603126238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1603126237}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 801fb765582ca72418d03313da1d06e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1614325289 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4411128782263238, guid: 426b44a7575f71e479fab4f4e8431989,

@@ -221,6 +221,9 @@ public class ButtonsManager : MonoBehaviour
 
         //Mostramos el Panel de Victoria
         victoryPanel.SetActive(true);
+
+        //Enviamos los Resultados al GameManager
+        EnviarResultadosAGameManager();
     }
 
     //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -256,37 +259,8 @@ public class ButtonsManager : MonoBehaviour
         return $"{arrAcciones[indiceMax]} ({valMaximo})";
     }
 
-    //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-    private TipoDeAccion RegistrarAccionPreferida()
-    {
-        int indiceMax = 0;
-        int valMaximo = 0;
 
-        TipoDeAccion[] arrTiposAccion = new TipoDeAccion[4];
-        arrTiposAccion[0] = TipoDeAccion.AccionEmpuje;
-        arrTiposAccion[1] = TipoDeAccion.AccionImpulso;
-        arrTiposAccion[2] = TipoDeAccion.AccionGravedad;
-        arrTiposAccion[3] = TipoDeAccion.AccionMasa;
-
-        int[] arrContadores = new int[4];
-        arrContadores[0] = contEmpuje;
-        arrContadores[1] = contImpulso;
-        arrContadores[2] = contGravedad;
-        arrContadores[3] = contModificacionDeMasa;
-
-        for (int i = 0; i < arrContadores.Length; i++)
-        {
-            if (arrContadores[i] > valMaximo)
-            {
-                valMaximo = arrContadores[i];
-                indiceMax = i;
-            }
-        }
-
-        //Retornamos el Tipo de Accion mas utilizado
-        return arrTiposAccion[indiceMax];
-    }
 
     //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -310,73 +284,54 @@ public class ButtonsManager : MonoBehaviour
         }
     }
 
-    //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    private TipoDeFuerza ObtenerFuerzaPreferida()
-    {
-        if (contEmpuje > contGravedad && contEmpuje > contImpulso)
-        {
-            return TipoDeFuerza.Empuje;
-        }
-        else if (contGravedad > contEmpuje && contGravedad > contImpulso)
-        {
-            return TipoDeFuerza.Gravedad;
-        }
-        else if (contImpulso > contGravedad && contImpulso > contEmpuje)
-        {
-            return TipoDeFuerza.Impulso;
-        }
-        else
-        {
-            return TipoDeFuerza.SinPreferencias;
-        }
-    }
 
     //***********************************************************************
 
-    public void EnviarResultadosAAdaptationController()
+    public void EnviarResultadosAGameManager()
     {
         ResultadosEvento resultados = new ResultadosEvento();
 
-        //Obtenemos la Accion y fuerza preferida
-        resultados.accionFavorita = RegistrarAccionPreferida();
-        resultados.fuerzaFavorita = ObtenerFuerzaPreferida();
+        //Regisramos cual era la Dificultad con la que se generó el Nivel
+        resultados.dificultadDeDesafio = GameManager.Instance.siguienteDificultad;
 
-        //Obtenemos el tiempo que hemos tardado
-        resultados.tiempoFinal = CalcularTiempoDeResolucion();
+        print("La Dificultad del Desafio era: " + AdaptationController.Instance.relacionNivelCalculo[resultados.dificultadDeDesafio]);
+
+        //Le asignamos el ID del Evento en que nos encontramos
+        resultados.IDEvento = GameObject.Find("Event3DData").GetComponent<Event3DData>().IDEvento;
+
+        //Obtenemos el Conteo por cada Acciones oprimida
+        resultados.conteoDeAccionEmpuje = contEmpuje;
+        resultados.conteoDeAccionImpulso = contImpulso;
+        resultados.conteoDeAccionGravedad = contGravedad;
+        resultados.conteoDeAccionMasa = contModificacionDeMasa;
+
+        //Obtenemos la Accion y fuerza preferida
+        resultados.accionFavorita = AdaptationController.Instance.RegistrarAccionPreferida(contEmpuje, contImpulso, contGravedad, contModificacionDeMasa);
+        resultados.fuerzaFavorita = AdaptationController.Instance.ObtenerFuerzaPreferida(contEmpuje, contGravedad, contImpulso);
+
+        //Obtenemos el Tiempo que hemos tardado
+        resultados.tiempoFinal = Manager3D.Instance.TiempoTranscurrido;
+
+        //Obtenemos la velocidad del jugador para resolver el reto 
+        resultados.velocidadDeResolucion = AdaptationController.Instance.CalcularVelocidadDeResolucion(Manager3D.Instance.TiempoTranscurrido);
 
         //Obtenemos la Velocidad maxima registrada en la escena
         resultados.velocidadObtenida = maxVelAlcanzada;
 
-        //Con los datos anteriormente obtenidos, Calculamos la Dificultad de Evento percibida
+        //Obtenemos la cantidad de veces que se solicitó Apoyo al Robot
+        resultados.solicitudesDeApoyo = contApoyo;
+
+        //Con los datos anteriormente obtenidos, Calculamos la Dificultad de Evento percibida por el jugador
         resultados.dificultadPercibida = resultados.CalcularDificultadDeEventoPercibida();
+
+        print("La Dificultad percibida fue: " + AdaptationController.Instance.relacionNivelCalculo[resultados.dificultadPercibida]);
 
         //Agregamos el resultado a la Lista de Resultados de Evento
         GameManager.Instance.listaResultados.Add(resultados);
-    }
 
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-    private TiempoDeResolucion CalcularTiempoDeResolucion()
-    {
-        if (Manager3D.Instance.TiempoTranscurrido > 0.00f && Manager3D.Instance.TiempoTranscurrido < 60.00f)
-        {
-            return TiempoDeResolucion.Veloz;
-        }
-
-        else if (Manager3D.Instance.TiempoTranscurrido > 60.00f && Manager3D.Instance.TiempoTranscurrido < 150.00f)
-        {
-            return TiempoDeResolucion.Normal;
-        }
-
-        else
-        {
-            return TiempoDeResolucion.Lento;
-        }
-    }
-
-
-    //************************************************************************
+        //Actualizamos los Parametros del GameManager
+        GameManager.Instance.ActualizarParametrosActuales();
+    } 
 
     //-----------------------------------------------------------------------------------------------
     #endregion //------------------------------------------------------------------------------------
