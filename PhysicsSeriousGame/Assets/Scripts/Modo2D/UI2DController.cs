@@ -26,7 +26,21 @@ public class UI2DController : MonoBehaviour
     //Referencia a Objetos de UI para la ineraccion
     [SerializeField] private GameObject interactionPanel;
     [SerializeField] private TextMeshProUGUI interactionText;
-    
+
+    //Referencia a Objetos de UI para el STATUS
+    [SerializeField] private GameObject dataPanel;
+
+    [SerializeField] private TextMeshProUGUI dificultadText;
+    [SerializeField] private TextMeshProUGUI impulsosText;
+    [SerializeField] private TextMeshProUGUI empujesText;
+    [SerializeField] private TextMeshProUGUI gravedadText;
+    [SerializeField] private TextMeshProUGUI masaText;
+    [SerializeField] private TextMeshProUGUI solicitudesText;
+    [SerializeField] private TextMeshProUGUI tiempoText;
+    [SerializeField] private TextMeshProUGUI ultimoDesafio;
+
+    private bool mostrandoPromedio = false;
+
 
     public GameObject InteractionPanel { get => interactionPanel; set => interactionPanel = value; }
     public TextMeshProUGUI InteractionText { get => interactionText; set => interactionText = value; }
@@ -73,8 +87,88 @@ public class UI2DController : MonoBehaviour
 
     }
 
-    //---------------------------------------------------------
-    //---------------------------------------------------------
+    //-----------------------------------------------------------------------------
+    //------------------------------------------------------------------------------
+
+    public void MostrarDataDeJuego()
+    {
+        mAudioSource.PlayOneShot(clipClicks, 0.5f);
+
+        //Asignamos los Parametros
+        if (GameManager.Instance.listaResultados.Count == 0)
+        {
+            dificultadText.text = "Aun no se han completado Eventos";
+        }
+        else
+        {
+            dificultadText.text = "Dificultad percibida en ultimo evento: " + GameManager.Instance.listaResultados[GameManager.Instance.listaResultados.Count - 1].dificultadPercibida;
+        }
+        impulsosText.text = "Impulsos realizados: " + GameManager.Instance.contAccionImpulso;
+        empujesText.text = "Empujes realizados: " + GameManager.Instance.contAccionEmpuje;
+        gravedadText.text = "Cambios de Gravedad: " + GameManager.Instance.contAccionGravedad;
+        masaText.text = "Alteraciones de Masa: " + GameManager.Instance.contAccionMasa;
+        solicitudesText.text = "Solicitudes de Apoyo a CRAB: " + GameManager.Instance.numSolicitudesActuales;
+        tiempoText.text = "Tiempo de resolucion Promedio: " + GameManager.Instance.tiempoDeResolucionPromedio.ToString("F2") + "s";
+        ultimoDesafio.text = "Dificultad del Juego Actual: " + GameManager.Instance.siguienteDificultad;
+
+        mostrandoPromedio = false;
+
+        //Activamos el Panel de Data
+        dataPanel.SetActive(true);
+    }
+
+    public void AlternarParametros()
+    {
+        mAudioSource.PlayOneShot(clipClicks, 0.5f);
+
+        if (!mostrandoPromedio)
+        {
+            //Asignamos los Parametros
+            dificultadText.text = "DATOS PROMEDIO POR EVENTO";
+            impulsosText.text = "Impulsos por evento: " + GameManager.Instance.avgAccionImpulso;
+            empujesText.text = "Empujes por evento: " + GameManager.Instance.avgAccionEmpuje;
+            gravedadText.text = "Cambios de Gravedad por evento: " + GameManager.Instance.avgAccionGravedad;
+            masaText.text = "Cambios de Masa por evento: " + GameManager.Instance.avgAccionMasa;
+            solicitudesText.text = "Solicitudes por evento: " + GameManager.Instance.avgSolicitudes;
+            tiempoText.text = "Accion favorita: " + GameManager.Instance.accionFavoritaActual;
+            ultimoDesafio.text = "Dificultad del Juego Actual: " + GameManager.Instance.siguienteDificultad;
+
+            mostrandoPromedio = true;
+        }
+        else
+        {
+            //Asignamos los Parametros
+            if (GameManager.Instance.listaResultados.Count == 0)
+            {
+                dificultadText.text = "Aun no se han completado Eventos";
+            }
+            else
+            {
+                dificultadText.text = "Dificultad percibida en ultimo evento: " + GameManager.Instance.listaResultados[GameManager.Instance.listaResultados.Count - 1].dificultadPercibida;
+            }
+            impulsosText.text = "Impulsos realizados: " + GameManager.Instance.contAccionImpulso;
+            empujesText.text = "Empujes realizados: " + GameManager.Instance.contAccionEmpuje;
+            gravedadText.text = "Cambios de Gravedad: " + GameManager.Instance.contAccionGravedad;
+            masaText.text = "Alteraciones de Masa: " + GameManager.Instance.contAccionMasa;
+            solicitudesText.text = "Solicitudes de Apoyo a CRAB: " + GameManager.Instance.numSolicitudesActuales;
+            tiempoText.text = "Tiempo de resolucion Promedio: " + GameManager.Instance.tiempoDeResolucionPromedio.ToString("F2") + "s";
+            ultimoDesafio.text = "Dificultad del Juego Actual: " + GameManager.Instance.siguienteDificultad;
+            
+            mostrandoPromedio = false;
+        }
+        
+    }
+
+    public void OcultarDataDeJuego()
+    {
+        mAudioSource.PlayOneShot(clipClicks, 0.5f);
+
+        //Desactivamos el Panel de Data
+        dataPanel.SetActive(false);
+    }
+
+    //-----------------------------------------------------------------------------
+    //------------------------------------------------------------------------------
 
     private void PosicionarTransicionDetras()
     {

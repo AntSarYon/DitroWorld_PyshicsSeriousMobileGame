@@ -54,6 +54,7 @@ public class GameManager : MonoBehaviour
         contAccionEmpuje += listaResultados[listaResultados.Count - 1].conteoDeAccionEmpuje;
         contAccionImpulso += listaResultados[listaResultados.Count - 1].conteoDeAccionImpulso;
         contAccionGravedad += listaResultados[listaResultados.Count - 1].conteoDeAccionGravedad;
+        print("Nueva gravedad acumulada: " + contAccionGravedad);
         contAccionMasa += listaResultados[listaResultados.Count - 1].conteoDeAccionMasa;
         //Tambien incrementamos el contador de solicitudes
         numSolicitudesActuales += listaResultados[listaResultados.Count-1].solicitudesDeApoyo;
@@ -167,7 +168,7 @@ public class GameManager : MonoBehaviour
             siguienteDificultad = listaResultados[listaResultados.Count - 1].dificultadDeDesafio;
         }
 
-        print("La Proxima dificultad sera: " + AdaptationController.Instance.relacionNivelCalculo[siguienteDificultad]);
+        //print("La Proxima dificultad sera: " + AdaptationController.Instance.relacionNivelCalculo[siguienteDificultad]);
 
         
     }
@@ -182,12 +183,6 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         ControlarUnicaInstancia();
-
-
-    }
-
-    private void Start()
-    {
 
         //Inicializmaos variables para Adaptabilidad en 0
         tiempoDeResolucionPromedio = 0;                    // <-- LISTO
@@ -206,6 +201,10 @@ public class GameManager : MonoBehaviour
         avgSolicitudes = 0;      // <-- LISTO
         numSolicitudesActuales = 0;    // <-- LISTO
 
+    }
+
+    private void Start()
+    {
         //El nivel de Dificultad empezara en MEDIO
         siguienteDificultad = NivelDeDificultad.Medio;
     }

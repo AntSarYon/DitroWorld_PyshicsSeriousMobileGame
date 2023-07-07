@@ -169,7 +169,7 @@ public class PysichsMaster : MonoBehaviour
                     //Incrementamos el contador de acciones totales
                     ButtonsManager.Instance.ContAccionesTotal++;
                 }
-                Physics.gravity = transform.up * -9.81f;
+                Physics.gravity = new Vector3(0, -9.81f, 0);
                 break;
 
             //Caso 1 (Hacia arriba)
@@ -182,7 +182,7 @@ public class PysichsMaster : MonoBehaviour
                     //Incrementamos el contador de acciones totales
                     ButtonsManager.Instance.ContAccionesTotal++;
                 }
-                Physics.gravity = transform.up * 9.81f;
+                Physics.gravity = new Vector3(0, 9.81f, 0);
                 break;
 
             //Caso 2 (Hacia la Izquierda)

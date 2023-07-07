@@ -49,7 +49,7 @@ namespace eventoOtro
         protected override void Update()
         {
             //Llamamos al Update heredado del padre
-            base.Update();
+            //base.Update();
         }
     }
 }

@@ -116,4 +116,9 @@ public class MenuSeleccionPersonaje : MonoBehaviour
         //Mediante la instancia de SceneManager invocamos la función Empezar Juego
         ScenesManager.Instance.EmpezarJuego();
     }
+
+    public void VolverAlMenu()
+    {
+        ScenesManager.Instance.CargarEscena("MainMenu");
+    }
 }

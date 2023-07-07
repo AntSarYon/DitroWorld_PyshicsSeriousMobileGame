@@ -210,6 +210,11 @@ public class ButtonsManager : MonoBehaviour
         //Desactivamos el Panel de Objetivo
         helpPanel.SetActive(false);
     }
+    //---------------------------------------------------------------------------------------------
+    public void SimularFIn()
+    {
+        Manager3D.Instance.Victoria = true;
+    }
 
     //-----------------------------------------------------------------------------------------------
     #region Resultados y Adaptabilidad 
@@ -228,8 +233,6 @@ public class ButtonsManager : MonoBehaviour
         //Mostramos el Panel de Victoria
         victoryPanel.SetActive(true);
 
-        //Enviamos los Resultados al GameManager
-        EnviarResultadosAGameManager();
     }
 
     //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -309,6 +312,7 @@ public class ButtonsManager : MonoBehaviour
         resultados.conteoDeAccionEmpuje = contEmpuje;
         resultados.conteoDeAccionImpulso = contImpulso;
         resultados.conteoDeAccionGravedad = contGravedad;
+        print("gravedad enviada: " + contGravedad);
         resultados.conteoDeAccionMasa = contModificacionDeMasa;
 
         //Obtenemos la Accion y fuerza preferida
@@ -330,7 +334,7 @@ public class ButtonsManager : MonoBehaviour
         //Con los datos anteriormente obtenidos, Calculamos la Dificultad de Evento percibida por el jugador
         resultados.dificultadPercibida = resultados.CalcularDificultadDeEventoPercibida();
 
-        print("La Dificultad percibida fue: " + AdaptationController.Instance.relacionNivelCalculo[resultados.dificultadPercibida]);
+        //print("La Dificultad percibida fue: " + AdaptationController.Instance.relacionNivelCalculo[resultados.dificultadPercibida]);
 
         //Agregamos el resultado a la Lista de Resultados de Evento
         GameManager.Instance.listaResultados.Add(resultados);
@@ -585,7 +589,7 @@ public class ButtonsManager : MonoBehaviour
     public void ModificarGravedad(int direccion)
     {
         //Incrementamos el Contador de Gravedad modificada
-        contGravedad++;
+        contGravedad = contGravedad + 1;
         //...................................
 
         CameraPlayer.GetComponent<PysichsMaster>().ModificarGravedad(direccion);
@@ -840,5 +844,15 @@ public class ButtonsManager : MonoBehaviour
         //Regresamos a la ultima escena antes del experimento
         ScenesManager.Instance.SolicitarCambioDeEscena(ScenesManager.Instance.LastSceneName);
     }
+
+    public void CompletarEvento()
+    {
+        //Enviamos los Resultados al GameManager
+        EnviarResultadosAGameManager();
+        //Regresamos a la ultima escena antes del experimento
+        ScenesManager.Instance.SolicitarCambioDeEscena(ScenesManager.Instance.LastSceneName);
+    }
+
+    
 
 }

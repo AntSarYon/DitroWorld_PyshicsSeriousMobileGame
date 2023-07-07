@@ -5328,8 +5328,8 @@ MonoBehaviour:
   - "Cientifica Ellie: Me quedar\xE9 a analizar los datos de tu red neuronal."
   - "As\xED podr\xE9 conocer m\xE1s acerca de tu nivel de aprendizaje, y la percepci\xF3n
     que tienes sobre los desafios que enfrentes."
-  - Si en algum momento deseas revisar el ESTADO DE TU APRENDIZAJE, no dudes en venir
-    a revisarlo a la Supercomputadora.
+  - Si en algun momento deseas revisar el ESTADO DE TU APRENDIZAJE, puedes hacerlo
+    oprimiendo el icono en la esquina superior izquierda de tu visor.
   ComentarioDron: 'CRAB: Ellie es mi mejor amiga dentro del laboratorio; no solo
     es brillante, sino tambien muy creativa.'
 --- !u!61 &1537529833

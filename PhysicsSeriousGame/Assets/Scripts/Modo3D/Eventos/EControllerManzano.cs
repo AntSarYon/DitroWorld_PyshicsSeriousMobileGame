@@ -13,6 +13,10 @@ namespace eventoManzano
 
         //-------------------------------------------------
 
+        public GameObject[] arrPostes = new GameObject[4];
+
+        //-------------------------------------------------------------------------
+
         public override void ConfigurarObjetosFisicos()
         {
             
@@ -26,25 +30,25 @@ namespace eventoManzano
 
         public override bool MonitorearVictoria()
         {
-            int contManzanasListas = 0;
+            int postesGolpeados = 0;
             bool victoria = false;
 
-            foreach (GameObject go in listaObjetosFisicos)
+            foreach (GameObject go in arrPostes)
             {
-                if (go.GetComponent<Rigidbody>().drag == 5)
+                //Si el poste esta desactivado
+                if (go.activeSelf == false)
                 {
-                    contManzanasListas++;
-
-                    if (contManzanasListas >= 4)
-                    {
-                        victoria = true;
-                        break;
-                    }
+                    postesGolpeados++;
                 }
             }
 
+            if (postesGolpeados == 4)
+            {
+                victoria = true;
+            }
+            else victoria = false;
+
             return victoria;
-            
         }
 
         //-------------------------------------------------
