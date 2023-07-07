@@ -1287,8 +1287,8 @@ MonoBehaviour:
   ComentarioDron: "La ultima vez que estuve cerca de ese grifo me ca\xED e hice corto
     circuto. Mejor no te acerques..."
   lineasObservacion:
-  - "*Observas una taza con residuos de Caf\xE9 y Azucar en el lavadero*"
-  - "*Aunque tienes ganas de limpiarla, sabes que el agua podria da\xF1ar tus circuitos*"
+  - "Hay una taza con residuos de Caf\xE9 y Azucar en el lavadero"
+  - "Aunque tienes ganas de limpiarla, sabes que el agua podria da\xF1ar tus circuitos..."
 --- !u!58 &461687443
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1466,7 +1466,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &506593521
 Transform:
   m_ObjectHideFlags: 0
@@ -3477,8 +3477,8 @@ MonoBehaviour:
   ComentarioDron: A veces el cientifico Oscar utiliza la computadora para jugar en
     lugar de trabajar.
   lineasObservacion:
-  - '*Observas una Supercomputadora de 3 monitores*'
-  - '*Te preguntas que son todas esas letras y numeros en la pantalla*'
+  - Parece ser una supercomputadora de 3 monitores...
+  - "Mmmmm, \xBFqu\xE9 son todas esas letras y numeros en la pantalla?"
 --- !u!58 &678554415
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3557,7 +3557,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.117815256, y: 1.1847429}
+  m_Offset: {x: 0.117815256, y: 1.0913682}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3568,7 +3568,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.2828784, y: 2.5840511}
+  m_Size: {x: 1.3864942, y: 1.2021265}
   m_EdgeRadius: 0
 --- !u!114 &723874072
 MonoBehaviour:
@@ -3641,6 +3641,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 60997752, guid: b0dc05455545ef249b64995bf4bb39e5, type: 3}
+      propertyPath: lineasDialogo.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 60997752, guid: b0dc05455545ef249b64995bf4bb39e5, type: 3}
+      propertyPath: lineasDialogo.Array.data[0]
+      value: 'CRAB: Yo tambien fui creado en este laboratorio.
+
+        Es como mi
+        hogar....'
+      objectReference: {fileID: 0}
+    - target: {fileID: 60997752, guid: b0dc05455545ef249b64995bf4bb39e5, type: 3}
+      propertyPath: lineasDialogo.Array.data[1]
+      value: "CRAB: El Cientifico Kao es el hombre mas amable que conozco, una vez
+        me construy\xF3 una novia dron."
+      objectReference: {fileID: 0}
+    - target: {fileID: 60997752, guid: b0dc05455545ef249b64995bf4bb39e5, type: 3}
+      propertyPath: lineasDialogo.Array.data[2]
+      value: 'CRAB: Yo propuse la idea de que tengas cabello azul.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 60997752, guid: b0dc05455545ef249b64995bf4bb39e5, type: 3}
+      propertyPath: lineasDialogo.Array.data[3]
+      value: "CRAB: No soy muy veloz, pero procurar\xE9 estar siempre a tu lado para
+        lo que necesites."
+      objectReference: {fileID: 0}
     - target: {fileID: 396149495131695368, guid: b0dc05455545ef249b64995bf4bb39e5,
         type: 3}
       propertyPath: m_RootOrder
@@ -3649,12 +3674,12 @@ PrefabInstance:
     - target: {fileID: 396149495131695368, guid: b0dc05455545ef249b64995bf4bb39e5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.61
+      value: -8.42
       objectReference: {fileID: 0}
     - target: {fileID: 396149495131695368, guid: b0dc05455545ef249b64995bf4bb39e5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.35
+      value: -2.71
       objectReference: {fileID: 0}
     - target: {fileID: 396149495131695368, guid: b0dc05455545ef249b64995bf4bb39e5,
         type: 3}
@@ -5297,11 +5322,10 @@ MonoBehaviour:
   lineasDialogo:
   - "Cientifica Ellie: \xA1Me alegra poder conocerte al fin; hemos esperado tanto
     este d\xEDa!"
-  - "Cientifica Ellie: Nuestros compa\xF1eros Bou y Foreman te est\xE1n esperando
-    en la habitaci\xF3n de enfrente."
-  - "Cientifica Ellie: \xA1Adelante, ve a verlos!"
-  ComentarioDron: 'CRAB: Ellie es mi mejor amiga dentro del laboratorio; no solo
-    es brillante, sino tambien muy creativa.'
+  - "Antes de salir ve al sal\xF3n del ala Este; nuestros compa\xF1eros Bou y Foreman
+    te est\xE1n esperando."
+  - "\xA1Adelante, ve a verlos!"
+  ComentarioDron: "CRAB: \xA1Vayamos al Ala Este!"
 --- !u!61 &1537529833
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5414,7 +5438,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1537529831}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 6.03, y: -3.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7604,7 +7628,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1691708018}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.39, y: 6.5, z: 0}
+  m_LocalPosition: {x: 6.79, y: 6.5, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7651,12 +7675,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lineasDialogo:
-  - "Cient\xEDfico Kao: Ahora que despertaste eres totalmente libre de ir a explorar
-    el mundo y aprender cosas nuevas por t\xED mismo."
-  - "Cient\xEDfico Kao: Si necesitas ayuda con algo, no dudes en hablar con CRAB,
-    \xE9l est\xE1 tan capacitado como nosotros."
-  ComentarioDron: "CRAB: El profesor KAO es el ser humano m\xE1s brillante que he
-    conocido. Aunque no conozco a muchos..."
+  - "Cient\xEDfico Kao: Ditro, aseg\xFArate de probar tus SENSORES DE ACCION antes
+    de salir a explorar mundo."
+  - "Cuando tus sensores detecten alg\xFAn evento de inter\xE9s cerca tuyo, ver\xE1s
+    un icono de acci\xF3n aparecer en pantalla."
+  - "Para interactuar con dicho evento, asegurate de activar la opci\xF3n correspondiente
+    en tu panel de accion en la esquina inferior derecha."
+  ComentarioDron: 'CRAB: Yo tambien cuento con un boton propio.
+
+    Llamame cada
+    vez que necesites algo.'
 --- !u!95 &1691708024
 Animator:
   serializedVersion: 5
@@ -11917,7 +11945,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.09432387, y: -0.8786297}
+  m_Offset: {x: -0.35576916, y: -0.87862957}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -11928,7 +11956,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1886477, y: 2.7572594}
+  m_Size: {x: 0.6657572, y: 2.0102723}
   m_EdgeRadius: 0
 --- !u!4 &1956721614
 Transform:
@@ -12013,12 +12041,12 @@ PrefabInstance:
     - target: {fileID: 2522234034842157577, guid: aad97d391aa428f448fdcc6bc7ff7a4a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.75
+      value: -1.73
       objectReference: {fileID: 0}
     - target: {fileID: 2522234034842157577, guid: aad97d391aa428f448fdcc6bc7ff7a4a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.54
+      value: -9.34
       objectReference: {fileID: 0}
     - target: {fileID: 2522234034842157577, guid: aad97d391aa428f448fdcc6bc7ff7a4a,
         type: 3}
@@ -12297,8 +12325,7 @@ MonoBehaviour:
   ComentarioDron: 'CRAB: El profesor KAO suele olvidar lavar los trastes; pero lo
     compensa con entusiasmo por la ciencia. '
   lineasObservacion:
-  - "*Parece que alguien estuvo almorzando en esta mesa...\n...Y no recogi\xF3 sus
-    trastes.*"
+  - "Parece que alguien estuvo almorzando en esta mesa...Y no recogi\xF3 sus trastes."
 --- !u!58 &7340299282307774609
 CircleCollider2D:
   m_ObjectHideFlags: 0

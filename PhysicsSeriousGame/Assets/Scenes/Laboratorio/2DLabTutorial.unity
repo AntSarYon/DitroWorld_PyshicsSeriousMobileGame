@@ -881,15 +881,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lineasDialogo:
-  - 'Cientifico Foreman: Hola Ditro! Yo soy el creador de la ZONA CERO.'
-  - "Cient\xEDfico Foreman: Me he encargado de incorporar un GENERADOR ZERO dentro
-    de tus componentes."
-  - "Cient\xEDfico Foreman: Ese artefacto te permitir\xE1 recrear la ZONA CERO en
-    el exterior, o al menos en una delimitada \xE1rea."
-  - "Cientifico Foreman: Adem\xE1s de manipular la gravedad, y ajustar tu fuerza,
-    podr\xE1s modificar la MASA de los objetos. "
-  - "Cientifico Foreman: Estoy seguro de que te ser\xE1 de mucha utilidad. Te deseo
-    la mejor de las suertes en tu b\xFAsqueda de aprendizaje!"
+  - "Cientifico Foreman: !Hola Ditro! Me encargu\xE9 de incorporar un GENERADOR ZERO
+    en tus componentes."
+  - "Ese artefacto te permitir\xE1 recrear la ZONA CERO en el exterior, o al menos
+    en una delimitada \xE1rea."
+  - "Adem\xE1s de manipular la gravedad, y ajustar la fuerza de tu cuerpo bi\xF3nico,
+    podr\xE1s modificar la MASA de los objetos. \xBFAcaso no es genial?"
+  - "\xA1Te deseo la mejor de las suertes en tu b\xFAsqueda de aprendizaje!"
   ComentarioDron: "CRAB: El doc Foreman es quien cre\xF3 la ZONA CERO; pas\xF3 muchas
     noches sin dormir..."
 --- !u!61 &605200860
@@ -1004,7 +1002,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 605200857}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.18, y: -8.94, z: 0}
+  m_LocalPosition: {x: 12.26, y: -3.32, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1445,7 +1443,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1105635531}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.19, y: 5.7, z: 0}
+  m_LocalPosition: {x: -6.11, y: 5.81, z: 0}
   m_LocalScale: {x: 0.9, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1508,7 +1506,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92a8aa3a2b7abc045b359d42411844bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  siguienteEscena: 2DLabPrincipal
+  siguienteEscena: 2DLabSalida
 --- !u!61 &1131421074
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1519,10 +1517,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -3.0558558, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1533,7 +1531,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 2}
+  m_Size: {x: 0.8216686, y: 2}
   m_EdgeRadius: 0
 --- !u!4 &1131421075
 Transform:
@@ -1543,7 +1541,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1131421072}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.6, y: 0.3, z: 0}
+  m_LocalPosition: {x: -9.55, y: 0.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1718,7 +1716,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3609960666186319614}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1265111474
 MonoBehaviour:
@@ -1817,6 +1815,51 @@ Transform:
   m_Father: {fileID: 484133078}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -8.529}
+--- !u!1 &1395726731
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1395726733}
+  - component: {fileID: 1395726732}
+  m_Layer: 0
+  m_Name: Coordenada0P (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1395726732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395726731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acd4cfbc4fd2dd4449b9e86411060eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NombreEscenaOrigen: 2DLabGeneral
+--- !u!4 &1395726733
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395726731}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.63, y: -0.05, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3609960666186319614}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1438174171
 GameObject:
   m_ObjectHideFlags: 0
@@ -1842,7 +1885,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1438174171}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.28, y: -0.05, z: 0}
+  m_LocalPosition: {x: -9.2, y: -0.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2088,9 +2131,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.08, y: 0.47}
+  m_Offset: {x: 0, y: 0.45}
   serializedVersion: 2
-  m_Radius: 4.75
+  m_Radius: 3.63
 --- !u!4 &1631755212
 Transform:
   m_ObjectHideFlags: 0
@@ -2162,14 +2205,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lineasDialogo:
   - 'Cientifico Bou: Hola Ditro; bienvenido a la ZONA CERO.'
-  - "Cientifico Bou: Esta sala ha sido dise\xF1ada especialmente para controlar las
-    propiedades f\xEDsicas de los objetos en ella."
-  - "Cientifico Bou: Incluye un mecanismo de alteraci\xF3n gravitatoria; en pocas
-    palabras, podr\xE1s hacer que los objetos sean atra\xEDdos en distintas direcciones."
-  - 'Cientifico Bou: El doctor Foreman ha trabajado arduamente para hacer que toda
-    esto sea posible.'
-  - "Cientifico Bou: Gracias a \xE9l podr\xE1s recrear espacios similares a este
-    en el mundo exterior."
+  - "Esta sala ha sido dise\xF1ada especialmente para detectar y controlar las propiedades
+    f\xEDsicas de los objetos en ella."
+  - "Pru\xE9balo tu mismo: Acercate a la mesa del centro y activa la ZONA CERO oprimiendo
+    el ICONO correspondiente en tu Panel de Acciones."
   ComentarioDron: "CRAB: El doc Bou es uno de los hombre m\xE1s queridos por la comunidad;
     tiene un gran sentido del humor."
 --- !u!61 &1809987916
@@ -2284,7 +2323,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1809987913}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.45, y: -1.39, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2674,6 +2713,51 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2116667749
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2116667751}
+  - component: {fileID: 2116667750}
+  m_Layer: 0
+  m_Name: Coordenada0P (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2116667750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116667749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acd4cfbc4fd2dd4449b9e86411060eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NombreEscenaOrigen: 2DLabSalida
+--- !u!4 &2116667751
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116667749}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.73, y: -0.05, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3609960666186319614}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1617121226609212936
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2789,9 +2873,8 @@ MonoBehaviour:
   ComentarioDron: "CRAB: Una vez la cient\xEDfica Ellie le hizo una broma a Foreman,
     tom\xF3 limonada y le hizo creer que estaba bebiendo sustancias t\xF3xicas."
   lineasObservacion:
-  - "*Observas una mesa con matraces que se usan para la realizaci\xF3n de experimentos*"
-  - '*Notas que han pegado las patas de la mesa al suelo; como si quisieran impedir
-    que se despegara de este*'
+  - "Es una mesa con matraces que se usan para la realizaci\xF3n de experimentos..."
+  - Puede verse que han pegado las patas de la mesa al suelo
 --- !u!58 &1617121227667515821
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2941,8 +3024,7 @@ MonoBehaviour:
   ComentarioDron: 'CRAB: Han retirado los libros del estante; supongo que es parte
     del experimento qu vamos a realizar.'
   lineasObservacion:
-  - '*Observas un estante para libros hecho de madera*'
-  - '*Notas que han utilizado clavos para mantenerla pegada al muro*'
+  - Parece que han utilizado clavos para mantener este estante pegado al muro...
 --- !u!58 &1956232108357951421
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2992,6 +3074,8 @@ MonoBehaviour:
   listaCoordenadas:
   - {fileID: 1438174173}
   - {fileID: 1265111474}
+  - {fileID: 1395726732}
+  - {fileID: 2116667750}
 --- !u!1 &3451876809366597495
 GameObject:
   m_ObjectHideFlags: 0
@@ -3023,6 +3107,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1438174172}
+  - {fileID: 1395726733}
+  - {fileID: 2116667751}
   - {fileID: 1265111473}
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -3332,6 +3418,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d47516f1bdbd67f4c83d39cb2fd63f14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IDEvento: 0
   nombreEscena3D: 3DTutorial
   ComentarioDron: "CRAB: Parece que podemos manipular todos estos objetos como parte
     del experimento. Veamos qu\xE9 sucede."
@@ -10998,9 +11085,9 @@ MonoBehaviour:
   ComentarioDron: "CRAB: Al parecer los humanos han creado una sustancia capaz de
     inducir al sentimiento de alegr\xEDa. Qu\xE9 curioso, \xBFNo crees?"
   lineasObservacion:
-  - "*Es una m\xE1quina dispensadora de Gaseosas*\n"
-  - "*Alcanzas a leer una frase en la parte inferior* \nDice... \"Destapa la Felicidad\""
-  - "*Metes la mano por la ranura par ver si hay algo all\xED; pero no hay nada*"
+  - "Alcanzas a leer una frase en la parte inferior de la m\xE1quina. Dice... \"Destapa
+    la Felicidad\""
+  - "Metes la mano por la ranura par ver si hay algo all\xED; pero no hay nada..."
 --- !u!1 &8915655196309329954
 GameObject:
   m_ObjectHideFlags: 0
@@ -11027,7 +11114,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8915655196309329954}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18.11, y: 7.99, z: 0}
+  m_LocalPosition: {x: -17.91, y: 8.87, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

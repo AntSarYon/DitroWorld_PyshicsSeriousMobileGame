@@ -568,6 +568,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1069387439, guid: 2f3f7d4927009b84583c02fcbc509217, type: 3}
+      propertyPath: m_Drag
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 522926820628845222, guid: 2f3f7d4927009b84583c02fcbc509217,
         type: 3}
       propertyPath: m_RootOrder
@@ -3537,21 +3541,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 522926820628845222, guid: 2f3f7d4927009b84583c02fcbc509217,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 522926820628845222, guid: 2f3f7d4927009b84583c02fcbc509217,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 522926820628845222, guid: 2f3f7d4927009b84583c02fcbc509217,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 522926820628845222, guid: 2f3f7d4927009b84583c02fcbc509217,
-        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -3604,36 +3593,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ColumnaFinal4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3713104444964819695, guid: 2f3f7d4927009b84583c02fcbc509217,
-        type: 3}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 3713104444964819695, guid: 2f3f7d4927009b84583c02fcbc509217,
-        type: 3}
-      propertyPath: m_TagString
-      value: ObjectiveFixedObject
-      objectReference: {fileID: 0}
-    - target: {fileID: 3713104444964819695, guid: 2f3f7d4927009b84583c02fcbc509217,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 4031902545585363002, guid: 2f3f7d4927009b84583c02fcbc509217,
-        type: 3}
-      propertyPath: m_LightProbeUsage
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4031902545585363002, guid: 2f3f7d4927009b84583c02fcbc509217,
-        type: 3}
-      propertyPath: m_ReflectionProbeUsage
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5364512601293629222, guid: 2f3f7d4927009b84583c02fcbc509217,
-        type: 3}
-      propertyPath: m_Convex
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f3f7d4927009b84583c02fcbc509217, type: 3}
@@ -4939,22 +4898,22 @@ PrefabInstance:
     - target: {fileID: 314607070663445035, guid: d1918ef5054cfba4b97c46972329fcdb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1534450622313102179, guid: d1918ef5054cfba4b97c46972329fcdb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4575629907033354169, guid: d1918ef5054cfba4b97c46972329fcdb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5200772544492575966, guid: d1918ef5054cfba4b97c46972329fcdb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5868637373441961659, guid: d1918ef5054cfba4b97c46972329fcdb,
         type: 3}
@@ -4964,7 +4923,7 @@ PrefabInstance:
     - target: {fileID: 7395854622950138433, guid: d1918ef5054cfba4b97c46972329fcdb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7583456960165463936, guid: d1918ef5054cfba4b97c46972329fcdb,
         type: 3}
@@ -5079,7 +5038,7 @@ PrefabInstance:
     - target: {fileID: 7875619208343306009, guid: d1918ef5054cfba4b97c46972329fcdb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1918ef5054cfba4b97c46972329fcdb, type: 3}
@@ -6277,6 +6236,11 @@ PrefabInstance:
         type: 3}
       propertyPath: IDEvento
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 297889505705136707, guid: f31a4fe05284d614ab6b8d48b4b83932,
+        type: 3}
+      propertyPath: textoObjetivo
+      value: "OBJETIVO: \nHaz que cada Pedestal tenga una manzana."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f31a4fe05284d614ab6b8d48b4b83932, type: 3}

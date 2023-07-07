@@ -3566,12 +3566,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 568564511}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &617411888 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1334371297295548900, guid: fec1b1ccb1d40f94f8ea84f4c4ea5e3e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1334371297753019604}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &623484516
 GameObject:
   m_ObjectHideFlags: 0
@@ -10223,7 +10217,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 847ff18d7302b114fb249ba8809cdf4d, type: 3}
   - {fileID: 8300000, guid: 9eda13de917fb7140bf6176f44ab8a66, type: 3}
   clipPokemon: {fileID: 8300000, guid: 42105cb2dd0ff584581a352990bc7197, type: 3}
-  CameraPlayer: {fileID: 617411888}
   btnEmpujar: {fileID: 1211839317}
   btnImpulsar: {fileID: 1780694392}
   txtDescripcionFuerza: {fileID: 702903200}
@@ -10251,6 +10244,13 @@ MonoBehaviour:
   helpPanel: {fileID: 1635822057}
   helpText: {fileID: 257066500}
   optionCRABText: {fileID: 1743451642}
+  victoryPanel: {fileID: 0}
+  timeText: {fileID: 0}
+  actionsText: {fileID: 0}
+  prefActionText: {fileID: 0}
+  prefFuerzaText: {fileID: 0}
+  maxVelText: {fileID: 0}
+  solApoyoText: {fileID: 0}
 --- !u!95 &1608869119
 Animator:
   serializedVersion: 5
@@ -13089,6 +13089,34 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 297889505705136707, guid: f31a4fe05284d614ab6b8d48b4b83932,
+        type: 3}
+      propertyPath: textoObjetivo
+      value: "OBJETIVO: \nHaz Touch sobre un objeto y aprende a utilizar la Zona
+        Cero. Sal cuando te sientas listo."
+      objectReference: {fileID: 0}
+    - target: {fileID: 297889505705136707, guid: f31a4fe05284d614ab6b8d48b4b83932,
+        type: 3}
+      propertyPath: comentariosDron.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 297889505705136707, guid: f31a4fe05284d614ab6b8d48b4b83932,
+        type: 3}
+      propertyPath: comentariosDron.Array.data[0]
+      value: Puedes llamarme en cualquier momento si necesitas mi ayuda; ahora vuelve
+        a oprimir el icono de Apoyo para terminar de leer este Consejo.
+      objectReference: {fileID: 0}
+    - target: {fileID: 297889505705136707, guid: f31a4fe05284d614ab6b8d48b4b83932,
+        type: 3}
+      propertyPath: comentariosDron.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 297889505705136707, guid: f31a4fe05284d614ab6b8d48b4b83932,
+        type: 3}
+      propertyPath: comentariosDron.Array.data[7]
+      value: "A diferencia de la Fuerza de tus manos, la Gravedad es una fuerza universal;
+        quiere decir que afecta a todos los objetos en el espacio. \xA1Consid\xE9ralo!"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f31a4fe05284d614ab6b8d48b4b83932, type: 3}

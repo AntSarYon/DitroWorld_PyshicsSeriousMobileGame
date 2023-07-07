@@ -26,13 +26,24 @@ namespace eventoManzano
 
         public override bool MonitorearVictoria()
         {
-            if (Input.GetKeyDown(KeyCode.V))
+            int contManzanasListas = 0;
+            bool victoria = false;
+
+            foreach (GameObject go in listaObjetosFisicos)
             {
-                return true;
-            }else
-            {
-                return false;
+                if (go.GetComponent<Rigidbody>().drag == 5)
+                {
+                    contManzanasListas++;
+
+                    if (contManzanasListas >= 4)
+                    {
+                        victoria = true;
+                        break;
+                    }
+                }
             }
+
+            return victoria;
             
         }
 

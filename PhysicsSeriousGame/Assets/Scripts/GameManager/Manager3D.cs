@@ -52,7 +52,7 @@ public class Manager3D : MonoBehaviour
     private void OnEventAcomplishedDelegate()
     {
         //Reproducimos sonido de Victoria
-        mAudioSource.Play();
+        //mAudioSource.Play();
 
         //Llamamos al ButtonsManager para que muestre el Panel de Victoria
         ButtonsManager.Instance.MostrarPanelDeVictoria();

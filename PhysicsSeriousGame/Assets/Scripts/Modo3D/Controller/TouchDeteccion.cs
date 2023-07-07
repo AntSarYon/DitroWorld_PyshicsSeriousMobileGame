@@ -68,6 +68,8 @@ public class TouchDeteccion : MonoBehaviour
                 //Almacenamos el Rigidbody y Collider del Objeto Real cn el cual estamos interactuando
                 rigidBodySeleccionado = hitClick.transform.GetComponent<Rigidbody>();
                 ColliderSeleccionado = hitClick.transform.GetComponent<Collider>();
+
+                ButtonsManager.Instance.ActivarParametrosFisicos();
             }
         }
     }

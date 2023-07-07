@@ -1745,7 +1745,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Media
+  m_text: Alta
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d28e17355bb1afc458cd8febb6949cb3, type: 2}
   m_sharedMaterial: {fileID: -1734632800649394153, guid: d28e17355bb1afc458cd8febb6949cb3,
@@ -2402,8 +2402,6 @@ MonoBehaviour:
   m_Options:
     m_Options:
     - m_Text: Baja
-      m_Image: {fileID: 0}
-    - m_Text: Media
       m_Image: {fileID: 0}
     - m_Text: Media
       m_Image: {fileID: 0}

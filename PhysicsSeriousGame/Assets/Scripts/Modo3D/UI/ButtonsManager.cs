@@ -122,6 +122,12 @@ public class ButtonsManager : MonoBehaviour
     public bool AccionGravedad4Oprimida { get => accionGravedad4Oprimida; set => accionGravedad4Oprimida = value; }
     public bool AccionGravedad5Oprimida { get => accionGravedad5Oprimida; set => accionGravedad5Oprimida = value; }
     public int ContAccionesTotal { get => contAccionesTotal; set => contAccionesTotal = value; }
+    public List<GameObject> UiMasa { get => uiMasa; set => uiMasa = value; }
+    public List<GameObject> UiVelocidad { get => uiVelocidad; set => uiVelocidad = value; }
+    public List<GameObject> UiFriccion { get => uiFriccion; set => uiFriccion = value; }
+    public bool VelocidadActivada { get => velocidadActivada; set => velocidadActivada = value; }
+    public bool MasaActivada { get => masaActivada; set => masaActivada = value; }
+    public bool FriccionActivada { get => friccionActivada; set => friccionActivada = value; }
 
     //-------------------------------------------------------
 
@@ -536,6 +542,33 @@ public class ButtonsManager : MonoBehaviour
             flag = false;
         }
             
+    }
+
+    public void ActivarParametrosFisicos()
+    {
+        //Por cada boton de gravedad
+        for (int i = 0; i < uiFriccion .Count; i++)
+        {
+            //Lo activamos
+            uiFriccion[i].SetActive(true);
+        }
+        friccionActivada = true;
+
+        //Por cada boton de gravedad
+        for (int i = 0; i < uiMasa.Count; i++)
+        {
+            //Lo activamos
+            uiMasa[i].SetActive(true);
+        }
+        masaActivada = true;
+
+        //Por cada boton de gravedad
+        for (int i = 0; i < uiVelocidad.Count; i++)
+        {
+            //Lo activamos
+            uiVelocidad[i].SetActive(true);
+        }
+        velocidadActivada = true;
     }
 
     #region FuncionesJugador

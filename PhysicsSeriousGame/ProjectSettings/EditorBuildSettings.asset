@@ -32,6 +32,33 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Exterior/3DManzano.unity
     guid: 5859aca2a906178429a168702493de1f
+  - enabled: 1
+    path: Assets/Scenes/Exterior/3DAuto.unity
+    guid: 918ddb78dac70e646a07486434194916
+  - enabled: 1
+    path: Assets/Scenes/Exterior/3DCajas.unity
+    guid: b9401987a86cbc74894051e86c592d65
+  - enabled: 1
+    path: Assets/Scenes/Exterior/3DCamping.unity
+    guid: b21bac8b598bf8e438f4b054f9d11d1c
+  - enabled: 1
+    path: Assets/Scenes/Exterior/3DConstruccion.unity
+    guid: 5e292dd4748e5a14b91630ceb58841cf
+  - enabled: 1
+    path: Assets/Scenes/Exterior/3DMelon.unity
+    guid: 18f3f7cde314d0a419ed739f5c73b19b
+  - enabled: 1
+    path: Assets/Scenes/Exterior/3DPezca.unity
+    guid: 69576d0b10ad3fe40bd5e100eb06a5eb
+  - enabled: 1
+    path: Assets/Scenes/Exterior/3DPozo.unity
+    guid: 689c2e013c3762d42881d1e73014c6bb
+  - enabled: 1
+    path: Assets/Scenes/Laboratorio/2DLabGeneral.unity
+    guid: afd5e193c8083b148a57ba25fe25d108
+  - enabled: 1
+    path: Assets/Scenes/Laboratorio/2DLabSalida.unity
+    guid: 703136e456105ab4fa7d39f472b52dac
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 86aedb8289800c94ab867c5bab09b28f,
       type: 2}

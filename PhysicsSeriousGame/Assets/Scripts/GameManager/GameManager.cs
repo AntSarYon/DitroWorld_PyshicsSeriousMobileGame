@@ -108,7 +108,7 @@ public class GameManager : MonoBehaviour
         else if (avgSolicitudes > 2 && avgSolicitudes <= 4) { valApoyo = 1; }
         else { valApoyo = 2; }
 
-        //Realizmaos el Calculo considerando los Pesos que cada parametro tiene en
+        //Realizmaos el Calculo considerando los Pesos que cada parametro tiene
         float auxiliarCalculo = ((valAccion * 1.5f) + (valFuerza * 1.5f) + (valVelocidad * 4f) + (valApoyo * 3f))/10;
 
         //Asignacion de resultado redondeado
@@ -118,7 +118,7 @@ public class GameManager : MonoBehaviour
         NivelDeDificultad dificultadGeneralPercibida = AdaptationController.Instance.relacionNivel[indiceNivelDeDificultad];
 
         //----------------------------------------------------------------------------------------------------------
-        //HASTA AQUI ESTAMOS OBTENIENDO LA DIFICULTAD QUE PERCIBE EL JUGADOR DEL JUEGO; PERO ES ESO LO QUE QUEREMOS?
+        //HASTA AQUI ESTAMOS OBTENIENDO LA DIFICULTAD QUE PERCIBE EL JUGADOR DEL JUEGO; PERO NO ES ESO LO QUE QUEREMOS
         //----------------------------------------------------------------------------------------------------------
 
         //Si la dificultad percibida por el jugador (segun parametros), es ALTA
