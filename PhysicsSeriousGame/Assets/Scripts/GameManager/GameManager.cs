@@ -11,7 +11,6 @@ public class GameManager : MonoBehaviour
     //Lista de Personajes Jugables
     public List<Personajes> personajes;
 
-
     //Definimos e inicializamos una Lista de Resultados  
     public List<ResultadosEvento> listaResultados = new List<ResultadosEvento>();
     //ID Del Evento a los que los Datos pertenecen
@@ -45,6 +44,32 @@ public class GameManager : MonoBehaviour
     //VariableS que indicaN el Nivel de Dificultad que Se aplicará al siguiente Evento que inicie
     public NivelDeDificultad siguienteDificultad;
 
+    //---------------------------------------------------------------------------
+
+    private void Awake()
+    {
+        ControlarUnicaInstancia();
+
+        //Inicializmaos variables para Adaptabilidad en 0
+        tiempoDeResolucionPromedio = 0;                    // <-- LISTO
+        velocidadDeResolucionActual = 0;     // <-- LISTO
+
+        contAccionEmpuje = 0;
+        contAccionImpulso = 0;         // <-- LISTO
+        contAccionGravedad = 0;
+        contAccionMasa = 0;
+
+        avgAccionEmpuje = 0;
+        avgAccionImpulso = 0;
+        avgAccionGravedad = 0;         // <-- LISTO
+        avgAccionMasa = 0;
+
+        avgSolicitudes = 0;      // <-- LISTO
+        numSolicitudesActuales = 0;    // <-- LISTO
+
+        //El nivel de Dificultad empezara en MEDIO
+        siguienteDificultad = NivelDeDificultad.Medio;
+    }
 
     //-------------------------------------------------------------------------
 
@@ -167,61 +192,7 @@ public class GameManager : MonoBehaviour
             //Mantenemos la misma dificultad del ultimo Evento
             siguienteDificultad = listaResultados[listaResultados.Count - 1].dificultadDeDesafio;
         }
-
-        //print("La Proxima dificultad sera: " + AdaptationController.Instance.relacionNivelCalculo[siguienteDificultad]);
-
-        
     }
-
-    //---------------------------------------------------------------------------
-
-    //EVENTO PARA CONTROLAR EL CUMPLIMIENTO DE UN OBJETIVO
-    public event UnityAction OnEventAcomplished;
-
-    //--------------------------------------------
-
-    private void Awake()
-    {
-        ControlarUnicaInstancia();
-
-        //Inicializmaos variables para Adaptabilidad en 0
-        tiempoDeResolucionPromedio = 0;                    // <-- LISTO
-        velocidadDeResolucionActual = 0;     // <-- LISTO
-
-        contAccionEmpuje = 0;
-        contAccionImpulso = 0;         // <-- LISTO
-        contAccionGravedad = 0;
-        contAccionMasa = 0;
-
-        avgAccionEmpuje = 0;
-        avgAccionImpulso = 0;
-        avgAccionGravedad = 0;         // <-- LISTO
-        avgAccionMasa = 0;
-
-        avgSolicitudes = 0;      // <-- LISTO
-        numSolicitudesActuales = 0;    // <-- LISTO
-
-    }
-
-    private void Start()
-    {
-        //El nivel de Dificultad empezara en MEDIO
-        siguienteDificultad = NivelDeDificultad.Medio;
-    }
-
-    //----------------------------------------------------------
-    //Invocador de Evento
-    public void EventAcomplished()
-    {
-        OnEventAcomplished?.Invoke();
-    }
-    //---------------------------------------------------------------------------
-
-    public void RecalcularParametros()
-    {
-
-    }
-
 
     //---------------------------------------------------------------------------
 

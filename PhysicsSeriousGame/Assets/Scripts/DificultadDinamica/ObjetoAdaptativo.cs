@@ -17,11 +17,11 @@ public class ObjetoAdaptativo : MonoBehaviour
                 //Si el GameObject esta destinado a Aparecer
                 if (dataAdap.Participa)
                 {
-                    //Adoptamos sus atributos (Si es que los tiene)
+                    /*/Adoptamos sus atributos (Si es que los tiene)
                     if (dataAdap.Peso != 0)
                     {
                         GetComponent<Rigidbody>().mass = dataAdap.Peso;
-                    }
+                    }*/
                     break;
                 }
 

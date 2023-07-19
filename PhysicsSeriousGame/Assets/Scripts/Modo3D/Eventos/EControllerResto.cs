@@ -16,14 +16,18 @@ namespace eventoOtro
 
         public override void ConfigurarObjetosFisicos()
         {
-
+            //(...)
         }
+
+        //-------------------------------------------------
 
         public override void EjecutarCondicionesDeInicio()
         {
             //Seteamos la Gravedad a 0
             Physics.gravity = new Vector3(0, -9.81f, 0);
         }
+
+        //-------------------------------------------------
 
         public override bool MonitorearVictoria()
         {
@@ -38,6 +42,8 @@ namespace eventoOtro
             }
 
         }
+
+        //-------------------------------------------------
 
         //-------------------------------------------------
         protected override void Start()

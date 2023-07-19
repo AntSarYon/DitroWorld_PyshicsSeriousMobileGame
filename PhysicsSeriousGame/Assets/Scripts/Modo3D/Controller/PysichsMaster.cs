@@ -313,7 +313,7 @@ public class PysichsMaster : MonoBehaviour
 
     public void IncrementarMasa()
     {
-        mTouchDeteccion.RigidBodySeleccionado.mass += 1.25f * Time.deltaTime;
+        mTouchDeteccion.RigidBodySeleccionado.mass += 2.5f * Time.deltaTime;
     }
 
     public void ActivarAumentoDeMasa()
@@ -331,7 +331,7 @@ public class PysichsMaster : MonoBehaviour
         //Limitamos que el objeto nunca pueda pesar 0 Kg
         if (mTouchDeteccion.RigidBodySeleccionado.mass >= 0.25f)
         {
-            mTouchDeteccion.RigidBodySeleccionado.mass -= 1.25f * Time.deltaTime;
+            mTouchDeteccion.RigidBodySeleccionado.mass -= 2.5f * Time.deltaTime;
         }
     }
 

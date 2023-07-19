@@ -7,26 +7,40 @@ namespace eventoManzano
 {
     public class EControllerManzano : EventsEDConditions
     {
-
-        // TENEMOS UNA Lista heredada de los Objetos Fisicos dentro del nivel
-        //protected List<GameObject> listaObjetosFisicos = new List<GameObject>();
-
-        //-------------------------------------------------
-
+        //Arreglo para tener referencias a todos los Postes en la Escena
         public GameObject[] arrPostes = new GameObject[4];
 
         //-------------------------------------------------------------------------
 
         public override void ConfigurarObjetosFisicos()
         {
-            
+            //Asignamos las propiedades fisicas de las Manzanas
+            foreach (GameObject manzana in listaObjetosFisicos)
+            {
+                manzana.GetComponent<Rigidbody>().mass = 0.25f;
+                manzana.GetComponent<Rigidbody>().drag = 0f;
+                manzana.GetComponent<Rigidbody>().angularDrag = 0.75f;
+            }
         }
+
+        //-------------------------------------------------------------------------
 
         public override void EjecutarCondicionesDeInicio()
         {
-            //Seteamos la Gravedad a 0
-            Physics.gravity = Vector3.zero;
+            if (GameManager.Instance.siguienteDificultad == NivelDeDificultad.Alto)
+            {
+                //Seteamos la Gravedad a 0
+                Physics.gravity = Vector3.zero;
+            }
+            else
+            {
+                //Seteamos la Gravedad a la Normal
+                Physics.gravity = new Vector3(0, -9.81f, 0);
+            }
+            
         }
+
+        //-------------------------------------------------------------------------
 
         public override bool MonitorearVictoria()
         {

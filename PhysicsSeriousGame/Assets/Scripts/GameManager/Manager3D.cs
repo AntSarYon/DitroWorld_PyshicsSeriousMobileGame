@@ -12,6 +12,8 @@ public class Manager3D : MonoBehaviour
 
     //Flag de Victoria
     private bool victoria;
+    //Flag de Evento terminado
+    private bool eventoTerminado;
 
     //Variable de tiempo transcurrido
     private float tiempoTranscurrido;
@@ -23,7 +25,7 @@ public class Manager3D : MonoBehaviour
     public bool Victoria { get => victoria; set => victoria = value; }
     public float TiempoTranscurrido { get => tiempoTranscurrido; set => tiempoTranscurrido = value; }
 
-    //-----------------------------------------------------
+    //---------------------------------------------------------------------------------------------------
 
     private void Awake()
     {
@@ -31,15 +33,16 @@ public class Manager3D : MonoBehaviour
 
         //Obtenemos referencia a audioSource
         mAudioSource = GetComponent<AudioSource>();
+        
+        //Inicializamos el Flag de Evento Terminado en FALSO
+        eventoTerminado = false;
+
     }
 
-    //-----------------------------------------------------
+    //----------------------------------------------------------------------------------
 
     private void Start()
     {
-        //Declaramos el Script como Delegado del Evento OnEventAcomplished
-        GameManager.Instance.OnEventAcomplished += OnEventAcomplishedDelegate;
-
         //Inicializamos el tiempo en 0
         tiempoTranscurrido = 0;
 
@@ -47,33 +50,42 @@ public class Manager3D : MonoBehaviour
         victoria = false;
     }
 
-    //----------------------------------------------------------------------------------------
+    //---------------------------------------------------------------------------------------------------------------
     //Función encargada de ejecutarse cuando GameManager lance el Evento de OnEventAcomplished (Evento completado)
-    private void OnEventAcomplishedDelegate()
+    private void EventoCompletado()
     {
         //Reproducimos sonido de Victoria
-        //mAudioSource.Play();
+        mAudioSource.Play();
 
         //Llamamos al ButtonsManager para que muestre el Panel de Victoria
         ButtonsManager.Instance.MostrarPanelDeVictoria();
     }
 
-    //-------------------------------------------------
+    //---------------------------------------------------------------------------
 
     private void Update()
     {
-        //Si aun no alcanzamos la victoria...
-        if (!victoria)
+        //Si el Evento aun no ha terminado...
+        if (!eventoTerminado)
         {
-            //Incrementamos el tiempo Transcurrido en cada Frame
-            tiempoTranscurrido += Time.deltaTime;
-        }
-        //Si ya lo logramos...
-        else
-        {
-            //Invocamos al Evento de Juego -> Evento completado
-            GameManager.Instance.EventAcomplished();
+            //Si aun no alcanzamos la victoria...
+            if (!victoria)
+            {
+                //Incrementamos el tiempo Transcurrido en cada Frame
+                tiempoTranscurrido += Time.deltaTime;
+            }
+            //Si ya lo logramos...
+            else
+            {
+                //Invocamos al Evento de Juego -> Evento completado
+                EventoCompletado();
+                
+                //Activamos el Flag de EventoTerminado para no seguir con el Bucle
+                eventoTerminado=true;
+            }
         }
     }
+
+
 }
 

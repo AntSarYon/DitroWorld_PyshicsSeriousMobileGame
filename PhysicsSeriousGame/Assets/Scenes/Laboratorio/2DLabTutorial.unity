@@ -885,9 +885,10 @@ MonoBehaviour:
     en tus componentes."
   - "Ese artefacto te permitir\xE1 recrear la ZONA CERO en el exterior, o al menos
     en una delimitada \xE1rea."
-  - "Adem\xE1s de manipular la gravedad, y ajustar la fuerza de tu cuerpo bi\xF3nico,
-    podr\xE1s modificar la MASA de los objetos. \xBFAcaso no es genial?"
-  - "\xA1Te deseo la mejor de las suertes en tu b\xFAsqueda de aprendizaje!"
+  - Lo unico malo es que el campo gravitatorio ocupa mucha energia, por lo que a
+    veces puede llegar a fallar, quedando inhabilitado temporalmente.
+  - "No obstante, adem\xE1s de ajustar la fuerza de tu cuerpo bi\xF3nico, podr\xE1s
+    modificar la MASA de los objetos. \xBFAcaso no es genial?"
   ComentarioDron: "CRAB: El doc Foreman es quien cre\xF3 la ZONA CERO; pas\xF3 muchas
     noches sin dormir..."
 --- !u!61 &605200860

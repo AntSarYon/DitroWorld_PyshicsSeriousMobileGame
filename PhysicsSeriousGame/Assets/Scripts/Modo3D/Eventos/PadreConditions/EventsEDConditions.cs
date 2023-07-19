@@ -5,15 +5,8 @@ using UnityEngine.InputSystem.XR;
 
 public abstract class EventsEDConditions : MonoBehaviour
 {
-    //--------------------------------------
-    //Atributos heredados por cada Evento3D
-
-    //Lista de Objetos Fisicos dentro del nivel
+    //Lista de Objetos Fisicos dentro del nivel [heredados por cada Evento3D]
     protected List<GameObject> listaObjetosFisicos = new List<GameObject>();
-
-
-    //-------------------------------------------------------------------------------------
-    //-------- FUNCIONES ABSTRACTAS -> DEFINIDAS ESEPCIFCICAMENTE POR CADA EVENTO 3D ------
 
     //------------------------------------------------------------------
     //Función donde se definicran las condiciones de inicio del Evento
@@ -45,21 +38,23 @@ public abstract class EventsEDConditions : MonoBehaviour
         }
     }
 
-    //---------------------------------------------
+    //-----------------------------------------------------------------
     //START que sera ejecutado por todos sus hijos 
+
     protected virtual void Start()
     {
         //Obtenemos Lista con los Objetos fisicos del Escenario
         ObtenerObjetosFisicos();
 
+        ConfigurarObjetosFisicos();
+
         //Ejecutamos las condiciones de inicio del Evento3D
         EjecutarCondicionesDeInicio();
-
-        
     }
 
-    //---------------------------------------------
+    //-------------------------------------------------------------------
     //UPDATE que sera ejecutado por todos sus hijos 
+
     protected virtual void Update()
     {
         //Monitoreamos la Victoria constantemente -> arroja BOOL

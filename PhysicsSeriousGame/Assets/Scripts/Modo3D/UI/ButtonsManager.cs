@@ -33,9 +33,11 @@ public class ButtonsManager : MonoBehaviour
     [SerializeField] private GameObject btnEmpujar;
     [SerializeField] private GameObject btnImpulsar;
     [SerializeField] private TextMeshProUGUI txtDescripcionFuerza;
+    [SerializeField] private GameObject btnCambiarFuerza;
 
     [Header("Objetos de UI")]
     //Lista de botones de gravedad (hijos)
+    [SerializeField] private GameObject btnGravedad;
     [SerializeField] private List<GameObject> optsGravedad;
 
     //Lista de interfaces de UI
@@ -113,6 +115,7 @@ public class ButtonsManager : MonoBehaviour
     private bool masaActivada;
     private bool friccionActivada;
 
+    // GETTERS Y SETTERS - - - - - - - - - - - - - - - - - - - - - - - - - -
     public float MaxVelAlcanzada { get => maxVelAlcanzada; set => maxVelAlcanzada = value; }
     public float Timer { get => timer; set => timer = value; }
     public bool AccionGravedad0Oprimida { get => accionGravedad0Oprimida; set => accionGravedad0Oprimida = value; }
@@ -128,8 +131,12 @@ public class ButtonsManager : MonoBehaviour
     public bool VelocidadActivada { get => velocidadActivada; set => velocidadActivada = value; }
     public bool MasaActivada { get => masaActivada; set => masaActivada = value; }
     public bool FriccionActivada { get => friccionActivada; set => friccionActivada = value; }
+    public GameObject BtnGravedad { get => btnGravedad; set => btnGravedad = value; }
+    public GameObject BtnCambiarFuerza { get => btnCambiarFuerza; set => btnCambiarFuerza = value; }
+    public GameObject BtnEmpujar { get => btnEmpujar; set => btnEmpujar = value; }
+    public GameObject BtnImpulsar { get => btnImpulsar; set => btnImpulsar = value; }
 
-    //-------------------------------------------------------
+    //-------------------------------------------------------------------------------------------------
 
     private void Awake()
     {
