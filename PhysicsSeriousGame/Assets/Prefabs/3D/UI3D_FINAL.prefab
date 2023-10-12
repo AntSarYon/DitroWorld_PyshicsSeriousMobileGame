@@ -6019,7 +6019,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Fuerza :'
+  m_text: 'Fuerza:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d28e17355bb1afc458cd8febb6949cb3, type: 2}
   m_sharedMaterial: {fileID: -1734632800649394153, guid: d28e17355bb1afc458cd8febb6949cb3,
@@ -6047,8 +6047,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16
-  m_fontSizeBase: 16
+  m_fontSize: 14
+  m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
