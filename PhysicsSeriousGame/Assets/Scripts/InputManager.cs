@@ -12,6 +12,8 @@ public class InputManager : MonoBehaviour
     //Flags de Acciones oprimidas
     private bool interactPressed = false;
     private bool submitPressed = false;
+    private bool crabPressed = false;
+    private bool manipulatePressed = false;
 
     //Variable de Instancia
     public static InputManager Instance;
@@ -109,5 +111,66 @@ public class InputManager : MonoBehaviour
     {
         //Pasamos el Flag de SUBMIT  a Falso
         submitPressed = false;
+    }
+
+    //--------------------------------------------------------------
+    //EVENTO: Input de Interaccion Recibido
+    public void CrabPressed(InputAction.CallbackContext context)
+    {
+        //Si el contexto del Input es que se ha Oprimido
+        if (context.performed)
+        {
+            //Activamos el Flag
+            crabPressed = true;
+        }
+        //Si el contexto del Input es que se ha Soltado
+        else if (context.canceled)
+        {
+            //Desactivamos el Flag
+            crabPressed = false;
+        }
+    }
+    // - - - - - - - - - - - - - - - - - - - 
+    public bool GetCrabPressed()
+    {
+        //Capturamos el valor del Flag de Interacción EN EL MOMENTO
+        bool result = crabPressed;
+        //Lo convertimos a Falso
+        crabPressed = false;
+        //Retornamos el valor que habiamos capturado antes de Falsearlo
+        return result;
+    }
+
+    //--------------------------------------------------------------
+    //EVENTO: Input de Interaccion Recibido
+    public void ManipulatePressed(InputAction.CallbackContext context)
+    {
+        //Si el contexto del Input es que se ha Oprimido
+        if (context.performed)
+        {
+            //Activamos el Flag
+            manipulatePressed = true;
+        }
+        if (context.duration > 0.01f)
+        {
+            //Activamos el Flag
+            manipulatePressed = true;
+        }
+        //Si el contexto del Input es que se ha Soltado
+        else if (context.canceled)
+        {
+            //Desactivamos el Flag
+            manipulatePressed = false;
+        }
+    }
+    // - - - - - - - - - - - - - - - - - - - 
+    public bool GetManipulatePressed()
+    {
+        //Capturamos el valor del Flag de Interacción EN EL MOMENTO
+        bool result = manipulatePressed;
+        //Lo convertimos a Falso
+        manipulatePressed = false;
+        //Retornamos el valor que habiamos capturado antes de Falsearlo
+        return result;
     }
 }

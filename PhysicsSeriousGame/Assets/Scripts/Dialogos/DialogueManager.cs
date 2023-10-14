@@ -295,7 +295,7 @@ public class DialogueManager : MonoBehaviour
             btnsChoices[i].gameObject.SetActive(false);
         }
         
-        //StartCoroutine(SelectFirstChoice());
+        StartCoroutine(SelectFirstChoice());
 
     }
 
@@ -408,6 +408,18 @@ public class DialogueManager : MonoBehaviour
 
         //Activamos el Flag para continuar
         canContinueToNextLine = true;
+    }
+
+    //----------------------------------------------
+    //Hacer que haya una primera opcion seleccionada
+    private IEnumerator SelectFirstChoice()
+    {
+        //Limpiamos el selector de objetos
+        EventSystem.current.SetSelectedGameObject(null);
+        yield return new WaitForEndOfFrame();
+
+        //Asignamos el objeto seleccionado
+        EventSystem.current.SetSelectedGameObject(btnsChoices[0].gameObject);
     }
 
     //--------------------------------------------------------  

@@ -17,6 +17,7 @@ TagManager:
   - ZonaInteraccion
   - ObjectivePhysicObject
   - ObjectiveFixedObject
+  - Observation
   layers:
   - Default
   - TransparentFX

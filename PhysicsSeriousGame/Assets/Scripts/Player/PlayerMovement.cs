@@ -51,17 +51,27 @@ public class PlayerMovement : MonoBehaviour
 
     private void Animations()
     {
-        //Si la dirección Input esta recibiendo algo...
-        if(InputManager.Instance.GetMoveDirection().magnitude != 0)
+        //Mientras no se esté mostrando ningún Dialogo en pantalla
+        if (!DialogueManager.Instance.dialogueIsPlaying)
         {
-            //Modificamos los parametros de ambos ejes X e Y
-            mAnimator.SetFloat("Horizontal", InputManager.Instance.GetMoveDirection().x);
-            mAnimator.SetFloat("Vertical", InputManager.Instance.GetMoveDirection().y);
+            //Si la dirección Input esta recibiendo algo...
+            if (InputManager.Instance.GetMoveDirection().magnitude != 0)
+            {
+                //Modificamos los parametros de ambos ejes X e Y
+                mAnimator.SetFloat("Horizontal", InputManager.Instance.GetMoveDirection().x);
+                mAnimator.SetFloat("Vertical", InputManager.Instance.GetMoveDirection().y);
 
-            //Reproducimos el BlendingTree de CORRER
-            mAnimator.Play("Run");
+                //Reproducimos el BlendingTree de CORRER
+                mAnimator.Play("Run");
+            }
+            //En caso no se esté recibiendo Input; se reproducirá el Blending Tree de IDLE
+            else mAnimator.Play("Idle");
+
         }
-        //En caso no se esté recibiendo Input; se reproducirá el Blending Tree de IDLE
-        else mAnimator.Play("Idle");
+        else
+        {
+            //En caso el Dialogo este activo, activamos el IDLE
+            mAnimator.Play("Idle");
+        }
     }
 }

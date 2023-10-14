@@ -52,11 +52,13 @@ public class DialogueTrigger : MonoBehaviour
     {
         //Si el Objeto colisionado tiene la etiqueta de PLAYER -> Activamos Flag
         playerInRange = collision.gameObject.CompareTag("Player") ? true : false;
+        print("Jugador en zona para Dialogo");
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         //Si el Objeto colisionado tiene la etiqueta de PLAYER -> Desactivamos flag
         playerInRange = collision.gameObject.CompareTag("Player") ? false : true;
+        print("Jugador salio de zona");
     }
 }

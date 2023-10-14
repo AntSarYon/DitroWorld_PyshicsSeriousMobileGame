@@ -31,6 +31,33 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "CallCRAB",
+                    "type": "Button",
+                    "id": "c6358b8a-2262-41ca-883e-e80ad42792a8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Manipulate",
+                    "type": "Button",
+                    "id": "50426587-8801-41cc-b096-562db516174f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Enter3D",
+                    "type": "Button",
+                    "id": "c6db6c8a-4b32-46cb-b212-fd40d471bc08",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -146,17 +173,6 @@
                 },
                 {
                     "name": "",
-                    "id": "c924b258-4e20-4c49-9e74-8f64c46c9809",
-                    "path": "<Keyboard>/i",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "Interact",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "b96c3f9f-1ccc-4361-98af-abedddae680a",
                     "path": "<Gamepad>/buttonEast",
                     "interactions": "",
@@ -168,12 +184,56 @@
                 },
                 {
                     "name": "",
-                    "id": "c700cc26-6c16-4863-8127-62af63042a61",
+                    "id": "61025808-0e90-400c-a177-0a7a0fb56de7",
                     "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c700cc26-6c16-4863-8127-62af63042a61",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
                     "action": "Submit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e052e28c-95e3-4d36-a73a-83a80385df46",
+                    "path": "<Keyboard>/c",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CallCRAB",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a46ce0d3-72c0-42c9-a862-8680a22738fc",
+                    "path": "<Keyboard>/m",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Manipulate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "07d157c0-9816-41e9-9429-a7b739f2db0b",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Enter3D",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
