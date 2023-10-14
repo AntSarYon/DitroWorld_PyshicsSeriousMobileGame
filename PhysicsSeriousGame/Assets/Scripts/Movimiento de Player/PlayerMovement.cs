@@ -32,16 +32,19 @@ public class PlayerMovement : MonoBehaviour
     //-----------------------------------------------------
     private void FixedUpdate()
     {
-        //Mientras no se esté mostrando ningún Texto en pantalla
-        if (!Manager2D.Instance.TextoEnProceso)
+        //Mientras no se esté mostrando ningún Dialogo en pantalla
+        if (!DialogueManager.Instance.dialogueIsPlaying)
         {
             //Movemos la posición del Player
             mRb.MovePosition(
-                transform.position + (Manager2D.Instance.MoveInput * walkSpeed * Time.fixedDeltaTime)
+                transform.position + 
+                (new Vector3(
+                    InputManager.Instance.GetMoveDirection().x,
+                    InputManager.Instance.GetMoveDirection().y,
+                    0) * walkSpeed * Time.fixedDeltaTime
+                 )
             );
         }
-        
-        
     }
 
     //-----------------------------------------------------
@@ -49,11 +52,11 @@ public class PlayerMovement : MonoBehaviour
     private void Animations()
     {
         //Si la dirección Input esta recibiendo algo...
-        if(Manager2D.Instance.MoveInput.magnitude != 0)
+        if(InputManager.Instance.GetMoveDirection().magnitude != 0)
         {
             //Modificamos los parametros de ambos ejes X e Y
-            mAnimator.SetFloat("Horizontal", Manager2D.Instance.MoveInput.x);
-            mAnimator.SetFloat("Vertical", Manager2D.Instance.MoveInput.y);
+            mAnimator.SetFloat("Horizontal", InputManager.Instance.GetMoveDirection().x);
+            mAnimator.SetFloat("Vertical", InputManager.Instance.GetMoveDirection().y);
 
             //Reproducimos el BlendingTree de CORRER
             mAnimator.Play("Run");

@@ -29,20 +29,21 @@ public class DialogueTrigger : MonoBehaviour
         //Controlamos que se visualice, o no, el icono de dialogo
         //dependiendo de la distnacia del PLayer, y si el Panel del
         //dialogo esta desactivado
-        /*
+        
         if (playerInRange && !DialogueManager.Instance.dialogueIsPlaying)
         {
             visualCue.SetActive(true);
-
+            
             //Si se oprime el boton de interaccion
-            if (InputManager.GetInstance().GetInteractPressed())
+            if(InputManager.Instance.GetInteractPressed())
             {
                 //Por ahora, mostramos el Texto del JSON
                 DialogueManager.Instance.EnterDialogueMode(inkJSON);
             }
+            
         }
         else visualCue.SetActive(false);
-        */
+        
     }
 
     //------------------------------------------------------
