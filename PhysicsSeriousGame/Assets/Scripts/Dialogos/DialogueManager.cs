@@ -44,6 +44,7 @@ public class DialogueManager : MonoBehaviour
 
     [Header("Dialogue Flag")]
     [HideInInspector] public bool dialogueIsPlaying;
+    [HideInInspector] public bool speakerIsCrab;
 
     [Header("Choices UI")]
     [SerializeField] private GameObject[] btnsChoices;

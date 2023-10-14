@@ -37,6 +37,9 @@ public class DialogueTrigger : MonoBehaviour
             //Si se oprime el boton de interaccion
             if(InputManager.Instance.GetInteractPressed())
             {
+                //Desactivamos el Flag de CrabHablando
+                DialogueManager.Instance.speakerIsCrab = false;
+
                 //Por ahora, mostramos el Texto del JSON
                 DialogueManager.Instance.EnterDialogueMode(inkJSON);
             }

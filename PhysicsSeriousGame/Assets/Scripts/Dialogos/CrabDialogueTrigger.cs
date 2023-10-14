@@ -50,6 +50,8 @@ public class CrabDialogueTrigger : MonoBehaviour
             //Si se oprime el boton de interaccion
             if (InputManager.Instance.GetCrabPressed())
             {
+                //Activamos el Flag de CrabHablando
+                DialogueManager.Instance.speakerIsCrab = true;
                 //Mostramos el Texto del inkJSON correspondiente
                 DialogueManager.Instance.EnterDialogueMode(inkJSON);
             }
@@ -60,7 +62,8 @@ public class CrabDialogueTrigger : MonoBehaviour
 
     private void ControlarVisualizacionDeCUE()
     {
-        if (DialogueManager.Instance.dialogueIsPlaying)
+        //Si el dialogo esta activo, y CRAB es quien esta hablando...
+        if (DialogueManager.Instance.dialogueIsPlaying && DialogueManager.Instance.speakerIsCrab)
         {
             //Activamos el icono de DIALOGO DISPONIBLE
             visualCue.SetActive(true);
