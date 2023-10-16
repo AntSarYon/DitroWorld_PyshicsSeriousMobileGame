@@ -168,9 +168,7 @@ public class InputManager : MonoBehaviour
     {
         //Capturamos el valor del Flag de Interacción EN EL MOMENTO
         bool result = manipulatePressed;
-        //Lo convertimos a Falso
-        manipulatePressed = false;
-        //Retornamos el valor que habiamos capturado antes de Falsearlo
+
         return result;
     }
 }

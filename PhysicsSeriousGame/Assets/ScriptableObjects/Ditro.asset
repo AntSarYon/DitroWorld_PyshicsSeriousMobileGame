@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ff3414fff74c7c4fb51b37433b0838b, type: 3}
   m_Name: Ditro
   m_EditorClassIdentifier: 
-  personajeJugable: {fileID: 3674964621585032215, guid: 9f8d00f3c766b76489a462b8680240df,
+  personajeJugable: {fileID: 8824561024861516399, guid: e2ccae56bf9c7b943a4ce73e7cceacf6,
     type: 3}
   imagen: {fileID: 2147262699, guid: 3042ab6a2bcc97a4f9641de226256b8d, type: 3}
   nombre: Ditro

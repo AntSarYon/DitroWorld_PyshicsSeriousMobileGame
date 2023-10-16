@@ -6,9 +6,6 @@ public class Manipulation : MonoBehaviour
 {
     #region VARIABLES
 
-    //Referencia al icono de Manipulacion
-    private GameObject iconoManipulacion;
-
     //Flag de Jugador cerca (para cuando choca)
     private bool jugadorCerca;
 
@@ -16,47 +13,37 @@ public class Manipulation : MonoBehaviour
 
     private Collision2D colisionConPlayer;
 
-    [TextArea(3, 4)] public string ComentarioDron;
-
     #endregion
     //-----------------------------------------------------------
-    //-----------------------------------------------------------
 
-    private void Awake()
+    void Awake()
     {
         //Obtenemos referencia a componente RB
         mRb = GetComponent<Rigidbody2D>();
 
         //Inicializamos flag de jugador cercano a falso
         jugadorCerca = false;
-
-        //Obtenemos referencia al icono de Manipulacion del Objeto
-        iconoManipulacion= transform.Find("icoManipulacion").gameObject;
     }
 
     //--------------------------------------------------------------------
     #region Controlar Click del Boton de manipulacion
 
-    public void ManipulacionOprimida()
+    void Update()
     {
-        //Si el jugador esta cerca, el Flag de Dialogo proximo esta Activo
-        if (jugadorCerca && Manager2D.Instance.FlagManipulacion)
-        {
-            //Movemos al objeto conviertiendo su RigidBody a Dinamico
-            
-            //Si existe un contacto entre el personaje y el Objeto manipulable
-            if (colisionConPlayer != null)
-            {
-                //Hacemos su RigidBody Dinamico para que podmaos empujarlo
-                mRb.bodyType = RigidbodyType2D.Dynamic;
-            }
-            //Si no existe contacto...
-            else
-            {
-                //Lo devolvemos a su Estado Kinematico
-                ConvertirAKinematico();
-            }
-        }
+        //Si el jugador esta cerca, y esta oprimiendo el boton de Manipulación
+        if (jugadorCerca && InputManager.Instance.GetManipulatePressed())
+            ConvertirADinamico();
+        else
+            ConvertirAKinematico();
+    }
+
+    #endregion
+
+    //-------------------------------------------------------------------------
+    public void ConvertirADinamico()
+    {
+        //Hacemos su RigidBody Dinamico para que podmaos empujarlo
+        mRb.bodyType = RigidbodyType2D.Dynamic;
     }
 
     //-------------------------------------------------------------------------
@@ -67,39 +54,6 @@ public class Manipulation : MonoBehaviour
         mRb.velocity = Vector3.zero;
     }
 
-    #endregion
-    //--------------------------------------------------------------------------------
-    #region Activacion y Deteccion de Icono
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        //Si el jugador es quien entra en el Trigger del objeto maipulable
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            //Mostramos el icono de Manipulacion
-            iconoManipulacion.SetActive(true);
-            Manager2D.Instance.FlagManipulacionVisible = true;
-
-            //Asignamos referencia a este Objeto como el propietario del Dialogo
-            Manager2D.Instance.ObjetoManipulacion = this.gameObject;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        //Si el jugador es quien salde del Trigger del objeto maipulable
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            //Dsactivamos el icono de Manipulacion
-            iconoManipulacion.SetActive(false);
-            Manager2D.Instance.FlagManipulacionVisible = false;
-
-            //Cambiamos referencia a Objeto null
-            Manager2D.Instance.ObjetoManipulacion = null;
-        }
-    }
-
-    #endregion
     //--------------------------------------------------------------------------------
     #region Controlar Choque con el Objeto
     
@@ -117,7 +71,7 @@ public class Manipulation : MonoBehaviour
             //Asignamos referencia a este Objeto como el propietario del Dialogo
             Manager2D.Instance.ObjetoManipulacion = this.gameObject;
 
-            //Activamos el Flag de Evento de Dialogo proximo
+            //Activamos el Flag de Manipulacion en proceso
             Manager2D.Instance.FlagManipulacion = true;
         }
     }
@@ -136,10 +90,10 @@ public class Manipulation : MonoBehaviour
             //Cambiamos referencia a Objeto null
             Manager2D.Instance.ObjetoManipulacion = null;
 
-            //Desactivamos el Flag de Evento de Manipulacion proximo
+            //Desactivamos el Flag de Manipulacion en proceso
             Manager2D.Instance.FlagManipulacion = false;
         }
     }
-   
+
     #endregion
 }

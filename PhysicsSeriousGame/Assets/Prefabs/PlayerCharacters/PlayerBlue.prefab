@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 4378235223989339520}
   - component: {fileID: 4378235223989339527}
   - component: {fileID: 4378235223989339526}
-  - component: {fileID: 4378235223989339525}
-  - component: {fileID: 4378235223989339524}
   - component: {fileID: 4378235223989339547}
+  - component: {fileID: 4378235223989339524}
+  - component: {fileID: 61043962884652218}
   m_Layer: 3
   m_Name: PlayerBlue
   m_TagString: Player
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1766232141
-  m_SortingLayer: 4
+  m_SortingLayer: 9
   m_SortingOrder: 0
   m_Sprite: {fileID: 1893584989, guid: a6391184ac926b94ea813177ecc10fbf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -126,50 +126,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0.0000018386995, y: -0.42412728}
   m_Size: {x: 1.2154126, y: 0.5106512}
   m_Direction: 1
---- !u!114 &4378235223989339525
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4378235223989339546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 4bb66f7f576569e4297c01d4fa348d80,
-    type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Player
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
---- !u!114 &4378235223989339524
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4378235223989339546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f69a37c31241e3a4680b96e43cf4f26b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  walkSpeed: 3
 --- !u!95 &4378235223989339547
 Animator:
   serializedVersion: 5
@@ -190,3 +146,27 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &4378235223989339524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4378235223989339546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f69a37c31241e3a4680b96e43cf4f26b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &61043962884652218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4378235223989339546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f7b2c4a2de04834d8ac1588a1f9eb45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

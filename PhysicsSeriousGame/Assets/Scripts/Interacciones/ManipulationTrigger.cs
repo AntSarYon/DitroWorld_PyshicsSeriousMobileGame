@@ -1,19 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Purchasing;
 
-public class DialogueTrigger : MonoBehaviour
+public class ManipulationTrigger : MonoBehaviour
 {
     [Header("Visual Cue")]
     [SerializeField] private GameObject visualCue;
 
-    [Header("Ink JSON")]
-    [SerializeField] private TextAsset inkJSON;
     private bool playerInRange;
 
     //------------------------------------------------------
 
-    private void Awake()
+    void Awake()
     {
         //El VisualCue estara activo al inicio del juego
         visualCue.SetActive(false);
@@ -22,34 +21,21 @@ public class DialogueTrigger : MonoBehaviour
         playerInRange = false;
     }
 
-    //------------------------------------------------------
+    //--------------------------------------------------------------
 
     private void Update()
     {
         //Controlamos que se visualice, o no, el icono de dialogo
-        //dependiendo de la distnacia del PLayer, y si el Panel del
-        //dialogo esta desactivado
-        
-        if (playerInRange && !DialogueManager.Instance.dialogueIsPlaying)
-        {
-            visualCue.SetActive(true);
-            
-            //Si se oprime el boton de interaccion
-            if(InputManager.Instance.GetInteractPressed())
-            {
-                //Desactivamos el Flag de CrabHablando
-                DialogueManager.Instance.speakerIsCrab = false;
+        //dependiendo de la distnacia del PLayer
 
-                //Por ahora, mostramos el Texto del JSON
-                DialogueManager.Instance.EnterDialogueMode(inkJSON);
-            }
-            
-        }
-        else visualCue.SetActive(false);
-        
+        if (playerInRange)
+            visualCue.SetActive(true);
+        else 
+            visualCue.SetActive(false);
+
     }
 
-    //------------------------------------------------------
+    //-----------------------------------------------------------------------------
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -62,4 +48,5 @@ public class DialogueTrigger : MonoBehaviour
         //Si el Objeto colisionado tiene la etiqueta de PLAYER -> Desactivamos flag
         playerInRange = collision.gameObject.CompareTag("Player") ? false : true;
     }
+
 }

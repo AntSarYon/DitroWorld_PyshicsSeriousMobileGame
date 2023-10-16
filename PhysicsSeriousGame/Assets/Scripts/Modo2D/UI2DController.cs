@@ -248,7 +248,7 @@ public class UI2DController : MonoBehaviour
         if (Manager2D.Instance.ObjetoManipulacion != null)
         {
             //Llamamos a la funcion de ManipulacionOprimida desde el Objeto dueño del dialogo
-            Manager2D.Instance.ObjetoManipulacion.GetComponent<Manipulation>().ManipulacionOprimida();
+            //Manager2D.Instance.ObjetoManipulacion.GetComponent<Manipulation>().ManipulacionOprimida();
         }
     }
 

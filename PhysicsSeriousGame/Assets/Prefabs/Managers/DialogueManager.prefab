@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1340754937317852885
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1340754937317852886}
+  - component: {fileID: 1340754937317852887}
+  m_Layer: 0
+  m_Name: DialogueManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1340754937317852886
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1340754937317852885}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.8337274, y: -2.752697, z: -11.062476}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1340754937317852887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1340754937317852885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fca2bd1a1920c634388806b36cb2af61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialoguePanel: {fileID: 0}
+  dialogueText: {fileID: 0}
+  displayNameText: {fileID: 0}
+  typingSpeed: 0.04
+  loadGlobalsJSON: {fileID: 4900000, guid: 564f004d1bc7e1f4a9a2d1289b7888fc, type: 3}
+  defaultAudioInfo: {fileID: 11400000, guid: ff2417d34133dd6489a85da2f23427da, type: 2}
+  currentAudioInfo: {fileID: 0}
+  audioInfos:
+  - {fileID: 11400000, guid: f69b3ec6f1a37d5449814c8bb2bfed51, type: 2}
+  - {fileID: 11400000, guid: 7cd96ab218475ee4093d6b64256c6ddf, type: 2}
+  - {fileID: 11400000, guid: 9e62cdd0027df0949a1ae93c6c2a6a46, type: 2}
+  - {fileID: 11400000, guid: 5c27f783780ca6447a391025eb71bd65, type: 2}
+  - {fileID: 11400000, guid: 81aabdb2d1850c84da041a9c085dba26, type: 2}
+  dialogueIsPlaying: 0
+  speakerIsCrab: 0
+  btnsChoices:
+  - {fileID: 0}
+  - {fileID: 0}

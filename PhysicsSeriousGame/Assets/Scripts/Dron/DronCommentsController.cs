@@ -64,7 +64,7 @@ public class DronCommentsController : MonoBehaviour
             else if (Manager2D.Instance.FlagManipulacionVisible)
             {
                 //Tomamos el dialogo DE Dron que tienen asignados...
-                AsignarYActivarDialogo(Manager2D.Instance.ObjetoManipulacion.GetComponent<Manipulation>().ComentarioDron);
+                //AsignarYActivarDialogo(Manager2D.Instance.ObjetoManipulacion.GetComponent<Manipulation>().ComentarioDron);
             }
             //Si hay un Objeto manipulable activo...
             else if (Manager2D.Instance.FlagObservacion)
