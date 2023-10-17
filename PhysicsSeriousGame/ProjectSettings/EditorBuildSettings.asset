@@ -27,7 +27,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu/Settings.unity
     guid: 1e0b800e59c888a44ac9399a407e050b
   - enabled: 1
-    path: Assets/Scenes/Introduction/Prologo.unity
+    path: Assets/Scenes/Prologo.unity
     guid: 72988eccbda69784084d1cf2f966ab82
   - enabled: 1
     path: Assets/Scenes/Exterior/3DManzano.unity

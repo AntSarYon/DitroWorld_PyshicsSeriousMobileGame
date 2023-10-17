@@ -7,40 +7,48 @@ public class InkExternalFunctions
 {
     public void Bind(Story story) //Puede agregarse otro parametro de ser necesario...
     {
-        /*
-        story.BindExternalFunction("funcionEjemplo", (string parametroEjemploInk) =>
-            FuncionEjemplo(parametroEjemploInk)
+        
+        story.BindExternalFunction("AnimarCientifico", (string nombreAnimacion) =>
+            AnimarCientifico(nombreAnimacion)
             );
 
         //Se debera agregar uno nuevo por cada Funcion Externa creada
         
-         story.BindExternalFunction("funcionEjemplo", (string parametroEjemploInk) => 
-            FuncionEjemplo(parametroEjemploInk)
+         story.BindExternalFunction("FadeInPrologo", () =>
+            FadeInPrologo()
             );
-         */
-
-        /*
-         story.BindExternalFunction("funcionEjemplo", (string parametroEjemploInk) => 
-            FuncionEjemplo(parametroEjemploInk)
-            );
-         */
+         
 
     }
 
     //--------------------------------------------------------------------------------------
 
     public void Unbind(Story story)
-    {   /*
-        story.UnbindExternalFunction("funcionEjemplo");
-        */
+    {   
+        story.UnbindExternalFunction("AnimarCientifico");
+        
     }
 
     #region External Functions INK
 
-    public void FuncionEjemplo(string ejemplo)
-    {   /*
-        Debug.Log("Las funciones externas funcionan: " + ejemplo);
-        */
+    public void AnimarCientifico(string nombreAnimacion)
+    {
+        //Obtenemos Animator del cientifico
+        Animator scientistAnimator = GameObject.Find("Cientifico").GetComponent<Animator>();
+
+        //Reproducimos la Animacion
+        scientistAnimator.Play(nombreAnimacion);
+
+    }
+    
+
+    public void FadeInPrologo()
+    {
+        //Obtenemos Animator de la UI del Prologo
+        Animator ProUIAnimator = GameObject.Find("UI_Dialogue").GetComponent<Animator>();
+
+        //Reproducimos la Animacion
+        ProUIAnimator.Play("FadeIn");
     }
 
     #endregion
