@@ -308,7 +308,7 @@ Transform:
   m_GameObject: {fileID: 571463920}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 3.25, z: 5}
-  m_LocalScale: {x: -1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: -1.75, y: 1.75, z: 1.75}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -1817,8 +1817,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Usa las FLECHAS para elegir una respuesta y [Enter] para continuar
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0499475d5370ea448b6f25462c973733, type: 2}
-  m_sharedMaterial: {fileID: -4203897188517082366, guid: 0499475d5370ea448b6f25462c973733,
+  m_fontAsset: {fileID: 11400000, guid: e8d0beab9b5b320418c1ead115727e23, type: 2}
+  m_sharedMaterial: {fileID: 2163303582158786804, guid: e8d0beab9b5b320418c1ead115727e23,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1843,8 +1843,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10
-  m_fontSizeBase: 10
+  m_fontSize: 10.5
+  m_fontSizeBase: 10.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2132,8 +2132,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0499475d5370ea448b6f25462c973733, type: 2}
-  m_sharedMaterial: {fileID: -4203897188517082366, guid: 0499475d5370ea448b6f25462c973733,
+  m_fontAsset: {fileID: 11400000, guid: e8d0beab9b5b320418c1ead115727e23, type: 2}
+  m_sharedMaterial: {fileID: 2163303582158786804, guid: e8d0beab9b5b320418c1ead115727e23,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2158,8 +2158,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 17.5
+  m_fontSizeBase: 17.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2217,8 +2217,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.7766113, y: 2.5122986}
-  m_SizeDelta: {x: -51.5531, y: -55.025}
+  m_AnchoredPosition: {x: -0.7766113, y: 2.5123978}
+  m_SizeDelta: {x: -51.55, y: -55.025}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &7555362860346514462
 GameObject:
