@@ -14,10 +14,14 @@ public class InkExternalFunctions
 
         //Se debera agregar uno nuevo por cada Funcion Externa creada
         
-         story.BindExternalFunction("FadeInPrologo", () =>
+         story.BindExternalFunction("AnimarCRAB", (string nombreAnimacion) =>
+            AnimarCRAB(nombreAnimacion)
+            );
+
+        story.BindExternalFunction("FadeInPrologo", () =>
             FadeInPrologo()
             );
-         
+
 
     }
 
@@ -26,7 +30,9 @@ public class InkExternalFunctions
     public void Unbind(Story story)
     {   
         story.UnbindExternalFunction("AnimarCientifico");
-        
+        story.UnbindExternalFunction("AnimarCRAB");
+        story.UnbindExternalFunction("FadeInPrologo");
+
     }
 
     #region External Functions INK
@@ -40,7 +46,20 @@ public class InkExternalFunctions
         scientistAnimator.Play(nombreAnimacion);
 
     }
-    
+
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+    public void AnimarCRAB(string nombreAnimacion)
+    {
+        //Obtenemos Animator del cientifico
+        Animator scientistAnimator = GameObject.Find("CRAB").GetComponent<Animator>();
+
+        //Reproducimos la Animacion
+        scientistAnimator.Play(nombreAnimacion);
+
+    }
+
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
     public void FadeInPrologo()
     {

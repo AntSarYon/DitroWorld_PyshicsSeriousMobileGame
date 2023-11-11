@@ -3,28 +3,29 @@ INCLUDE Globals.ink
 -> main
 
 === main ===
+#audio:default
 ¡Oh cielos, Oh cielos! ¡Está despertando! ¡Todos calmados!
 
-    * [¿Por que corres?]
+    * [¿Por qué corres?]
         ~ AnimarCientifico("Writting")
-        ¡Increible! El modulo de voz parece funcionar sin inconvenientes...
-        Respondiendo a tu pregunta, corria porque no todos los dias veo despertar a un ser tan avanzado como tu, <color=\#0C2BF2>DITRO</color>...
+        ¡Increíble! El modulo de voz parece funcionar sin inconvenientes...
+        Respondiendo a tu pregunta, corría porque no todos los dias veo despertar a un ser tan avanzado como tu, <color=\#0C2BF2>DITRO</color>...
         
         ** [¿DITRO?]
-            Si, ese es el nombre que se te ha sido asignado.
+            Si, ese es el nombre te hemos asignado.
         
         ** [¿Ser avanzado?]
             Tu existencia es fruto del esfuerzo de muchas horas de trabajo, estudio, y muchas noches sin dormir.
             
         -- Pero no nos adelantemos...
         
-    * [¿Quien eres?]
+    * [¿Quién eres?]
         ~ AnimarCientifico("Writting") 
         ¡Increible! El modulo de voz parece funcionar sin inconvenientes...
         
     - Mi nombre es Kao, querido <color=\#0C2BF2>DITRO</color>, pero todos suelen llamarme: Profesor Kao.
     
-#speaker: Profesor Kao
+#speaker:Profesor Kao
 Aunque, al ser tu creador, puedes llamarme PADRE, si así lo deseas.... 
 
     * [¡Claro!]
@@ -34,7 +35,7 @@ Aunque, al ser tu creador, puedes llamarme PADRE, si así lo deseas....
         ...  ...  ... ¿No?
         Bueno, no puedo obligarte a hacerlo.
         
-    - Después de todo, como Inteligencia Artificial super avanzada, eres libre de tomar tus propias decisiones.
+    - Después de todo, como <color=\#0C2BF2>Inteligencia Artificial</color> super avanzada, eres libre de tomar tus propias decisiones.
     
     * [¿Inteligencia avanzada?]
         -> parteDos
@@ -47,18 +48,15 @@ Aunque, al ser tu creador, puedes llamarme PADRE, si así lo deseas....
 
 === parteDos ===
 Veras Ditro...
-
-~ AnimarCientifico("Writting") 
-Hoy, es el dia en que una Super Inteligencia Artificial Sintética despierta por primera vez
-Y estamos emocionados por ver de lo que es capaz de hacer.
+Hoy es el dia en que un Robot con inteligencia super avanzada despierta por primera vez... Y todos estamos emocionados por ver lo que es capaz de hacer.
 
     * [¡Suena increíble!]
-        ¿Verdad que si? tengo los pelos de punta
+        ¿Verdad que si? tengo los pelos de punta.
         
-    * [¡Quiero conocerla!]
-        Jajaja, creo que te lleverás una gran sorpresa
+    * [¡Quiero conocerlo!]
+        Jajaja, creo que te lleverás una gran sorpresa...
     
-    - Porque esa super inteligencia de la que tanto hablamos...
+    - Porque ese super inteligente robot del que tanto hablamos...
 
 
 Eres tú... <color=\#0C2BF2>DITRO</color>.
@@ -66,93 +64,85 @@ Eres tú... <color=\#0C2BF2>DITRO</color>.
     * [¿Yo?]
     * [¿Me lo juras?]
     
-    - En efecto, eres tú, <color=\#0C2BF2>DITRO</color>.
-Quería ser al primero que vieras cuando despertaras, y por eso vine corriendo.
+    - En efecto, ¡eres tú!
 
-    *[¿Desde donde corriste?]
-        Desde el baño, jeje.
-        ~ AnimarCientifico("Scared")
-        ¡Pero eso no es lo importante!
-        -> parteTres
-        
-    *[¿Y ahora qué?]
-        ->parteTres
+-> parteTres
 
 -> DONE
 
 === parteTres ===
-Ahora es cuando empieza tu misión para <color=\#0D8E2C>evolucionar</color>...
-Tu misión de <color=\#938D00>Aprendizaje</color>.
+Y es ahora cuando empieza tu misión para <color=\#0D8E2C>evolucionar</color>...
 
     *[¿Evolucionar?]
-        No es una evolución fisica, jaja, sino más una evolución intelectual, por decirlo de alguna manera.
-        
-    *[¿Aprendizaje?]
-        Asi es, toda inteligencia artifical necesita aprender antes de funcionar como es debido... Y tu no eres la excepción.
+    *[¿Misión?]
     
-    - Veras Ditro; haberte creado, y que hayas logrado despertar, no es suficiente. 
-    
-Necesitamos que hagas funcionar todas esas redes que hemos instalado en tu mente.
+    - Verás <color=\#0C2BF2>DITRO</color>, a pesar de tu GRAN POTENCIAL, depende de tí convertirte en lo que estás destinado a ser.
+Necesitamos que pongas a trabajar todos esos circuitos que hemos instalado en tu cabeza.
 
-Tienes un GRAN POTENCIAL para comprender y aplicar los principios que rigen nuestro universo... 
-
-Es por ese motivo que tu <color=\#B2AD00>Misión Principal</color> será  entender aquellas leyes naturales que rigen este mundo. Empezando por los <color=\#BF0000>PRINCIPIOS FÍSICOS</color>.
+Por ese motivo hemos programado tu primera <color=\#A20017>Misión</color>:
+<color=\#A20017>Comprender las leyes naturales que rigen este mundo.</color>
 
     * [¿Leyes Naturales?]
-    * [¿Principios fisicos?]
+    * [¿Cuales son esas?]
     
-    - Para todo lo que se mueve en este mundo, hay un POR QUÉ; así como también hay un CÓMO.
-
-<color=\#A9A64C>Tu primera misión es entender por qué algunas cosas se mueven de la forma en que lo hacen, y por qué lo hacen. </color>.
-
-    * [¿Y cómo haré eso?]
+    - Te daré una pista: <color=\#707000>"Para todo lo que se mueve, hay un POR QUÉ; y tambien un CÓMO".</color>
     
-    * [¿Yo solito?]
+    * [Suena interesante]
+        ¡Eso es porque realmente lo es!
+    
+    * [¿Me lo repites?]
+        Deberás entender <color=\#707000>por qué las cosas se mueven de la forma en que lo hacen, y qué es lo que eso significa.</color>
+        
+    - De acuerdo <color=\#0C2BF2>DITRO</color>, sera mejor que te pongas en marcha.
 
-    - Mi querido <color=\#0C2BF2>DITRO</color>... Eres capaz de lograr grandes cosas, yo lo sé.
+Y recuerda que el conocimiento llega de muchas maneras...
+<color=\#E86600>Habla</color> con las personas que encuentres a tu alrededor...
+<color=\#E86600>Observa</color> y <color=\#E86600>mueve</color> tantas cosas como puedas...
 
-Interactúa con las cosas y personas que encuentres a tu alrededor.
-El conocimiento llega de muchas maneras...
-
-Pero sobretodo, busca siempre <color=\#E86600>aplicar</color> lo que has aprendido. 
-No hay mejor manera de aprender que HACIENDO. Si señor.
-
-Y no creas que te dejaremos solo. ¡No señor!
+Pero sobretodo, busca siempre <color=\#E86600>experimentar</color> con todo lo que hayas aprendido. 
+No hay mejor manera de aprender que <color=\#E86600>HACIENDO</color>; ¡Si señor!
 
 ~ AnimarCientifico("Scared")
-¡CRAB! ¡Ven aqui en este instante!
+¡Oh! ¡aguarda! No creas que te dejaremos solo.
 
-Nuestro querido dron, CRAB, se ha ofrecido a acompañarte durante tu aventura.
+~ AnimarCientifico("Idle")
+¡¡CRAAAAAB!! ¡Ven aqui en este instante!
 
-Es un dron muy servicial, cuando tengas alguna duda sobre algo, puedes confiar en que él sabrá cómo ayudarte.
+~ AnimarCRAB("Aparicion")
+#speaker:CRAB #audio: animatedVoice
+¡¿Qué ocurre Profesor?!
+
+#speaker: Profesor Kao #audio:default
+Nuestro querido dron <color=\#AB9618>CRAB</color> se ha ofrecido a acompañarte durante tu aventura.
+
+#speaker:CRAB #audio: animatedVoice
+¿Qué? ¿Cuándo hice eso?
+
+#speaker:Profesor Kao #audio:default
+<color=\#AB9618>CRAB</color> te hará una pequeña guía sobre todo lo que necesitas saber para empezar tu aventura.
+
+#speaker:CRAB #audio: animatedVoice
+¡¿Yo?!
+
+#speaker:Profesor Kao #audio:default
+Es un dron muy servicial, cuando tengas alguna duda sobre algo, oprime <color=\#E86600>[C]</color> para llamarlo.
+Puedes confiar en que él siempre sabrá cómo ayudarte.
+
+#speaker:CRAB #audio: animatedVoice
+Profesor, usted nunca me dijo...
 
 ~ AnimarCientifico("Running")
-~ FadeInPrologo()
+#speaker:Profesor Kao #audio:default
+Bueno, los veo luego muchachos! <color=\#AB9618>CRAB</color> cuida muy bien a <color=\#0C2BF2>DITRO</color> y enseñale todo lo necesario antes de partir...!
 
-¡Adelante <color=\#0C2BF2>DITRO</color>, ya quiero ver las grandes cosas de las que eres capaz!
+#speaker:CRAB #audio: animatedVoice
+¡Profesooor...!
+... Oh bueno, será mejor que nos pongamos en marcha...
+Vamos <color=\#0C2BF2>DITRO</color>, utiliza las <color=\#E86600>[Flechas]</color> o <color=\#E86600>[WASD]</color> para moverte por el escenario.
 
-~ AnimarCientifico("Running")
+~ AnimarCRAB("Retirada")
 ~ FadeInPrologo()
 
 -> END
 
-
-
-
-A medida que avances, los desafíos que enfrentes podrán parecerte más complejos, o más secillos, dependiendo de tu desempeño a lo largo de tu aventura.
-
-Cuando interactúes con objetos, obtendrás información crucial sobre sus atributos físicos, lo que te permitirá entender de mejor forma su  comportamiento.
-
-El uso de conceptos como la fuerza, la Masa, y la velocidad será crucial para alcanzar tus objetivos.
-
-Pero no nos adelantemos...
-
-
-
-
-Por cierto, antes de salir, te recomiendo ir a la SALA ESTE del laboratorio; mis compañeros han preparado algo muy especial para tí. 
-
-
-
 -> DONE
-*/

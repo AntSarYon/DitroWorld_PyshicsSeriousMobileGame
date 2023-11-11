@@ -8,7 +8,8 @@ public class Door : MonoBehaviour
     [SerializeField] private string siguienteEscena;
 
     //----------------------------------------------------
-    private void OnCollisionEnter2D(Collision2D collision)
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         //Si detectamos colisión del Jugador...
         if (collision.transform.CompareTag("Player"))
