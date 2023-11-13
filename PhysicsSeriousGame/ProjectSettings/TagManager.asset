@@ -18,6 +18,7 @@ TagManager:
   - ObjectivePhysicObject
   - ObjectiveFixedObject
   - Observation
+  - SensoringObject
   layers:
   - Default
   - TransparentFX

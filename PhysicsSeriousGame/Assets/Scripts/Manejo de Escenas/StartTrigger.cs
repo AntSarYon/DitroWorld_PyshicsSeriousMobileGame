@@ -6,6 +6,6 @@ public class StartTrigger : MonoBehaviour
 {
     public void IniciarJuego()
     {
-        ScenesManager.Instance.SolicitarCambioDeEscena("2DLabPrincipal");
+        ScenesManager.Instance.SolicitarCambioDeEscena("Lab-1");
     }
 }
