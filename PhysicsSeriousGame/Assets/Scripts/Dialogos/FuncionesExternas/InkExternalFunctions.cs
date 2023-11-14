@@ -22,6 +22,10 @@ public class InkExternalFunctions
             FadeInPrologo()
             );
 
+        story.BindExternalFunction("ActivateIntroEvent3D", () =>
+            ActivateIntroEvent3D()
+            );
+
 
     }
 
@@ -32,6 +36,7 @@ public class InkExternalFunctions
         story.UnbindExternalFunction("AnimarCientifico");
         story.UnbindExternalFunction("AnimarCRAB");
         story.UnbindExternalFunction("FadeInPrologo");
+        story.UnbindExternalFunction("ActivateIntroEvent3D");
 
     }
 
@@ -68,6 +73,15 @@ public class InkExternalFunctions
 
         //Reproducimos la Animacion
         ProUIAnimator.Play("FadeIn");
+    }
+
+    public void ActivateIntroEvent3D()
+    {
+        //Obtenemos Referencia al Script de Reglas
+        Lab3Rules lr = GameObject.Find("SceneRules").GetComponent<Lab3Rules>();
+
+        //Activamos el Evento 3D Tutorial
+        lr.ActivateEvent();
     }
 
     #endregion

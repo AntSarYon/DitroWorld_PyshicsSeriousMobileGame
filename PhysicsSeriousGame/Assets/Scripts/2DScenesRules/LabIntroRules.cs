@@ -24,10 +24,10 @@ public class LabIntroRules : MonoBehaviour
     [SerializeField] private SpriteRenderer computerSprite;
 
     [Header("Puertas que se abriran")]
-    [SerializeField] private SpriteRenderer[] doorSprites = new SpriteRenderer[2];
+    [SerializeField] private SpriteRenderer doorSprite;
 
     [Header("Triggers de Salida")]
-    [SerializeField] private GameObject[] exitTriggers = new GameObject[2];
+    [SerializeField] private GameObject exitTrigger;
 
     [Header("Clip: Secreto desbloqueado")]
     [SerializeField] private AudioClip clipSecretUnlock;
@@ -53,12 +53,9 @@ public class LabIntroRules : MonoBehaviour
         allChairsInPlace = false;
         chairsCounter = 0;
 
-        //Por cada Trigger de salida
-        foreach (GameObject trigger in exitTriggers)
-        {
-            //Desactivamos el GameObject
-            trigger.SetActive(false);
-        }
+        //Desactivamos el Trigger
+        exitTrigger.SetActive(false);
+        
     }
 
     //-------------------------------------------------------------------------
@@ -103,22 +100,15 @@ public class LabIntroRules : MonoBehaviour
     {
         mAudioSource.PlayOneShot(clipSecretUnlock, 1f);
 
-        //Por cada Sprite renderer en la lista
-        foreach (SpriteRenderer sr in doorSprites)
-        {
-            //Asignamos el Sprite de Puerta abierta
-            sr.sprite = openDoorSprite;
-        }
+        //Asignamos el Sprite de Puerta abierta
+        doorSprite.sprite = openDoorSprite;
 
         //Cambiamos el Sprite del computador a Naranja
         computerSprite.sprite = orangeComputer;
 
-        //Por cada Trigger de salida
-        foreach (GameObject trigger in exitTriggers)
-        {
-            //Activamos el GameObject
-            trigger.SetActive(true);
-        }
+        //Activamos el GameObject
+        exitTrigger.SetActive(true);
+        
     }
 
     //-------------------------------------------------------------------------
@@ -126,22 +116,15 @@ public class LabIntroRules : MonoBehaviour
     private void CloseDoors()
     {
         mAudioSource.PlayOneShot(clipDoorLocked, 0.30f);
-        //Por cada Sprite renderer en la lista
-        foreach (SpriteRenderer sr in doorSprites)
-        {
-            //Asignamos el Sprite de Puerta abierta
-            sr.sprite = closeDoorSprite;
-        }
+        
+        //Asignamos el Sprite de Puerta abierta
+        doorSprite.sprite = closeDoorSprite;
 
         //Cambiamos el Sprite del computador a Celeste
         computerSprite.sprite = blueComputer;
 
-        //Por cada Trigger de salida
-        foreach (GameObject trigger in exitTriggers)
-        {
-            //Desactivamos el GameObject
-            trigger.SetActive(false);
-        }
+        //Desactivamos el GameObject
+        exitTrigger.SetActive(false);
     }
 
     //-------------------------------------------------------------------------

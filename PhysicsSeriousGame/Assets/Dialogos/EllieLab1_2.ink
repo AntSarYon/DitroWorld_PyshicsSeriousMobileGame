@@ -1,0 +1,3 @@
+#speaker:Prof. Ellie  #audio:default
+Las sillas ya están ordenadas, pero solo la puerta de la sección Norte del Laboratorio se ha abierto...
+Puedes llegar a la habitación de la derecha si atraviesas el salon del ala Norte, y el que le sigue, pasando la puerta de la derecha.

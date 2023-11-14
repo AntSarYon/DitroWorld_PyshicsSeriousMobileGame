@@ -1,78 +1,71 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Purchasing;
 
 public class Event3D : MonoBehaviour
 {
     public int IDEvento;
 
-    //Referencia al icono de Dialogo
-    private GameObject iconoEvento;
+    [Header("Visual Cue")]
+    [SerializeField] private GameObject visualCue;
 
-    //Flags de Estado
-    private bool jugadorCerca;
+    private AudioSource mAudioSource;
+
+    private bool playerInRange;
 
     [SerializeField] private string nombreEscena3D;
-
-    [TextArea(3, 4)] public string ComentarioDron;
-
     public string NombreEscena3D { get => nombreEscena3D; set => nombreEscena3D = value; }
 
     //-------------------------------------------------------------
     private void Awake()
     {
-        //Inicializamos flag de jugador cercano a falso
-        jugadorCerca = false;
+        mAudioSource = GetComponent<AudioSource>();
 
-        //Obtenemos referencia al icono de excalamacion del NPC
-        iconoEvento = transform.Find("icoEvento").gameObject;
+        //El VisualCue estara activo al inicio del juego
+        visualCue.SetActive(false);
+
+        //Indicamos que el jugador no esta en rango
+        playerInRange = false;
     }
 
-    //--------------------------------------------------------------
+    //---------------------------------------------------------------------------------
 
-    public void BtnEvento3DOprimido()
+    private void Update()
     {
-        //Si el jugador esta cerca, el Flag de Evento proximo esta Activo
-        if (jugadorCerca && Manager2D.Instance.FlagEvento3DProximo)
+        //Controlamos que se visualice, o no, el icono de EVENTO 
+        //dependiendo de la distnacia del PLayer, y si el Panel del
+        //dialogo esta desactivado
+
+        if (playerInRange && !DialogueManager.Instance.dialogueIsPlaying)
         {
-            ScenesManager.Instance.SolicitarCambioDeEscena(NombreEscena3D);
+            visualCue.SetActive(true);
+
+            //Si se oprime el boton de interaccion
+            if (InputManager.Instance.GetSubmitPressed())
+            {
+                //Reproducimos el sonido de ingresar a Evento 3D
+                mAudioSource.Play();
+
+                //Solicitamos el cambio de Escena.
+                ScenesManager.Instance.SolicitarCambioDeEscena(NombreEscena3D);
+            }
+
         }
+        else visualCue.SetActive(false);
     }
 
-    //--------------------------------------------------------------
+    //---------------------------------------------------------------------------------
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //Si el jugador entra a la zona de Dialogo
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            //Activamos el Flag de jugadorCerca
-            jugadorCerca = true;
-            //Mostramos el icono de dialogo
-            iconoEvento.SetActive(true);
-            //Asignamos referencia a este Objeto como el propietario del Evento3D
-            Manager2D.Instance.ObjetoEvento3D = this.gameObject;
-            //Activamos el Flag de Evento de Dialogo proximo
-            Manager2D.Instance.FlagEvento3DProximo = true;
-        }
-
+        //Si el Objeto colisionado tiene la etiqueta de PLAYER -> Activamos Flag
+        playerInRange = collision.gameObject.CompareTag("Player") ? true : false;
     }
-
-    //-----------------------------------------------------------
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        //Si el jugador SALE DE la zona de Dialogo
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            //Desactivamos el Flag de JugadorCerca
-            jugadorCerca = false;
-            //Desactivamos el icono de dialogo
-            iconoEvento.SetActive(false);
-            //Asignamos a null la referencia a este Objeto 
-            Manager2D.Instance.ObjetoEvento3D = null;
-            //Desactivamos el Flag de Evento de Dialogo proximo
-            Manager2D.Instance.FlagEvento3DProximo = false;
-        }
+        //Si el Objeto colisionado tiene la etiqueta de PLAYER -> Desactivamos flag
+        playerInRange = collision.gameObject.CompareTag("Player") ? false : true;
     }
 }

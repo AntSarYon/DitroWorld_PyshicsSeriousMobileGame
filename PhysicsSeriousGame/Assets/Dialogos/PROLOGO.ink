@@ -11,14 +11,6 @@ INCLUDE Globals.ink
         ¡Increíble! El modulo de voz parece funcionar sin inconvenientes...
         Respondiendo a tu pregunta, corría porque no todos los dias veo despertar a un ser tan avanzado como tu, <color=\#0C2BF2>DITRO</color>...
         
-        ** [¿DITRO?]
-            Si, ese es el nombre te hemos asignado.
-        
-        ** [¿Ser avanzado?]
-            Tu existencia es fruto del esfuerzo de muchas horas de trabajo, estudio, y muchas noches sin dormir.
-            
-        -- Pero no nos adelantemos...
-        
     * [¿Quién eres?]
         ~ AnimarCientifico("Writting") 
         ¡Increible! El modulo de voz parece funcionar sin inconvenientes...
@@ -47,8 +39,7 @@ Aunque, al ser tu creador, puedes llamarme PADRE, si así lo deseas....
 -> DONE
 
 === parteDos ===
-Veras Ditro...
-Hoy es el dia en que un Robot con inteligencia super avanzada despierta por primera vez... Y todos estamos emocionados por ver lo que es capaz de hacer.
+Asi es... Hoy es el dia en que un Robot con inteligencia super avanzada despierta por primera vez... Y todos estamos emocionados por ver lo que es capaz de hacer.
 
     * [¡Suena increíble!]
         ¿Verdad que si? tengo los pelos de punta.
@@ -56,10 +47,7 @@ Hoy es el dia en que un Robot con inteligencia super avanzada despierta por prim
     * [¡Quiero conocerlo!]
         Jajaja, creo que te lleverás una gran sorpresa...
     
-    - Porque ese super inteligente robot del que tanto hablamos...
-
-
-Eres tú... <color=\#0C2BF2>DITRO</color>.
+    - Porque ese super inteligente robot del que tanto hablamos... Eres tú... <color=\#0C2BF2>DITRO</color>.
 
     * [¿Yo?]
     * [¿Me lo juras?]
@@ -76,8 +64,7 @@ Y es ahora cuando empieza tu misión para <color=\#0D8E2C>evolucionar</color>...
     *[¿Evolucionar?]
     *[¿Misión?]
     
-    - Verás <color=\#0C2BF2>DITRO</color>, a pesar de tu GRAN POTENCIAL, depende de tí convertirte en lo que estás destinado a ser.
-Necesitamos que pongas a trabajar todos esos circuitos que hemos instalado en tu cabeza.
+    - Verás <color=\#0C2BF2>DITRO</color>, a pesar de tu GRAN POTENCIAL, depende de tí poner a trabajar todos esos circuitos que hemos instalado en tu cabeza; y convertirte en quien estás destinado a ser.
 
 Por ese motivo hemos programado tu primera <color=\#A20017>Misión</color>:
 <color=\#A20017>Comprender las leyes naturales que rigen este mundo.</color>
