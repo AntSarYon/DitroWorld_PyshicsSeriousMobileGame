@@ -91,16 +91,14 @@ Por ese motivo hemos programado tu primera <color=\#A20017>Misión</color>:
         ¡Eso es porque realmente lo es!
     
     * [¿Me lo repites?]
-        Deberás entender <color=\#707000>por qué las cosas se mueven de la forma en que lo hacen, y qué es lo que eso significa.</color>
+        En esencia, deberás entender <color=\#707000>por qué las cosas se mueven de la forma en que lo hacen, y qué es lo que eso significa.</color>
         
-    - De acuerdo <color=\#0C2BF2>DITRO</color>, sera mejor que te pongas en marcha.
+    - Y recuerda: El conocimiento llega de muchas maneras...
+<color=\#E86600>Hablando</color>, <color=\#E86600>observando, incluso </color> <color=\#E86600>usando tus propias manos</color>...
 
-Y recuerda que el conocimiento llega de muchas maneras...
-<color=\#E86600>Habla</color> con las personas que encuentres a tu alrededor...
-<color=\#E86600>Observa</color> y <color=\#E86600>mueve</color> tantas cosas como puedas...
+Pero mi consejo para ti es siempre <color=\#E86600>experimentar</color> y <color=\#E86600>poner a prueba</color> lo que hayas aprendido.
 
-Pero sobretodo, busca siempre <color=\#E86600>experimentar</color> con todo lo que hayas aprendido. 
-No hay mejor manera de aprender que <color=\#E86600>HACIENDO</color>; ¡Si señor!
+De acuerdo <color=\#0C2BF2>DITRO</color>, sera mejor que te pongas en marcha.
 
 ~ AnimarCientifico("Scared")
 ¡Oh! ¡aguarda! No creas que te dejaremos solo.
@@ -119,21 +117,20 @@ Nuestro querido dron <color=\#AB9618>CRAB</color> se ha ofrecido a acompañarte 
 ¿Qué? ¿Cuándo hice eso?
 
 #speaker:Profesor Kao #audio:default
-<color=\#AB9618>CRAB</color> te hará una pequeña guía sobre todo lo que necesitas saber para empezar tu aventura.
+<color=\#AB9618>CRAB</color> te hará una pequeña guía por el laboratorio para que aprendas todo lo que necesitas saber antes de salir al exterior y empezar tu aventura.
 
 #speaker:CRAB #audio: animatedVoice
 ¡¿Yo?!
 
 #speaker:Profesor Kao #audio:default
-Es un dron muy servicial, cuando tengas alguna duda sobre algo, oprime <color=\#E86600>[C]</color> para llamarlo.
-Puedes confiar en que él siempre sabrá cómo ayudarte.
+Es un dron muy servicial, cuando tengas alguna duda sobre algo, oprime <color=\#E86600>[C]</color> para llamarlo. Puedes confiar en que él siempre sabrá cómo ayudarte.
 
 #speaker:CRAB #audio: animatedVoice
 Profesor, usted nunca me dijo...
 
 ~ AnimarCientifico("Running")
 #speaker:Profesor Kao #audio:default
-Bueno, los veo luego muchachos! <color=\#AB9618>CRAB</color> cuida muy bien a <color=\#0C2BF2>DITRO</color> y enseñale todo lo necesario antes de partir...!
+Bueno, los veo luego muchachos! !<color=\#AB9618>CRAB</color> cuida muy bien a <color=\#0C2BF2>DITRO</color>, y hazle el recorrido antes de partir...!
 
 #speaker:CRAB #audio: animatedVoice
 ¡Profesooor...!
