@@ -21,7 +21,7 @@ INCLUDE Globals.ink
     *[No lo entiendo]
     *[Osea que...]
     
-    - La Zona Cero ha sido diseñada especialmente para realizar experimentos, y ayudarte a entender mejor esas <color=\#A20017>Leyes naturales</color> que el profesor Kao te mencionó.
+    - La <color=\#1BA808>Zona Cero</color> ha sido diseñada especialmente para realizar experimentos, y ayudarte a entender mejor esas <color=\#A20017>Leyes naturales</color> que el profesor Kao te mencionó.
     
 Hagamos una prueba, ¿te parece?
 

@@ -11,6 +11,8 @@ public class DialogueTrigger : MonoBehaviour
     [SerializeField] private TextAsset inkJSON;
     private bool playerInRange;
 
+    public TextAsset InkJSON { get => inkJSON; set => inkJSON = value; }
+
     //------------------------------------------------------
 
     private void Awake()
