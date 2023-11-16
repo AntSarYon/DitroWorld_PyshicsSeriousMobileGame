@@ -102,10 +102,10 @@ public class OrbitaController : MonoBehaviour
 
         //
         if (InputManager.Instance.GetScrollValue() > 0)
-            incrementoZoom = -15;
+            incrementoZoom = -30;
 
         else if (InputManager.Instance.GetScrollValue() < 0)
-            incrementoZoom = 15;
+            incrementoZoom = 30;
 
         else
             incrementoZoom = 0;
