@@ -15,8 +15,18 @@ public class InputManager : MonoBehaviour
     private bool crabPressed = false;
     private bool manipulatePressed = false;
 
+    //Flags de Acciones para Movimiento de camara
+    private bool camWPressed = false;
+    private bool camAPressed = false;
+    private bool camSPressed = false;
+    private bool camDPressed = false;
+
+    //Flag de Accion para Gravedad
+    private bool gravityPressed = false;
+
     //Variable de Instancia
     public static InputManager Instance;
+    
 
     //--------------------------------------------------------------
 
@@ -28,6 +38,139 @@ public class InputManager : MonoBehaviour
         }
         Instance = this;
     }
+
+    #region 3DInputs
+
+    //--------------------------------------------------------------
+    //EVENTO: Input de Interaccion Recibido
+
+    public void CamWPressed(InputAction.CallbackContext context)
+    {
+        //Si el contexto del Input es que se ha Oprimido
+        if (context.performed)
+        {
+            //Activamos el Flag
+            camWPressed = true;
+        }
+        //Si el contexto del Input es que se ha Soltado
+        else if (context.canceled)
+        {
+            //Desactivamos el Flag
+            camWPressed = false;
+        }
+    }
+    // - - - - - - - - - - - - - - - - - - - 
+    public bool GetCamWPressed()
+    {
+        //Retornamos el valor del Flag de W oprimido;
+        return camWPressed;
+    }
+
+    //-------------------------------------------------------------------------
+
+    public void CamAPressed(InputAction.CallbackContext context)
+    {
+        //Si el contexto del Input es que se ha Oprimido
+        if (context.performed)
+        {
+            //Activamos el Flag
+            camAPressed = true;
+        }
+        //Si el contexto del Input es que se ha Soltado
+        else if (context.canceled)
+        {
+            //Desactivamos el Flag
+            camAPressed = false;
+        }
+    }
+    // - - - - - - - - - - - - - - - - - - - 
+    public bool GetCamAPressed()
+    {
+        //Retornamos el valor del Flag de A oprimido;
+        return camAPressed;
+    }
+
+    //-------------------------------------------------------------------------
+
+    public void CamSPressed(InputAction.CallbackContext context)
+    {
+        //Si el contexto del Input es que se ha Oprimido
+        if (context.performed)
+        {
+            //Activamos el Flag
+            camSPressed = true;
+        }
+        //Si el contexto del Input es que se ha Soltado
+        else if (context.canceled)
+        {
+            //Desactivamos el Flag
+            camSPressed = false;
+        }
+    }
+    // - - - - - - - - - - - - - - - - - - - 
+    public bool GetCamSPressed()
+    {
+        //Retornamos el valor del Flag de S oprimido;
+        return camSPressed;
+    }
+
+    //-------------------------------------------------------------------------
+
+    public void CamDPressed(InputAction.CallbackContext context)
+    {
+        //Si el contexto del Input es que se ha Oprimido
+        if (context.performed)
+        {
+            //Activamos el Flag
+            camDPressed = true;
+        }
+        //Si el contexto del Input es que se ha Soltado
+        else if (context.canceled)
+        {
+            //Desactivamos el Flag
+            camDPressed = false;
+        }
+    }
+    // - - - - - - - - - - - - - - - - - - - 
+    public bool GetCamDPressed()
+    {
+        //Retornamos el valor del Flag de D oprimido;
+        return camDPressed;
+    }
+
+    //-------------------------------------------------------------------------
+
+    public void GravityPressed(InputAction.CallbackContext context)
+    {
+        //Si el contexto del Input es que se ha Oprimido
+        if (context.performed)
+        {
+            //Activamos el Flag
+            gravityPressed = true;
+        }
+        //Si el contexto del Input es que se ha Soltado
+        else if (context.canceled)
+        {
+            //Desactivamos el Flag
+            gravityPressed = false;
+        }
+    }
+    // - - - - - - - - - - - - - - - - - - - 
+    public bool GetGravityPressed()
+    {
+        //Capturamos el valor del Flag de Interacción EN EL MOMENTO
+        bool result = gravityPressed;
+        //Lo convertimos a Falso
+        gravityPressed = false;
+        //Retornamos el valor que habiamos capturado antes de Falsearlo
+        return result;
+    }
+
+    #endregion
+
+    //-------------------------------------------------------------------------
+
+    #region 2D INPUTS
 
     //--------------------------------------------------------------
     //EVENTO: Input de Movimiento Recibido
@@ -45,14 +188,13 @@ public class InputManager : MonoBehaviour
             moveDirection = context.ReadValue<Vector2>().normalized;
         }
     }
+
     // - - - - - - - - - - - - - - - - - - - 
     public Vector2 GetMoveDirection()
     {
         return moveDirection;
     }
 
-    //--------------------------------------------------------------
-    //EVENTO: Input de Interaccion Recibido
     public void InteractButtonPressed(InputAction.CallbackContext context)
     {
         //Si el contexto del Input es que se ha Oprimido
@@ -171,4 +313,6 @@ public class InputManager : MonoBehaviour
 
         return result;
     }
+
+    #endregion
 }
