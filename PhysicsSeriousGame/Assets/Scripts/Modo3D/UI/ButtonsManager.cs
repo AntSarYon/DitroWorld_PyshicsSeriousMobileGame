@@ -69,7 +69,7 @@ public class ButtonsManager : MonoBehaviour
     //Tiempo de tipeo para paneles de texto
     private float tiempoTipeo = 0.025f;
 
-    [Header("Objetos de UI para la AYUDA de CRAB")]
+    [Header("Objetos de UI para el Panel de Victoria y los Datos")]
     //Referencia a Objetos de UI para los Resultados
     [SerializeField] private GameObject victoryPanel;
     [SerializeField] private TextMeshProUGUI timeText;

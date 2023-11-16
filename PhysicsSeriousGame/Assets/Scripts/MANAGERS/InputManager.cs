@@ -9,6 +9,9 @@ public class InputManager : MonoBehaviour
     //Direccion de Movimiento -> Inicializado en Zero
     private Vector2 moveDirection = Vector2.zero;
 
+    //Accion de Zoom -> Inicializado en Zero
+    private float ZoomValue = 0.0f;
+
     //Flags de Acciones oprimidas
     private bool interactPressed = false;
     private bool submitPressed = false;
@@ -43,6 +46,27 @@ public class InputManager : MonoBehaviour
 
     //--------------------------------------------------------------
     //EVENTO: Input de Interaccion Recibido
+
+    public void ScrollPressed(InputAction.CallbackContext context)
+    {
+        //Si el contexto del Input es que se ha Oprimido, o Soltado...
+        if (context.performed)
+        {
+            //Actualizamos la direccion de movimiento en base al Vector
+            ZoomValue = context.ReadValue<float>();
+        }
+
+        else if (context.canceled)
+        {
+            ZoomValue = 0f;
+        }
+    }
+
+    // - - - - - - - - - - - - - - - - - - - 
+    public float GetScrollValue()
+    {
+        return ZoomValue;
+    }
 
     public void CamWPressed(InputAction.CallbackContext context)
     {

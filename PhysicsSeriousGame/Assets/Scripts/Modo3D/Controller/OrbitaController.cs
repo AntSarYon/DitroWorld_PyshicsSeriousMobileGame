@@ -37,12 +37,27 @@ public class OrbitaController : MonoBehaviour
 
     private void Update()
     {
-        //Si se ha movido el mouse en horizontal
+        //Si se ha oprimido A o D o manualmente los botones de movimiento horizontal
         if (horizontalMouse != 0)
         {
             //Modificamos el angulo utilizando radiales; consideramos tmb la sensibilidad del Mouse
             anguloVision.x += horizontalMouse * Mathf.Deg2Rad * sensibilidadCamara.x * Time.deltaTime;
         }
+        else 
+        {
+            if (InputManager.Instance.GetCamAPressed())
+            {
+                //Modificamos el angulo utilizando radiales; consideramos tmb la sensibilidad del Mouse
+                anguloVision.x += 25 * Mathf.Deg2Rad * sensibilidadCamara.x * Time.deltaTime;
+            }
+
+            if (InputManager.Instance.GetCamDPressed())
+            {
+                //Modificamos el angulo utilizando radiales; consideramos tmb la sensibilidad del Mouse
+                anguloVision.x -= 25 * Mathf.Deg2Rad * sensibilidadCamara.x * Time.deltaTime;
+            }
+        }
+
         //Si se ha movido el mouse en vertical
         if (verticalMouse != 0)
         {
@@ -51,6 +66,26 @@ public class OrbitaController : MonoBehaviour
 
             //Limitmaos su valor para que no ascienda, o baje en exceso
             anguloVision.y = Mathf.Clamp(anguloVision.y, -80f * Mathf.Deg2Rad, 80f * Mathf.Deg2Rad);
+        }
+        else
+        {
+            if (InputManager.Instance.GetCamWPressed())
+            {
+                //Modificamos el angulo utilizando radiales; consideramos tmb la sensibilidad del Mouse
+                anguloVision.y -= 25 * Mathf.Deg2Rad * sensibilidadCamara.y * Time.deltaTime;
+
+                //Limitmaos su valor para que no ascienda, o baje en exceso
+                anguloVision.y = Mathf.Clamp(anguloVision.y, -80f * Mathf.Deg2Rad, 80f * Mathf.Deg2Rad);
+            }
+
+            if (InputManager.Instance.GetCamSPressed())
+            {
+                //Modificamos el angulo utilizando radiales; consideramos tmb la sensibilidad del Mouse
+                anguloVision.y += 25 * Mathf.Deg2Rad * sensibilidadCamara.y * Time.deltaTime;
+
+                //Limitmaos su valor para que no ascienda, o baje en exceso
+                anguloVision.y = Mathf.Clamp(anguloVision.y, -80f * Mathf.Deg2Rad, 80f * Mathf.Deg2Rad);
+            }
         }
     }
 
@@ -64,6 +99,16 @@ public class OrbitaController : MonoBehaviour
             -Mathf.Sin(anguloVision.y),
             -Mathf.Sin(anguloVision.x) * Mathf.Cos(anguloVision.y)
             );
+
+        //
+        if (InputManager.Instance.GetScrollValue() > 0)
+            incrementoZoom = -15;
+
+        else if (InputManager.Instance.GetScrollValue() < 0)
+            incrementoZoom = 15;
+
+        else
+            incrementoZoom = 0;
 
         //Actualizamos la distancia constantmente en base al incremento del Zoom;
         distancia = Mathf.Clamp(

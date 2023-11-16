@@ -377,6 +377,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "AddZoom",
+                    "type": "PassThrough",
+                    "id": "6ac99c6f-b258-4842-838f-958198de476f",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -773,6 +782,17 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "GravityOnOff",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a751d952-c76d-4b6f-880e-42c4a5c5f091",
+                    "path": "<Mouse>/scroll/y",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "AddZoom",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
