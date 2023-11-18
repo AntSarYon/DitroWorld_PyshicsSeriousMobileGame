@@ -386,6 +386,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "AskHelp",
+                    "type": "Button",
+                    "id": "84773b1f-6bd9-414d-a455-fde3ff835438",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SeeObjective",
+                    "type": "Button",
+                    "id": "095a4741-a086-4586-9115-ec8c9bcbdca7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -793,6 +811,28 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "AddZoom",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2dc4bb08-6978-416d-925d-c7eb98bdb49e",
+                    "path": "<Keyboard>/c",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "AskHelp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3f3703d3-130f-4a60-b5ba-9479653cd8ce",
+                    "path": "<Keyboard>/o",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "SeeObjective",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

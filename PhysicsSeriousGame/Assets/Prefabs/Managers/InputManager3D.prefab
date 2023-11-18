@@ -275,6 +275,54 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 2717929d-dfbc-4d78-95f8-2e82c7af7ae9
     m_ActionName: UI/GravityOnOff[/Keyboard/g]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7924622428611424576}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: ScrollPressed
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 6ac99c6f-b258-4842-838f-958198de476f
+    m_ActionName: UI/AddZoom[/Mouse/scroll/y]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7924622428611424576}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: AskForHelpPressed
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 84773b1f-6bd9-414d-a455-fde3ff835438
+    m_ActionName: UI/AskHelp[/Keyboard/c]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7924622428611424576}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: SeeObjectivePressed
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 095a4741-a086-4586-9115-ec8c9bcbdca7
+    m_ActionName: UI/SeeObjective[/Keyboard/o]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: UI

@@ -503,6 +503,31 @@ public class ButtonsManager : MonoBehaviour
             textVelocidad.text = "Velocidad: 0 m/s";
             textFriccion.text = "Friccion: 0";
         }
+
+        // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+        //Controlamos la visualización de las opciones de Gravedad
+        //cuando se percibe un Input
+        if (InputManager.Instance.GetGravityPressed())
+        {
+            ControlarBotonesGravedad();
+            ReproducirModificacionDeParametro();
+        }
+
+        // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+        if (InputManager.Instance.GetAskHelpPressed())
+        {
+            AyudaOprimida();
+        }
+
+        // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+        if (InputManager.Instance.GetSeeObjectivePressed())
+        {
+            ControlarVisualizacionDeObjetivo();
+            ReproducirSeleccionDeAtributo();
+        }
     }
 
     //-----------------------------------------------------------------------------------------------------------------------------------

@@ -27,6 +27,12 @@ public class InputManager : MonoBehaviour
     //Flag de Accion para Gravedad
     private bool gravityPressed = false;
 
+    //Flags de Accion de Ayuda
+    private bool askHelpPressed = false;
+
+    //Flags de Accion de VerObjetivo
+    private bool seeObjectivePressed = false;
+
     //Variable de Instancia
     public static InputManager Instance;
     
@@ -67,6 +73,64 @@ public class InputManager : MonoBehaviour
     {
         return ZoomValue;
     }
+
+    //-------------------------------------------------------------------------
+
+    public void AskForHelpPressed(InputAction.CallbackContext context)
+    {
+        //Si el contexto del Input es que se ha Oprimido
+        if (context.performed)
+        {
+            //Activamos el Flag
+            askHelpPressed = true;
+        }
+        //Si el contexto del Input es que se ha Soltado
+        else if (context.canceled)
+        {
+            //Desactivamos el Flag
+            askHelpPressed = false;
+        }
+    }
+    // - - - - - - - - - - - - - - - - - - - 
+    public bool GetAskHelpPressed()
+    {
+        //Capturamos el valor del Flag de Interacción EN EL MOMENTO
+        bool result = askHelpPressed;
+        //Lo convertimos a Falso
+        askHelpPressed = false;
+        //Retornamos el valor que habiamos capturado antes de Falsearlo
+        return result;
+    }
+
+    //-------------------------------------------------------------------------
+
+    public void SeeObjectivePressed(InputAction.CallbackContext context)
+    {
+        //Si el contexto del Input es que se ha Oprimido
+        if (context.performed)
+        {
+            //Activamos el Flag
+            seeObjectivePressed = true;
+        }
+        //Si el contexto del Input es que se ha Soltado
+        else if (context.canceled)
+        {
+            //Desactivamos el Flag
+            seeObjectivePressed = false;
+        }
+    }
+    // - - - - - - - - - - - - - - - - - - - 
+    public bool GetSeeObjectivePressed()
+    {
+        //Capturamos el valor del Flag de Interacción EN EL MOMENTO
+        bool result = seeObjectivePressed;
+        //Lo convertimos a Falso
+        seeObjectivePressed = false;
+        //Retornamos el valor que habiamos capturado antes de Falsearlo
+        return result;
+    }
+
+    //-------------------------------------------------------------------------
 
     public void CamWPressed(InputAction.CallbackContext context)
     {

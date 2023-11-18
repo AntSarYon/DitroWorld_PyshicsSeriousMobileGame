@@ -102,19 +102,38 @@ public class OrbitaController : MonoBehaviour
 
         //
         if (InputManager.Instance.GetScrollValue() > 0)
-            incrementoZoom = -30;
+        {
+
+            //Actualizamos la distancia constantmente en base al incremento del Zoom;
+            distancia = Mathf.Clamp(
+                distancia - 85 * Time.deltaTime,
+                2f,
+                45f);
+        }
 
         else if (InputManager.Instance.GetScrollValue() < 0)
-            incrementoZoom = 30;
+        {
+            //Actualizamos la distancia constantmente en base al incremento del Zoom;
+            distancia = Mathf.Clamp(
+                distancia + 85 * Time.deltaTime,
+                2f,
+                45f);
+        }
 
         else
-            incrementoZoom = 0;
+        {
+            //Actualizamos la distancia constantmente en base al incremento del Zoom;
+            distancia = Mathf.Clamp(
+                distancia + incrementoZoom * Time.deltaTime,
+                2f,
+                45f);
+        }
 
-        //Actualizamos la distancia constantmente en base al incremento del Zoom;
+        /*/Actualizamos la distancia constantmente en base al incremento del Zoom;
         distancia = Mathf.Clamp(
             distancia + incrementoZoom * Time.deltaTime,
             2f,
-            45f);
+            45f);*/
 
         //Actualizamos la posicion de la camara en base a la posiciond el Objeto seguido.
         transform.position = objetoSeguido.position + orbita * distancia;
