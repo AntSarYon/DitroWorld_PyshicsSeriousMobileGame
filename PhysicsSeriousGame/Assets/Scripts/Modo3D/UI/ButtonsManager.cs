@@ -474,14 +474,14 @@ public class ButtonsManager : MonoBehaviour
         if (btnImpulsar.activeSelf && !btnEmpujar.activeSelf)
         {
             //Asignamos el Texto de FUERZA DE IMPULSO a la UI
-            txtDescripcionFuerza.text = "Fuerza Impulso";
+            txtDescripcionFuerza.text = "F. IMPULSO";
         }
 
         //Si el boton de Empuje est� activo && el de Impulso est� desactivado
         else if (btnEmpujar.activeSelf && !btnImpulsar.activeSelf)
         {
             //Asignamos el Texto de FUERZA DE EMPUJE a la UI
-            txtDescripcionFuerza.text = "Fuerza Empuje";
+            txtDescripcionFuerza.text = "F. EMPUJE";
         }
 
         //Asignamos el valor de Fuerza real

@@ -1058,6 +1058,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2269142745126912048, guid: 0c0758fa08d89894e8afeae75bd399cb,
         type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2269142745126912048, guid: 0c0758fa08d89894e8afeae75bd399cb,
+        type: 3}
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: f03d113d13a6bcd4da69bf889e249a90, type: 3}
@@ -1121,7 +1126,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CentroExperimento
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2269142745126912048, guid: 0c0758fa08d89894e8afeae75bd399cb, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -8167,18 +8173,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6743227554626882452}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.82, y: 0.82, z: 0.82}
+  m_LocalScale: {x: 1.025, y: 1.025, z: 1.025}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7583456960016499216}
   - {fileID: 7583456960579009597}
-  m_Father: {fileID: 7583456960846747101}
+  m_Father: {fileID: 7583456961518759227}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 4, y: 9}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 228.25085, y: 47.49998}
   m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1624660317444904567
@@ -10834,7 +10840,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Objetivo:\nIngrese su Objetivo Aqu\xED"
+  m_text: "Objetivo:\nTu Objetivo aparecer\xE1 aqu\xED."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d28e17355bb1afc458cd8febb6949cb3, type: 2}
   m_sharedMaterial: {fileID: -1734632800649394153, guid: d28e17355bb1afc458cd8febb6949cb3,
@@ -12599,7 +12605,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Consejo va aqui, jajaja
+  m_text: "CRAB: Yo te aconsejar\xE9"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d28e17355bb1afc458cd8febb6949cb3, type: 2}
   m_sharedMaterial: {fileID: -1734632800649394153, guid: d28e17355bb1afc458cd8febb6949cb3,
@@ -14635,7 +14641,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7583456960785134783
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14764,7 +14770,6 @@ RectTransform:
   - {fileID: 7583456960738705899}
   - {fileID: 7583456960608675339}
   - {fileID: 7583456960479059524}
-  - {fileID: 1587043311964968842}
   m_Father: {fileID: 7583456961518759227}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -16225,7 +16230,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.554
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -16432,6 +16437,7 @@ RectTransform:
   - {fileID: 7583456960735790225}
   - {fileID: 7583456960677945388}
   - {fileID: 7583456960846747101}
+  - {fileID: 1587043311964968842}
   - {fileID: 7583456959700190635}
   - {fileID: 7583456959834549331}
   - {fileID: 7583456960571065052}
@@ -16502,6 +16508,7 @@ GameObject:
   - component: {fileID: 7583456961518759224}
   - component: {fileID: 7583456961518759225}
   - component: {fileID: 7583456961518759110}
+  - component: {fileID: 7583456961518759232}
   m_Layer: 5
   m_Name: UI3D_Tutorial
   m_TagString: Untagged
@@ -16509,6 +16516,53 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7583456961518759232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7583456961518759231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 281295addb1977f4c9cbd311baf496fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  btnEmpujar: {fileID: 7583456961356085907}
+  btnImpulsar: {fileID: 7583456960785134782}
+  txtDescripcionFuerza: {fileID: 7583456959740377702}
+  btnCambiarFuerza: {fileID: 7583456960132174904}
+  btnGravedad: {fileID: 7583456960394317019}
+  uiMasa: {fileID: 7583456960571065055}
+  uiVelocidad: {fileID: 7583456960938180831}
+  uiFriccion: {fileID: 7583456960819483906}
+  btnMovimiento: {fileID: 7583456960846747100}
+  btnZoom: {fileID: 7583456959700190634}
+  btnLiberar: {fileID: 7583456961550157952}
+  btnCentrar: {fileID: 7583456961326068280}
+  btnObjective: {fileID: 7583456960410295543}
+  optionCRAB: {fileID: 6743227554626882452}
+  btnSalida: {fileID: 7583456961345798179}
+  indexClip: 0
+  clipsTutorial:
+  - {fileID: 8300000, guid: e982d8f1adb0b224a9d8f3b094a3c028, type: 3}
+  - {fileID: 8300000, guid: 649bae001bc2ca14590c6e6c7389732c, type: 3}
+  - {fileID: 8300000, guid: 5dc195e53a9c0f144a7a7199c52cbaf4, type: 3}
+  - {fileID: 8300000, guid: 8f4caa7a9d5f5164b96dcdd73b4495b0, type: 3}
+  - {fileID: 8300000, guid: 0ad6054c36f204245832be2e16dd0e0f, type: 3}
+  - {fileID: 8300000, guid: 6651cae694b635d4da58a29984650745, type: 3}
+  - {fileID: 8300000, guid: 2a1e1bf1c6b184e47be0fb6ee643052e, type: 3}
+  - {fileID: 8300000, guid: ff68d454f14473f48bea91073609e48d, type: 3}
+  - {fileID: 8300000, guid: 1c18f8d91ed55be41a32b70162eeb6fe, type: 3}
+  - {fileID: 8300000, guid: cd333f715104c3247ac67efb975cd8c1, type: 3}
+  - {fileID: 8300000, guid: ce7cb4e418045e04481b701aa027509b, type: 3}
+  - {fileID: 8300000, guid: 550c8fdc1b027dd41806ab8b2031809e, type: 3}
+  - {fileID: 8300000, guid: 54d81c0da1ecf154b80cc38d84abea6a, type: 3}
+  - {fileID: 8300000, guid: 4477e7df30da0b44584f26e1aceaae51, type: 3}
+  - {fileID: 8300000, guid: d7381fd996f986242951ce6ca79342b7, type: 3}
+  - {fileID: 8300000, guid: 6a5b1775a76815f47bf36bb65b449de4, type: 3}
+  - {fileID: 8300000, guid: cfc140d11a8b49342844cf3ed4bb4c8b, type: 3}
+  - {fileID: 8300000, guid: 4599c088447590945bda0c8607ae93f9, type: 3}
 --- !u!1 &7583456961550157952
 GameObject:
   m_ObjectHideFlags: 0
