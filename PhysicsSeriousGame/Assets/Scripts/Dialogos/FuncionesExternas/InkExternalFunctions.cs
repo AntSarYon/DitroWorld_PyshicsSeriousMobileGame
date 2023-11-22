@@ -26,7 +26,13 @@ public class InkExternalFunctions
             ActivateIntroEvent3D()
             );
 
+        story.BindExternalFunction("AbrirPuertaTuto", () =>
+            AbrirPuertaTuto()
+            );
 
+        story.BindExternalFunction("EnableChairs", () =>
+            EnableChairs()
+            );
     }
 
     //--------------------------------------------------------------------------------------
@@ -37,6 +43,8 @@ public class InkExternalFunctions
         story.UnbindExternalFunction("AnimarCRAB");
         story.UnbindExternalFunction("FadeInPrologo");
         story.UnbindExternalFunction("ActivateIntroEvent3D");
+        story.UnbindExternalFunction("AbrirPuertaTuto");
+        story.UnbindExternalFunction("EnableChairs");
 
     }
 
@@ -75,6 +83,8 @@ public class InkExternalFunctions
         ProUIAnimator.Play("FadeIn");
     }
 
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
     public void ActivateIntroEvent3D()
     {
         //Obtenemos Referencia al Script de Reglas
@@ -82,6 +92,22 @@ public class InkExternalFunctions
 
         //Activamos el Evento 3D Tutorial
         lr.ActivateEvent();
+    }
+
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+    public void AbrirPuertaTuto()
+    {
+        //Buscamos las reglas de la Escena, y abrimos la puerta
+        GameObject.FindObjectOfType<Lab3TutoEndingRules>().OpenDoor();
+    }
+
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+    public void EnableChairs()
+    {
+        //Buscamos las reglas de la Escena, y Activamos las sillas
+        GameObject.FindObjectOfType<LabExp1>().EnableChairs();
     }
 
     #endregion

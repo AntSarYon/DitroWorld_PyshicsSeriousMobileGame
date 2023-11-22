@@ -62,8 +62,6 @@ public class LabIntroRules : MonoBehaviour
 
     private void Update()
     {
-        print(ChairsCounter);
-
         //Si el flag de las 3 sillas en posicion AUN ESTA DESACTIVADO...
         if (!allChairsInPlace)
         {
