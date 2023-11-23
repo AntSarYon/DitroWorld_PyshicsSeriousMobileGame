@@ -27,6 +27,22 @@ public class LabExp2 : MonoBehaviour
     [Header("Clip: Secreto desbloqueado")]
     [SerializeField] private AudioClip clipSecretUnlock;
 
+    [Header("Cajas en Posicion")]
+    private bool allBoxesActivated;
+    private int allBoxesInPlace;
+
+    private int boxesInPlace;
+
+    [Header("Propiedades de las silla 1")]
+    [SerializeField] private Manipulation manbox1;
+    [SerializeField] private GameObject box1Trigger;
+    [SerializeField] private GameObject box1VisualCue;
+
+    [Header("Propiedades de las silla 2")]
+    [SerializeField] private Manipulation manBox2;
+    [SerializeField] private GameObject box2Trigger;
+    [SerializeField] private GameObject box2VisualCue;
+
     private AudioSource mAudioSource;
 
     private bool boxesAreReady;
@@ -49,6 +65,14 @@ public class LabExp2 : MonoBehaviour
     {
         //Desactivamos el Trigger de la Salida
         exitTrigger.SetActive(false);
+
+        manbox1.enabled = false;
+        box1Trigger.SetActive(false);
+        box1VisualCue.SetActive(false);
+
+        manBox2.enabled = false;
+        box2Trigger.SetActive(false);
+        box2VisualCue.SetActive(false);
     }
 
     //--------------------------------------------------
@@ -67,8 +91,14 @@ public class LabExp2 : MonoBehaviour
 
     //--------------------------------------------------
 
-    public void UpdateBox()
+    public void EnableBoxes()
     {
+        manbox1.enabled = true;
+        box1Trigger.SetActive(true);
+        box1VisualCue.SetActive(true);
 
+        manBox2.enabled = true;
+        box2Trigger.SetActive(true);
+        box2VisualCue.SetActive(true);
     }
 }

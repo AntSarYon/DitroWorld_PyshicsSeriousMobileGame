@@ -6,7 +6,7 @@ INCLUDE Globals.ink
 }
 
 === firstInstructions ===
-
+#speaker:Prof. Ellie  #audio:default
 ¡Hola <color=\#0C2BF2>DITRO</color>!
 
 Mi lección para tí es entender por qué a veces es más sencillo mover unas cosas que otras. ¿Tienes alguna idea?
@@ -73,7 +73,7 @@ Cuando termines, puedes pasar a la siguiente habitación, y pasar a la siguiente
 -> DONE
 
 === secondInstructions ===
-
+#speaker:Prof. Ellie  #audio:default
 Recuerda, puedes empujar un objeto pesado si tu fuerza es mayor a la fuerza de fricción de la superficie.
 
 Y por supuesto, también es más sencillo mover objetos si estos tienen ruedas, o formas redondas.

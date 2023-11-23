@@ -328,6 +328,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43f7f3c763b22bb4fa6d4b83ab05ea65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &56052488 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 328384412992831712, guid: 4dd3d60023bff1646af0609072165f0b,
+    type: 3}
+  m_PrefabInstance: {fileID: 56052485}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56052486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 356725b862761ce4081ae5a657f24d52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!212 &56052489 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 328384412992831743, guid: 4dd3d60023bff1646af0609072165f0b,
+    type: 3}
+  m_PrefabInstance: {fileID: 56052485}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &56052490 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 328384412171075441, guid: 4dd3d60023bff1646af0609072165f0b,
+    type: 3}
+  m_PrefabInstance: {fileID: 56052485}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &56052491 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8340483250051672917, guid: 4dd3d60023bff1646af0609072165f0b,
+    type: 3}
+  m_PrefabInstance: {fileID: 56052485}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &165449434
 GameObject:
   m_ObjectHideFlags: 0
@@ -1015,6 +1045,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43f7f3c763b22bb4fa6d4b83ab05ea65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1130328137 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 328384412992831712, guid: 4dd3d60023bff1646af0609072165f0b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1130328134}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130328135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 356725b862761ce4081ae5a657f24d52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!212 &1130328138 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 328384412992831743, guid: 4dd3d60023bff1646af0609072165f0b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1130328134}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1130328139 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 328384412171075441, guid: 4dd3d60023bff1646af0609072165f0b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1130328134}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1130328140 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8340483250051672917, guid: 4dd3d60023bff1646af0609072165f0b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1130328134}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1367805181
 GameObject:
   m_ObjectHideFlags: 0
@@ -1750,15 +1810,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1715121033}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 049b11f0991722b46ab945f52871f7fd, type: 3}
+  m_Script: {fileID: 11500000, guid: 47f58a1986fcf6b489ce69ca0d022398, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   doorOpenSprite: {fileID: 0}
-  doorSR: {fileID: 0}
-  exitTrigger: {fileID: 0}
-  blueBoxSprite: {fileID: 0}
-  spriteRenderer: {fileID: 0}
-  clipSecretUnlock: {fileID: 0}
+  doorSR: {fileID: 788635177}
+  exitTrigger: {fileID: 1721303513}
+  blueBoxSprite: {fileID: 143786567, guid: 2f96f6d6ca497e545abb7862046ed39a, type: 3}
+  box1spRender: {fileID: 1130328138}
+  box2spRender: {fileID: 56052489}
+  clipSecretUnlock: {fileID: 8300000, guid: 1ca8d8adc8e28614bb737ce91929fc29, type: 3}
+  manbox1: {fileID: 1130328137}
+  box1Trigger: {fileID: 1130328140}
+  box1VisualCue: {fileID: 1130328139}
+  manBox2: {fileID: 56052488}
+  box2Trigger: {fileID: 56052491}
+  box2VisualCue: {fileID: 56052490}
 --- !u!1 &1721303513
 GameObject:
   m_ObjectHideFlags: 0
@@ -10955,7 +11022,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   visualCue: {fileID: 8481691485586995861}
-  inkJSON: {fileID: 4900000, guid: f7b6d850cff90024a9d5898c2a57cb0d, type: 3}
+  inkJSON: {fileID: 4900000, guid: f518286f496a24747a09a07bbe8d2df5, type: 3}
 --- !u!61 &8481691485888393116
 BoxCollider2D:
   m_ObjectHideFlags: 0

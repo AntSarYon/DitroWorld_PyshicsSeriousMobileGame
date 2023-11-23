@@ -33,6 +33,9 @@ public class InkExternalFunctions
         story.BindExternalFunction("EnableChairs", () =>
             EnableChairs()
             );
+        story.BindExternalFunction("EnableBoxes", () =>
+            EnableBoxes()
+            );
     }
 
     //--------------------------------------------------------------------------------------
@@ -44,8 +47,8 @@ public class InkExternalFunctions
         story.UnbindExternalFunction("FadeInPrologo");
         story.UnbindExternalFunction("ActivateIntroEvent3D");
         story.UnbindExternalFunction("AbrirPuertaTuto");
-        story.UnbindExternalFunction("EnableChairs");
-
+        story.UnbindExternalFunction("EnableChairs"); 
+        story.UnbindExternalFunction("EnableBoxes");
     }
 
     #region External Functions INK
@@ -108,6 +111,12 @@ public class InkExternalFunctions
     {
         //Buscamos las reglas de la Escena, y Activamos las sillas
         GameObject.FindObjectOfType<LabExp1>().EnableChairs();
+    }
+
+    public void EnableBoxes()
+    {
+        //Buscamos las reglas de la Escena, y Activamos las sillas
+        GameObject.FindObjectOfType<LabExp2>().EnableBoxes();
     }
 
     #endregion

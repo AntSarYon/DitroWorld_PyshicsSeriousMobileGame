@@ -527,6 +527,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 328384412171075442, guid: 4dd3d60023bff1646af0609072165f0b,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 328384412171075442, guid: 4dd3d60023bff1646af0609072165f0b,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 328384412171075442, guid: 4dd3d60023bff1646af0609072165f0b,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 328384412992831738, guid: 4dd3d60023bff1646af0609072165f0b,
         type: 3}
       propertyPath: m_Name
@@ -641,7 +656,7 @@ PrefabInstance:
     - target: {fileID: 328384412992831743, guid: 4dd3d60023bff1646af0609072165f0b,
         type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0.6698113
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1028,6 +1043,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 328384412171075442, guid: 4dd3d60023bff1646af0609072165f0b,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 328384412171075442, guid: 4dd3d60023bff1646af0609072165f0b,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.30457142
+      objectReference: {fileID: 0}
+    - target: {fileID: 328384412171075442, guid: 4dd3d60023bff1646af0609072165f0b,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.103999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 328384412171075442, guid: 4dd3d60023bff1646af0609072165f0b,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 328384412992831738, guid: 4dd3d60023bff1646af0609072165f0b,
         type: 3}
       propertyPath: m_Name
@@ -1051,37 +1086,37 @@ PrefabInstance:
     - target: {fileID: 328384412992831740, guid: 4dd3d60023bff1646af0609072165f0b,
         type: 3}
       propertyPath: m_Size.x
-      value: 1
+      value: 1.73
       objectReference: {fileID: 0}
     - target: {fileID: 328384412992831740, guid: 4dd3d60023bff1646af0609072165f0b,
         type: 3}
       propertyPath: m_Size.y
-      value: 1
+      value: 2.35
       objectReference: {fileID: 0}
     - target: {fileID: 328384412992831740, guid: 4dd3d60023bff1646af0609072165f0b,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1
+      value: 1.625
       objectReference: {fileID: 0}
     - target: {fileID: 328384412992831740, guid: 4dd3d60023bff1646af0609072165f0b,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1
+      value: 2.4375
       objectReference: {fileID: 0}
     - target: {fileID: 328384412992831741, guid: 4dd3d60023bff1646af0609072165f0b,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.42
+      value: 0.79
       objectReference: {fileID: 0}
     - target: {fileID: 328384412992831741, guid: 4dd3d60023bff1646af0609072165f0b,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.42
+      value: 0.63
       objectReference: {fileID: 0}
     - target: {fileID: 328384412992831741, guid: 4dd3d60023bff1646af0609072165f0b,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.42
+      value: 0.63
       objectReference: {fileID: 0}
     - target: {fileID: 328384412992831741, guid: 4dd3d60023bff1646af0609072165f0b,
         type: 3}
@@ -1133,11 +1168,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 328384412992831741, guid: 4dd3d60023bff1646af0609072165f0b,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 328384412992831743, guid: 4dd3d60023bff1646af0609072165f0b,
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
+      objectReference: {fileID: -2122686638, guid: 02f2ed4502bf09148b802c8508f262c6,
         type: 3}
     - target: {fileID: 328384412992831743, guid: 4dd3d60023bff1646af0609072165f0b,
         type: 3}
@@ -1147,12 +1187,12 @@ PrefabInstance:
     - target: {fileID: 328384412992831743, guid: 4dd3d60023bff1646af0609072165f0b,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.5348084
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 328384412992831743, guid: 4dd3d60023bff1646af0609072165f0b,
         type: 3}
       propertyPath: m_Color.r
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10122,7 +10162,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 21
-      m_TileSpriteIndex: 17
+      m_TileSpriteIndex: 20
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -10497,14 +10537,14 @@ Tilemap:
     m_Data: {fileID: -2090447900, guid: b811bd11aef3108408ed66eecdcf26b7, type: 3}
   - m_RefCount: 13
     m_Data: {fileID: 917089106, guid: b811bd11aef3108408ed66eecdcf26b7, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 1090447232, guid: b811bd11aef3108408ed66eecdcf26b7, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 15
     m_Data: {fileID: -257389022, guid: b811bd11aef3108408ed66eecdcf26b7, type: 3}
   - m_RefCount: 10
     m_Data: {fileID: -1174829698, guid: b811bd11aef3108408ed66eecdcf26b7, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 1090447232, guid: b811bd11aef3108408ed66eecdcf26b7, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -1861155954, guid: b811bd11aef3108408ed66eecdcf26b7, type: 3}
   - m_RefCount: 1

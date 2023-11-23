@@ -32,6 +32,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Laboratorio/Lab-3_2.unity
     guid: 71de6cb2489090d43b705c78f8d024ca
+  - enabled: 1
+    path: Assets/Scenes/Laboratorio/Lab-4.unity
+    guid: 4ddb7f1282685ab44941e2269121bb93
+  - enabled: 1
+    path: Assets/Scenes/Laboratorio/Lab-5.unity
+    guid: 030c5b924c364ee4f8ab58e589aab921
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 86aedb8289800c94ab867c5bab09b28f,
       type: 2}
