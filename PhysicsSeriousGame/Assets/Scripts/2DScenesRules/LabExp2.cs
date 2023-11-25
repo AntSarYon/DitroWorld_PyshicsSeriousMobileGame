@@ -15,23 +15,12 @@ public class LabExp2 : MonoBehaviour
 
     [Space]
 
-    [Header("Sprite de Caja Celeste")]
-    [SerializeField] private Sprite blueBoxSprite;
-
-    [Header("SpriteRenderer de las Cajas")]
-    [SerializeField] private SpriteRenderer box1spRender;
-    [SerializeField] private SpriteRenderer box2spRender;
-
-    [Space]
-
     [Header("Clip: Secreto desbloqueado")]
     [SerializeField] private AudioClip clipSecretUnlock;
 
     [Header("Cajas en Posicion")]
-    private bool allBoxesActivated;
-    private int allBoxesInPlace;
-
-    private int boxesInPlace;
+    [HideInInspector] public int boxesActivated;
+    [HideInInspector] public int boxesInPlace;
 
     [Header("Propiedades de las silla 1")]
     [SerializeField] private Manipulation manbox1;
@@ -56,16 +45,6 @@ public class LabExp2 : MonoBehaviour
         mAudioSource = GetComponent<AudioSource>();
 
         //Iniciamos flags en Falso
-        doorIsOpen = false;
-    }
-
-    //--------------------------------------------------
-
-    void Start()
-    {
-        //Desactivamos el Trigger de la Salida
-        exitTrigger.SetActive(false);
-
         manbox1.enabled = false;
         box1Trigger.SetActive(false);
         box1VisualCue.SetActive(false);
@@ -73,6 +52,35 @@ public class LabExp2 : MonoBehaviour
         manBox2.enabled = false;
         box2Trigger.SetActive(false);
         box2VisualCue.SetActive(false);
+
+        boxesActivated = 0;
+        boxesInPlace = 0;
+
+        //Iniciamos con el Flag de cajas listas en Falso
+        boxesAreReady = false;
+        doorIsOpen = false;
+    }
+
+    //--------------------------------------------------
+
+    void Update()
+    {
+        //Si ambas cajas estan en posición, y ambas cajas están activadas
+        if (boxesInPlace == 2 && boxesActivated == 2)
+        {
+            //Activamos el Flag de Boxes Listas
+            boxesAreReady = true;
+        }
+        //Si la Puerta est cerrada
+        if (!doorIsOpen)
+        {
+            //Si las cajas estan listas
+            if (boxesAreReady)
+            {
+                //Abrimos la puerta
+                OpenDoor();
+            }
+        }
     }
 
     //--------------------------------------------------
