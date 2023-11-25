@@ -71,6 +71,7 @@ public class LabExp2 : MonoBehaviour
             //Activamos el Flag de Boxes Listas
             boxesAreReady = true;
         }
+
         //Si la Puerta est cerrada
         if (!doorIsOpen)
         {
@@ -95,6 +96,9 @@ public class LabExp2 : MonoBehaviour
 
         //Activamos el Trigger de Salida
         exitTrigger.SetActive(true);
+
+        //Activamos el flag de Puerta abierta
+        doorIsOpen = true;
     }
 
     //--------------------------------------------------
