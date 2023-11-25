@@ -34,7 +34,7 @@ Los módulos de energía de la puerta (esas cajas con pantalla naranja) se han q
 
     - Verás <color=\#0C2BF2>DITRO</color>; la <color=\#A20017>distancia</color> se refiere a la longitud TOTAL del recorrido de un objeto. No importa si termina en el mismo lugar donde emepezó a moverse.
 
-El DESPLAZAMIENTO, por otro lado, se refiere a la distancia que hay entre el punto exacto donde empezamos a movernos, y el punto en el cuál terminamos.
+El <color=\#A20017>Desplazamiento</color>, por otro lado, se refiere a la distancia que hay entre el punto exacto donde empezamos a movernos, y el punto en el cuál terminamos.
 
 Eso quiere decir que los módulos de energía deben acumular una distancia de recorrido, pero finalmente deberán regresar a su posición de origen.
 

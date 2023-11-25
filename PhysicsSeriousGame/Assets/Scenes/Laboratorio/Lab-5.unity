@@ -183,7 +183,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 791205838, guid: 2f96f6d6ca497e545abb7862046ed39a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 2.625, y: 2.875}
@@ -228,7 +228,7 @@ PrefabInstance:
     - target: {fileID: 328384412992831739, guid: 4dd3d60023bff1646af0609072165f0b,
         type: 3}
       propertyPath: m_Mass
-      value: 10
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 328384412992831739, guid: 4dd3d60023bff1646af0609072165f0b,
         type: 3}
@@ -644,7 +644,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 791205838, guid: 2f96f6d6ca497e545abb7862046ed39a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 2.625, y: 2.875}
@@ -1003,12 +1003,12 @@ PrefabInstance:
     - target: {fileID: 328384412992831739, guid: 4dd3d60023bff1646af0609072165f0b,
         type: 3}
       propertyPath: m_Mass
-      value: 10
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 328384412992831739, guid: 4dd3d60023bff1646af0609072165f0b,
         type: 3}
       propertyPath: m_BodyType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 328384412992831740, guid: 4dd3d60023bff1646af0609072165f0b,
         type: 3}
@@ -1270,7 +1270,7 @@ Transform:
   m_GameObject: {fileID: 1438174171}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.25, y: 0.17, z: 0}
+  m_LocalPosition: {x: 0.09, y: 0.17, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1288,7 +1288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acd4cfbc4fd2dd4449b9e86411060eba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NombreEscenaOrigen: Lab-3_2
+  NombreEscenaOrigen: Lab-4
 --- !u!1001 &1522606238
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1815,10 +1815,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47f58a1986fcf6b489ce69ca0d022398, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorOpenSprite: {fileID: 0}
+  doorOpenSprite: {fileID: 1517405262, guid: 2f96f6d6ca497e545abb7862046ed39a, type: 3}
   doorSR: {fileID: 788635177}
   exitTrigger: {fileID: 1721303513}
   clipSecretUnlock: {fileID: 8300000, guid: 1ca8d8adc8e28614bb737ce91929fc29, type: 3}
+  clipSensor: {fileID: 8300000, guid: 2f89f7e27257cb341bcbddea992a6a9c, type: 3}
   boxesActivated: 0
   boxesInPlace: 0
   manbox1: {fileID: 1130328137}
@@ -1872,7 +1873,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92a8aa3a2b7abc045b359d42411844bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  siguienteEscena: Lab-4
+  siguienteEscena: Lab-6
 --- !u!61 &1721303516
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2424,7 +2425,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   listaCoordenadas:
   - {fileID: 1438174173}
-  - {fileID: 0}
 --- !u!1 &3451876809366597495
 GameObject:
   m_ObjectHideFlags: 0
@@ -2452,7 +2452,7 @@ Transform:
   m_GameObject: {fileID: 8364301000822436120}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -10.87, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

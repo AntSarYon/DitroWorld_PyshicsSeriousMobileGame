@@ -36,7 +36,7 @@ Generalmente esa fuerza se mueve en dirección opuesta hacia donde actúe cualqu
     
 Ten en cuenta que no es algo exclusivo de los suelos... Esto se aplica para culquier superficie por la que se mueva un objeto.
 
-Por ejemplo, cuando un niño se desliza por un tobogán, la gravedad viene a ser la Fuerza que lo hace caer, sin embargo, la fricción del tobogán es lo que frena su caída.
+Por ejemplo, cuando un niño se desliza por un tobogán, la gravedad viene a ser la Fuerza que lo hace caer, y la fricción del tobogán es lo que frena su caída.
 
     * [Suena interesante]
     * [¿Y qué más?]

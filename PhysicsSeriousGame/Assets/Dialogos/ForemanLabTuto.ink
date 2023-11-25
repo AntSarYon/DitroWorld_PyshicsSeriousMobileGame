@@ -30,7 +30,7 @@ Hagamos una prueba, ¿te parece?
     
     - ¿Ves esa mesa en el Centro de la Sala? Es la que tiene unos objetos encima de ella.
 
-Acércate a ella, y pulsa <color=\#EC7600>[Enter]</color> cuando el icono de Experimento aparezca. Cuando lo hagaas, ocurrirá algo especial.
+Acércate a ella, y pulsa <color=\#EC7600>[Enter]</color> cuando el icono de Experimento aparezca. Cuando lo haaas, ocurrirá algo especial.
 
 ~ ActivateIntroEvent3D()
 

@@ -18,6 +18,9 @@ public class LabExp2 : MonoBehaviour
     [Header("Clip: Secreto desbloqueado")]
     [SerializeField] private AudioClip clipSecretUnlock;
 
+    [Header("Clip: Sensor activo")]
+    [SerializeField] private AudioClip clipSensor;
+
     [Header("Cajas en Posicion")]
     [HideInInspector] public int boxesActivated;
     [HideInInspector] public int boxesInPlace;
@@ -112,5 +115,10 @@ public class LabExp2 : MonoBehaviour
         manBox2.enabled = true;
         box2Trigger.SetActive(true);
         box2VisualCue.SetActive(true);
+    }
+
+    public void PlaySensor()
+    {
+        mAudioSource.PlayOneShot(clipSensor, 0.85f);
     }
 }

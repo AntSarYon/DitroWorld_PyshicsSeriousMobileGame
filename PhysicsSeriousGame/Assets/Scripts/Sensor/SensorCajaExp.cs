@@ -20,6 +20,7 @@ public class SensorCajaExp : MonoBehaviour
             collision.transform.GetComponent<SensoringBox>().BoxReady = true;
             collision.transform.GetComponent<SpriteRenderer>().sprite = blueBoxSprite;
             sceneRules.boxesActivated++;
+            sceneRules.PlaySensor();
         }
     }
 

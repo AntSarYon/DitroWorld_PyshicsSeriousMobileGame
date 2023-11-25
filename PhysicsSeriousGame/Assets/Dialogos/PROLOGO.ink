@@ -9,7 +9,7 @@ INCLUDE Globals.ink
     * [¿Por qué corres?]
         ~ AnimarCientifico("Writting")
         ¡Increíble! El modulo de voz parece funcionar sin inconvenientes...
-        Respondiendo a tu pregunta, corría porque no todos los dias veo despertar a un ser tan avanzado como tu, <color=\#0C2BF2>DITRO</color>...
+        Respondiendo a tu pregunta, corría porque no todos los dias veo despertar a un ser tan avanzado como tú, <color=\#0C2BF2>DITRO</color>...
         
     * [¿Quién eres?]
         ~ AnimarCientifico("Writting") 
@@ -83,7 +83,7 @@ Por ese motivo hemos programado tu primera <color=\#A20017>Misión</color>:
     - Y recuerda: El conocimiento llega de muchas maneras...
 <color=\#E86600>Hablando</color>, <color=\#E86600>observando, incluso </color> <color=\#E86600>usando tus propias manos</color>...
 
-Pero mi consejo para ti es siempre <color=\#E86600>experimentar</color> y <color=\#E86600>poner a prueba</color> lo que hayas aprendido.
+Pero mi consejo para tí es siempre <color=\#E86600>experimentar</color> y <color=\#E86600>poner a prueba</color> lo que hayas aprendido.
 
 De acuerdo <color=\#0C2BF2>DITRO</color>, sera mejor que te pongas en marcha.
 
@@ -117,7 +117,7 @@ Profesor, usted nunca me dijo...
 
 ~ AnimarCientifico("Running")
 #speaker:Profesor Kao #audio:default
-Bueno, los veo luego muchachos! !<color=\#AB9618>CRAB</color> cuida muy bien a <color=\#0C2BF2>DITRO</color>, y hazle el recorrido antes de partir...!
+Bueno, los veo luego muchachos. ¡<color=\#AB9618>CRAB</color> cuida muy bien a <color=\#0C2BF2>DITRO</color>, y hazle el recorrido antes de partir...!
 
 #speaker:CRAB #audio: animatedVoice
 ¡Profesooor...!
