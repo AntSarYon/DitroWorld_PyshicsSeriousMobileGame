@@ -877,6 +877,12 @@ public class ButtonsManager : MonoBehaviour
         ScenesManager.Instance.SolicitarCambioDeEscena(ScenesManager.Instance.LastSceneName);
     }
 
+    public void SalirA(string sceneName)
+    {
+        //Regresamos a la ultima escena antes del experimento
+        ScenesManager.Instance.SolicitarCambioDeEscena(sceneName);
+    }
+
     public void CompletarEvento()
     {
         //Enviamos los Resultados al GameManager
@@ -885,6 +891,14 @@ public class ButtonsManager : MonoBehaviour
         ScenesManager.Instance.SolicitarCambioDeEscena(ScenesManager.Instance.LastSceneName);
     }
 
-    
+    public void CompletarEventoEIrA(string sceneName)
+    {
+        //Enviamos los Resultados al GameManager
+        EnviarResultadosAGameManager();
+        //Regresamos a la ultima escena antes del experimento
+        ScenesManager.Instance.SolicitarCambioDeEscena(sceneName);
+    }
+
+
 
 }

@@ -39,6 +39,9 @@ public class InkExternalFunctions
         story.BindExternalFunction("ActivarEventoKAO", () =>
             ActivarEventoKAO()
             );
+        story.BindExternalFunction("ActivarEventoFinalForeman", () =>
+            ActivarEventoFinalForeman()
+            );
     }
 
     //--------------------------------------------------------------------------------------
@@ -53,6 +56,7 @@ public class InkExternalFunctions
         story.UnbindExternalFunction("EnableChairs"); 
         story.UnbindExternalFunction("EnableBoxes");
         story.UnbindExternalFunction("ActivarEventoKAO");
+        story.UnbindExternalFunction("ActivarEventoFinalForeman");
     }
 
     #region External Functions INK
@@ -127,6 +131,12 @@ public class InkExternalFunctions
     {
         //Buscamos las reglas de la Escena, y Activamos las sillas
         GameObject.FindObjectOfType<LabExp3>().ActivateEvent();
+    }
+
+    public void ActivarEventoFinalForeman()
+    {
+        //Buscamos las reglas de la Escena, y Activamos las sillas
+        GameObject.FindObjectOfType<LabExpFinal>().ActivateEvent();
     }
 
 

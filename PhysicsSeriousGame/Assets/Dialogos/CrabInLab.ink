@@ -15,7 +15,7 @@ Siempre veo que los cientificos se acercan a esa computadora, imagino que debe s
 
 === crab2 === 
 #speaker: Crab #audio: animatedVoice
-Para los siguientes pasos de tu entrenamiento, necesitamos acceder a los salones del ala Norte, y el ala Este del Laboratorio. 
+Para los siguientes pasos de tu entrenamiento, necesitamos acceder al salón del ala Norte del Laboratorio.
 -> END
 
 === crab3 === 

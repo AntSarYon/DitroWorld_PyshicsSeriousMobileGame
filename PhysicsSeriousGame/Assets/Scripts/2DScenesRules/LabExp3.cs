@@ -17,14 +17,6 @@ public class LabExp3 : MonoBehaviour
 
     //----------------------------------------------------------
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    //----------------------------------------------------------
-
     public void ActivateEvent()
     {
         //Activamos el GO del Evento

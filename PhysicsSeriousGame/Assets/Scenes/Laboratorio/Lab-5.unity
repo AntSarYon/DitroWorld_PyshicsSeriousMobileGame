@@ -435,74 +435,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneRules: {fileID: 1715121037}
   blueBoxSprite: {fileID: 143786567, guid: 2f96f6d6ca497e545abb7862046ed39a, type: 3}
---- !u!1001 &255026646
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8824561024861516397, guid: e2ccae56bf9c7b943a4ce73e7cceacf6,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -8.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 8824561024861516397, guid: e2ccae56bf9c7b943a4ce73e7cceacf6,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.28
-      objectReference: {fileID: 0}
-    - target: {fileID: 8824561024861516397, guid: e2ccae56bf9c7b943a4ce73e7cceacf6,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8824561024861516397, guid: e2ccae56bf9c7b943a4ce73e7cceacf6,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8824561024861516397, guid: e2ccae56bf9c7b943a4ce73e7cceacf6,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8824561024861516397, guid: e2ccae56bf9c7b943a4ce73e7cceacf6,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8824561024861516397, guid: e2ccae56bf9c7b943a4ce73e7cceacf6,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8824561024861516397, guid: e2ccae56bf9c7b943a4ce73e7cceacf6,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8824561024861516397, guid: e2ccae56bf9c7b943a4ce73e7cceacf6,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8824561024861516397, guid: e2ccae56bf9c7b943a4ce73e7cceacf6,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8824561024861516399, guid: e2ccae56bf9c7b943a4ce73e7cceacf6,
-        type: 3}
-      propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e2ccae56bf9c7b943a4ce73e7cceacf6, type: 3}
 --- !u!1 &489323229
 GameObject:
   m_ObjectHideFlags: 0
@@ -976,7 +908,7 @@ PrefabInstance:
         type: 3}
       propertyPath: defaultInkJSON
       value: 
-      objectReference: {fileID: 4900000, guid: 27c065961fb5f2f448daee8c449b7415, type: 3}
+      objectReference: {fileID: 4900000, guid: 0c747eb198b706f43a923656c8be8387, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10850,7 +10782,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8daf226f8c22ee141bdca976fad23b77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crabDialogueInkJSON: {fileID: 4900000, guid: 924b8c07e170c464d84dc2df8dbbb5e7, type: 3}
+  crabDialogueInkJSON: {fileID: 4900000, guid: 7f343e9b2728429499725f128e35e9fc, type: 3}
 --- !u!58 &8481691485518171055
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -11104,7 +11036,6 @@ SceneRoots:
   - {fileID: 3609960666186319614}
   - {fileID: 1783499016}
   - {fileID: 8481691485518171040}
-  - {fileID: 255026646}
   - {fileID: 1130328134}
   - {fileID: 56052485}
   - {fileID: 1367805182}

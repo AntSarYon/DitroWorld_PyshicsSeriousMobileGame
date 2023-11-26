@@ -38,6 +38,27 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Laboratorio/Lab-5.unity
     guid: 030c5b924c364ee4f8ab58e589aab921
+  - enabled: 1
+    path: Assets/Scenes/Laboratorio/Lab-6.unity
+    guid: f38751b42948db145b3ae4b9661c8dc4
+  - enabled: 1
+    path: Assets/Scenes/Laboratorio/Lab-6_2.unity
+    guid: 491c388f236f7bd419d768ccfcf85b6f
+  - enabled: 1
+    path: Assets/Scenes/Laboratorio/Lab-7.unity
+    guid: 5e6ccf37d3b9fcb469fac989d702d6aa
+  - enabled: 1
+    path: Assets/Scenes/Laboratorio/Lab-7_2.unity
+    guid: 2431d6e514b170c409b58ddd4d2632a6
+  - enabled: 1
+    path: Assets/Scenes/Laboratorio/LabFinal.unity
+    guid: c3ca6d0eb79c94842b817edc18948168
+  - enabled: 1
+    path: Assets/Scenes/Laboratorio/3DExpFinal.unity
+    guid: e8b8d9060be602d4f9c520fa2a63bca9
+  - enabled: 1
+    path: Assets/Scenes/Laboratorio/3DExp3.unity
+    guid: f216a0a87cf679045b45dc3dc17848f2
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 86aedb8289800c94ab867c5bab09b28f,
       type: 2}

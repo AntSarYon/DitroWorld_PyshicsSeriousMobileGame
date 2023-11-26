@@ -1,0 +1,3 @@
+#speaker: Crab #audio: animatedVoice
+¡Andando <color=\#0C2BF2>DITRO</color>!
+Crucemos la salida y empecemos a explorar el mundo...

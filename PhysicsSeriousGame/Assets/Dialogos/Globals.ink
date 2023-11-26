@@ -3,7 +3,9 @@ VAR ForemanTutoFinishedDoorOpen = false
 VAR EllieExp1AlreadyTalked = false
 VAR BaoExp2AlreadyTalked = false
 VAR KAOExp3AlreadyTalked = false
+VAR ForemanExp4AlreadyTalked = false
 
+EXTERNAL ActivarEventoFinalForeman()
 EXTERNAL ActivarEventoKAO()
 EXTERNAL EnableBoxes()
 EXTERNAL EnableChairs()
